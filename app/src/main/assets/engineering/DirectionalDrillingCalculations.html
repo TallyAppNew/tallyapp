@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+        <style>
+          table, th, td {
+            border: 1px solid black;
+          }
+        </style>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Directional Drilling Calculations </h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:150px;font-size: 14px;">
+            <p><strong>Directional Survey Calculations<br /> <br /> </strong></p>
+            <p>The following are the two most commonly used methods to calculate directional surveys :</p>
+            <ol>
+              <li>Angie Averaging Method</li>
+              <p>&nbsp;</p>
+              <img src="img/ddc/a.png">
+              <p>&nbsp;</p>
+            </ol>
+            <ol start="2">
+              <li>Radius of Curvature Method</li>
+              <p>&nbsp;</p>
+              <img src="img/ddc/b.png">
+              <p>&nbsp;</p>
+            </ol>
+            <p>&nbsp;&nbsp; Where, MD &nbsp;&nbsp;&nbsp;&nbsp;= course length between surveys in measured depth (ft)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I<sub>l</sub>,I<sub>2&nbsp;&nbsp;&nbsp; </sub>= inclination (angle) at upper and lower surveys, degrees<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A<sub>1</sub>,A<sub>2</sub> &nbsp;&nbsp;= direction at upper and lower surveys</p>
+            <p>&nbsp;&nbsp; Case : Use the Angle Averaging Method and Radius of Curvature<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Method to calculate the following surveys :</p>
+            <p>&nbsp;</p>
+            <table width="616">
+            <tbody>
+            <tr>
+            <td width="369">
+            <p>&nbsp;</p>
+            </td>
+            <td width="123">
+            <p><strong>Survey 1</strong></p>
+            </td>
+            <td width="125">
+            <p><strong>Survey 2</strong></p>
+            </td>
+            </tr>
+            <tr>
+            <td width="369">
+            <p>&nbsp; Depth (ft)</p>
+            </td>
+            <td width="123">
+            <p>7482</p>
+            </td>
+            <td width="125">
+            <p>7782</p>
+            </td>
+            </tr>
+            <tr>
+            <td width="369">
+            <p>&nbsp; Inclination (degrees)</p>
+            </td>
+            <td width="123">
+            <p>4</p>
+            </td>
+            <td width="125">
+            <p>8</p>
+            </td>
+            </tr>
+            <tr>
+            <td width="369">
+            <p>&nbsp; Azimuth (degrees)</p>
+            </td>
+            <td width="123">
+            <p>10</p>
+            </td>
+            <td width="125">
+            <p>35</p>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+
+            <br/>
+            <br/>
+            <p><strong>&nbsp;&nbsp; </strong><strong>Angle Averaging Method :<br /> <br /> </strong></p>
+              <img src="img/ddc/c.png">
+              <p>&nbsp;</p>
+            <p><strong>&nbsp;&nbsp; </strong><strong>Radius of Curvature Meth</strong><strong>od :</strong><strong><br /> <br /> </strong></p>
+            <p>&nbsp;</p>
+              <img src="img/ddc/d.png">
+            <p>&nbsp;</p>
+            <p><strong>DEVIATION/DEPARTURE CALCULATION</strong></p>
+            <p>&nbsp;</p>
+            <p>Deviation is defined as departure of the wellbore from the vertical, measured by the horizontal distance from the rotary table to the target. The amount of deviation is a function of the dril angle (inclination) and hole depth.</p>
+            <p>&nbsp;</p>
+            <p>The following diagram illustrates how to determine the deviation/departure:</p>
+            <p>&nbsp;</p>
+            <img src="img/ddc/e.png">
+            <p>&nbsp;</p>
+            <p>To calculate the deviation/departure (CD), ft :</p>
+            <p><em>CD</em><em> (</em><em>ft</em><em>)</em><em> = sin I </em><em>x</em><em> BD<br /> <br /> </em></p>
+            <p>Case : Kick off point (KOP) is a distance <input type="text" id="for11" style="width:50px;text-align:right;" value="0"> ft from the surface.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MD is <input type="text" id="for121" style="width:50px;text-align:right;" value="0">  ft. Hole angle (inclination) is <input type="text" id="for12" style="width:50px;text-align:right;" value="0"> degrees.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Therefore the distance from KOP to MD = <input type="text" id="for13" style="width:50px;text-align:right;" value="0"> ft (BD):</p>
+            <br/>
+            <br/>
+            <button class="btn btn-success" id="hitung1">Calculate</button> 
+            <br/>
+
+            <p>From this calculation, the measured depth (MD) is <span id="hasil1"></span> ft away from vertical.</p>
+            <p>&nbsp;</p>
+            <p><strong>DOGLEG SEVERITY CALCULATION</strong><strong><br /> <br /> </strong></p>
+            <p><strong>Method</strong><strong> 1</strong><strong><br /> <br /> </strong></p>
+            <p>Dogleg severity (DLS) is usually given in degrees/100 ft. The following formula provides dogleg severity in degrees/100 ft and is based on the Radius of Curvature Method :</p>
+            <p><em>DLS = (cos</em><em><sup>-1 </sup></em><em>[</em><em>(cos</em><em> I<sub>1</sub></em> <em>x cos I<sub>2</sub>) + (sin I<sub>1 </sub>x sin I<sub>2</sub>) x cos (A<sub>2</sub> <sub>&ndash; </sub>A<sub>1</sub>)]x </em><em><br /> <br /> </em></p>
+            <p>For metric calculation, substitute x </p>
+            <p>Where, DLS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= dogleg severity, degrees/100 ft<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= course length, distance between survey points (ft)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I<sub>1</sub>, I<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;= inclination (angle) at upper and lower surveys (ft)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A<sub>l</sub>, A<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;= direction at upper and lower surveys, degrees<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Azimuth &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= azimuth change between surveys, degrees</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Case :</p>
+            <table>
+            <tbody>
+            <tr>
+            <td width="340">
+            <p>&nbsp;</p>
+            </td>
+            <td width="132">
+            <p><strong>Survey 1</strong></p>
+            </td>
+            <td width="136">
+            <p><strong>Survey 2</strong></p>
+            </td>
+            </tr>
+            <tr>
+            <td width="340">
+            <p>Depth (ft)</p>
+            </td>
+            <td width="132">
+            <p>4231</p>
+            </td>
+            <td width="136">
+            <p>4262</p>
+            </td>
+            </tr>
+            <tr>
+            <td width="340">
+            <p>Inclination (degrees)</p>
+            </td>
+            <td width="132">
+            <p>13.5</p>
+            </td>
+            <td width="136">
+            <p>14.7</p>
+            </td>
+            </tr>
+            <tr>
+            <td width="340">
+            <p>Azimuth (degrees)</p>
+            </td>
+            <td width="132">
+            <p>N 10 E</p>
+            </td>
+            <td width="136">
+            <p>N 19 E</p>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <p>DLS = (cos<sup>-1 </sup>[(cos 3.5xcos 14.7) + (sin 13.5xsin 14.7) x cos (19 - 10)]x </p>
+            <p>&nbsp;&nbsp; &nbsp;= (cos<sup>-1 </sup>[(.9723699 X .9672677)+(.2334453 x .2537579 x .9876883)]) x </p>
+            <p>&nbsp;&nbsp;&nbsp; = (cos<sup>-1</sup> [(.940542) + (.0585092)]) x </p>
+            <p>&nbsp;&nbsp;&nbsp; = 2.4960847 x </p>
+            <p>&nbsp;&nbsp;&nbsp; = 8.051886 degrees/100 ft</p>
+            <p><strong>M</strong><strong>e</strong><strong>thod 2<br /> <br /> </strong></p>
+            <p>This method of calculating dogleg severity is based on the tangential method :</p>
+            <p>&nbsp;</p>
+            <img src="img/ddc/f.png">
+            <p>&nbsp;</p>
+            <p>Where, DLS &nbsp;&nbsp;&nbsp;= dogleg severity, degrees/100 ft</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;= course length, ft<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I<sub>1</sub>, I<sub>2</sub>&nbsp; = inclination (angle) at upper and lower surveys, degrees<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A<sub>l</sub>, A<sub>2</sub> &nbsp;= direction at upper and lower surveys, degrees</p>
+            <p>Case :</p>
+            <table>
+            <tbody>
+            <tr>
+            <td width="340">
+            <p>&nbsp;</p>
+            </td>
+            <td width="132">
+            <p><strong>Survey 1</strong></p>
+            </td>
+            <td width="136">
+            <p><strong>Survey 2</strong></p>
+            </td>
+            </tr>
+            <tr>
+            <td width="340">
+            <p>Depth (ft)</p>
+            </td>
+            <td width="132">
+            <p>4231</p>
+            </td>
+            <td width="136">
+            <p>4262</p>
+            </td>
+            </tr>
+            <tr>
+            <td width="340">
+            <p>Inclination (degrees)</p>
+            </td>
+            <td width="132">
+            <p>13.5</p>
+            </td>
+            <td width="136">
+            <p>14.7</p>
+            </td>
+            </tr>
+            <tr>
+            <td width="340">
+            <p>Azimuth (degrees)</p>
+            </td>
+            <td width="132">
+            <p>N 10 E</p>
+            </td>
+            <td width="136">
+            <p>N 19 E</p>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <img src="img/ddc/g.png">
+            <p>&nbsp;</p>
+            <p><strong>AVAILABLE WEIGHT ON BIT IN DIRECTIONAL WELLS</strong></p>
+            <p>&nbsp;</p>
+            <p>A directionally drilled well requires that a correction be made in total drill collar weight because only a portion of the total weight will be available to the bit :</p>
+            <p>&nbsp;</p>
+            <p><em>P</em><em> = </em><em>W</em><em> x Cos I<br /> <br /> </em></p>
+            <p>Where, P&nbsp;&nbsp; &nbsp;= partial weight available for bit<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cos &nbsp;= cosine<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I&nbsp;&nbsp;&nbsp; = degrees inclination (angle)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W&nbsp;&nbsp; &nbsp;= total weight of collars</p>
+            <p>Case : W = <input type="text" id="for21" style="width:50px;text-align:right;" value="0"> lb<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               I = <input type="text" id="for22" style="width:50px;text-align:right;" value="0"> degrees</p>
+            <br/>
+            <br/>
+            <button class="btn btn-success" id="hitung2">Calculate</button> 
+            <br/>
+            <p>Thus, the available weight on bit is <span id="hasil2"></span> lb.</p>
+            <p><strong>DETERMINING TRUE VERTICAL DEPTH</strong><strong><br /> <br /> </strong></p>
+            <p>The following is simple method of correcting for the TVD on directional wells. This calculation will give the approximate TVD interval corresponding to the measured interval and is generally accurate enough for any pressure calculations. At the next surey, The TVD should be corrected to corespond to the directional driller&rsquo;s calculated true vertical depth :</p>
+            <p>&nbsp;</p>
+            <p><em>TVD<sub>2</sub> = cos I x CL + TVD<sub>1</sub></em></p>
+            <p>&nbsp;</p>
+            <p>Where, TVD<sub>2</sub>&nbsp;&nbsp; = new true vertical depth (ft)</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cos&nbsp;&nbsp;&nbsp; = cosine</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CL&nbsp;&nbsp;&nbsp;&nbsp; = course length &ndash; number of feet since last survey</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TVD<sub>1</sub>&nbsp;&nbsp; = last true vertical depth (ft)</p>
+            <p>&nbsp;</p>
+            <p>Case : TVD (last survey) = <input type="text" id="for31" style="width:50px;text-align:right;" value="0"> ft<br /><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deviation angle &nbsp;&nbsp;= <input type="text" id="for32" style="width:50px;text-align:right;" value="0"> degrees<br /><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Course length &nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for33" style="width:50px;text-align:right;" value="0"> ft<br /><br/>
+            &nbsp;</p>
+            <button class="btn btn-success" id="hitung3">Calculate</button> 
+            <h4>
+               <div id="hasil3"></div>
+            </h4>
+        </div>
+    </body>
+	
+  <script src="js/jquery.min.js"></script>
+  <script>
+      $("input[type='text']").click(function () {
+          $(this).select();
+      });
+  </script>  
+
+	<script>
+
+  hitung1.onclick = function(){
+    var hasil1 = Math.sin(document.getElementById('for12').value*(Math.PI / 180))*document.getElementById('for13').value;
+    document.getElementById('hasil1').innerHTML = '<b>'+ hasil1.toFixed(0) + '</b> ft';
+  }
+  hitung2.onclick = function(){
+     var hasil2 = document.getElementById('for21').value * Math.cos(document.getElementById('for22').value*(Math.PI / 180))
+     document.getElementById('hasil2').innerHTML = '<b>' + hasil2.toFixed(0) + '</b>';
+  }
+  hitung3.onclick = function(){
+    var hasil3 =  (Math.cos(document.getElementById('for32').value* (Math.PI / 180)) * document.getElementById('for33').value)+parseFloat(document.getElementById('for31').value)
+    document.getElementById('hasil3').innerHTML =  '<b>' + hasil3.toFixed(2) + '</b> ft';
+    
+  }
+	</script>
+	
+	
+</html>

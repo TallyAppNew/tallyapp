@@ -1,0 +1,2067 @@
+[
+  [
+    "Acre",
+    "43,560",
+    "Square Feet"
+  ],
+  [
+    "Acre",
+    "4,047",
+    "Square meters"
+  ],
+  [
+    "Acre",
+    "160",
+    "Square Rod"
+  ],
+  [
+    "Acre",
+    "5,645.4",
+    "Square Varas (Texas)"
+  ],
+  [
+    "Acre",
+    "0.4047",
+    "Hectares"
+  ],
+  [
+    "Acre Foot",
+    "7,758",
+    "Barrels"
+  ],
+  [
+    "Atmospheres",
+    "76",
+    "Cms of Mercury"
+  ],
+  [
+    "Atmospheres",
+    "760",
+    "Millimeters of Mercury"
+  ],
+  [
+    "Atmospheres",
+    "29.92",
+    "Inches of Mercury"
+  ],
+  [
+    "Atmospheres",
+    "33.90",
+    "Feet of Water"
+  ],
+  [
+    "Atmospheres",
+    "1.0333",
+    "Kg.s/Sq. Cm"
+  ],
+  [
+    "Atmospheres",
+    "14.7",
+    "Lbs/Sq. Inch"
+  ],
+  [
+    "Atmospheres",
+    "1.058",
+    "Tons/Sq. Ft"
+  ],
+  [
+    "Barrel",
+    "5.6146",
+    "Cubic Feet"
+  ],
+  [
+    "Barrel",
+    "0.15897",
+    "Cubic Meters"
+  ],
+  [
+    "Barrel-oil",
+    "42",
+    "Gallons-Oil"
+  ],
+  [
+    "Barrel of Water",
+    "0.1588",
+    "Metric Ton"
+  ],
+  [
+    "Barrel (36° A.P.I)",
+    "0.1342",
+    "Metric Ton"
+  ],
+  [
+    "Barrel per Hour",
+    "0.0936",
+    "Cu. Ft. Per Minute"
+  ],
+  [
+    "Barrel per Hour",
+    "0.7",
+    "Gallon per Minute"
+  ],
+  [
+    "Barrel per Hour",
+    "2.695",
+    "Cu. In. Per Second"
+  ],
+  [
+    "Barrel per Day",
+    "0.02917",
+    "Gallon per Minute"
+  ],
+  [
+    "Bars",
+    "0.9869",
+    "Atmospheres"
+  ],
+  [
+    "Bars",
+    "2,089",
+    "Lbs/Sq. Foot"
+  ],
+  [
+    "Bars",
+    "14.5",
+    "Lbs/Sq. Inc"
+  ],
+  [
+    "British Thermal Units",
+    "0.252",
+    "Kilogram-Calories"
+  ],
+  [
+    "British Thermal Units",
+    "0.2928",
+    "Watt Hour"
+  ],
+  [
+    "British Thermal Units",
+    "777.5",
+    "Fot-Lbs"
+  ],
+  [
+    "British Thermal Units",
+    "0.0003927",
+    "Horsepower-hours"
+  ],
+  [
+    "British Thermal Units",
+    "107.5",
+    "Kilogram-meters"
+  ],
+  [
+    "British Thermal Units",
+    "0.0002928",
+    "Kilowatt-hours"
+  ],
+  [
+    "B.T.U/min",
+    "12.96",
+    "Foot-lbs/sec"
+  ],
+  [
+    "B.T.U/min",
+    "0.02356",
+    "Horsepower"
+  ],
+  [
+    "B.T.U/min",
+    "0.01757",
+    "Kilowatts"
+  ],
+  [
+    "B.T.U/min",
+    "0.01757",
+    "Watts"
+  ],
+  [
+    "Cantares (Centaires)",
+    "1",
+    "Square Meters"
+  ],
+  [
+    "Centigrams",
+    "0.01",
+    "Grams"
+  ],
+  [
+    "Centiliters",
+    "0.01",
+    "Liters"
+  ],
+  [
+    "Centimeters",
+    "0.3937",
+    "Inches"
+  ],
+  [
+    "Centimeters",
+    "0.01",
+    "Meters"
+  ],
+  [
+    "Centimeters",
+    "10",
+    "Milimeters"
+  ],
+  [
+    "Centimeters of Mercury",
+    "0.01316",
+    "Atmospheres"
+  ],
+  [
+    "Centimeters of Mercury",
+    "0.4461",
+    "Feet of Water"
+  ],
+  [
+    "Centimeters of Mercury",
+    "136",
+    "Kgs/Sq. Meter"
+  ],
+  [
+    "Centimeters of Mercury",
+    "27.85",
+    "Lbs/Sq. Ft"
+  ],
+  [
+    "Centimeters of Mercury",
+    "0.1934",
+    "Lbs/Sq. Inch"
+  ],
+  [
+    "Centimeters/Second",
+    "1.969",
+    "Feet/Min"
+  ],
+  [
+    "Centimeters/Second",
+    "0.03281",
+    "Feet/Sec"
+  ],
+  [
+    "Centimeters/Second",
+    "0.036",
+    "Kilometers/Hrs"
+  ],
+  [
+    "Centimeters/Second",
+    "0.6",
+    "Meters/Min"
+  ],
+  [
+    "Centimeters/Second",
+    "0.02237",
+    "Miles/Hrs"
+  ],
+  [
+    "Centimeters/Second",
+    "0.0003728",
+    "Miles/Min"
+  ],
+  [
+    "Centimeters/Second/Second",
+    "0.03281",
+    "Feet/Sec/Sec"
+  ],
+  [
+    "Chain",
+    "66",
+    "Feet"
+  ],
+  [
+    "Chain",
+    "4",
+    "Rods"
+  ],
+  [
+    "Cubic Centimeters",
+    "0.00003531",
+    "Cubic Feet"
+  ],
+  [
+    "Cubic Centimeters",
+    "0.06102",
+    "Cubic Inches"
+  ],
+  [
+    "Cubic Centimeters",
+    "0.000001",
+    "Cubic Meters"
+  ],
+  [
+    "Cubic Centimeters",
+    "0.000001308",
+    "Cubic Yards"
+  ],
+  [
+    "Cubic Centimeters",
+    "0.0002624",
+    "Gallons"
+  ],
+  [
+    "Cubic Centimeters",
+    "0.001",
+    "Liters"
+  ],
+  [
+    "Cubic Centimeters",
+    "0.002113",
+    "Pints (Liq.)"
+  ],
+  [
+    "Cubic Centimeters",
+    "0.001057",
+    "Quarts (Liq.)"
+  ],
+  [
+    "Cubic Feet",
+    "0.1781",
+    "Barrels"
+  ],
+  [
+    "Cubic Feet",
+    "28,320",
+    "Cubic Cms"
+  ],
+  [
+    "Cubic Feet",
+    "1,728",
+    "Cubic Inches"
+  ],
+  [
+    "Cubic Feet",
+    "0.02832",
+    "Cubic Meters"
+  ],
+  [
+    "Cubic Feet",
+    "0.03704",
+    "Cubic Yards"
+  ],
+  [
+    "Cubic Feet",
+    "7.48052",
+    "Gallons"
+  ],
+  [
+    "Cubic Feet",
+    "28.32",
+    "Liters"
+  ],
+  [
+    "Cubic Feet",
+    "59.84",
+    "Pints (Liq.)"
+  ],
+  [
+    "Cubic Feet",
+    "29.92",
+    "Quarts (Liq.)"
+  ],
+  [
+    "Cubic Feet/Minute",
+    "472",
+    "Cubic Cm/Sec"
+  ],
+  [
+    "Cubic Feet/Minute",
+    "0.1247",
+    "Gallons/Sec"
+  ],
+  [
+    "Cubic Feet/Minute",
+    "0.472",
+    "Liters/Sec"
+  ],
+  [
+    "Cubic Feet/Minute",
+    "62.43",
+    "Lbs. Of Water/Min"
+  ],
+  [
+    "Cubic Feet/Minute",
+    "10.686",
+    "Barrels per Hour"
+  ],
+  [
+    "Cubic Feet/Minute",
+    "28.8",
+    "Cubic in. Per Sec"
+  ],
+  [
+    "Cubic Feet/Second",
+    "0.646317",
+    "Million Gals/Day"
+  ],
+  [
+    "Cubic Feet/Second",
+    "448.831",
+    "Gallons/Minute"
+  ],
+  [
+    "Cubic Inches",
+    "16.39",
+    "Cubic Centimeters"
+  ],
+  [
+    "Cubic Inches",
+    "0.005787",
+    "Cubic Feet"
+  ],
+  [
+    "Cubic Inches",
+    "0.00001639",
+    "Cubic Meters"
+  ],
+  [
+    "Cubic Inches",
+    "0.00002143",
+    "Cubic Yards"
+  ],
+  [
+    "Cubic Inches",
+    "0.004329",
+    "Gallons"
+  ],
+  [
+    "Cubic Inches",
+    "0.01639",
+    "Liters"
+  ],
+  [
+    "Cubic Inches",
+    "0.03463",
+    "Pints (Liq.)"
+  ],
+  [
+    "Cubic Inches",
+    "0.01732",
+    "Quarts (Liq.)"
+  ],
+  [
+    "Cubic Meters",
+    "6.2905",
+    "Barrels"
+  ],
+  [
+    "Cubic Meters",
+    "1,000,000",
+    "Cubic Centimeters"
+  ],
+  [
+    "Cubic Meters",
+    "35.31",
+    "Cubic Feet"
+  ],
+  [
+    "Cubic Meters",
+    "61,023",
+    "Cubic Inches"
+  ],
+  [
+    "Cubic Meters",
+    "1.308",
+    "Cubic Yards"
+  ],
+  [
+    "Cubic Meters",
+    "264.2",
+    "Gallons"
+  ],
+  [
+    "Cubic Meters",
+    "1,000",
+    "Liters"
+  ],
+  [
+    "Cubic Meters",
+    "2,113",
+    "Pints (Liq.)"
+  ],
+  [
+    "Cubic Meters",
+    "1,057",
+    "Quarts (Liq.)"
+  ],
+  [
+    "Cubic Yards",
+    "4.8089",
+    "Barrels"
+  ],
+  [
+    "Cubic Yards",
+    "764,600",
+    "Cubic Centimeters"
+  ],
+  [
+    "Cubic Yards",
+    "27",
+    "Cubic Feet"
+  ],
+  [
+    "Cubic Yards",
+    "46,656",
+    "Cubic Inches"
+  ],
+  [
+    "Cubic Yards",
+    "0.7646",
+    "Cubic Meters"
+  ],
+  [
+    "Cubic Yards",
+    "202",
+    "Gallons"
+  ],
+  [
+    "Cubic Yards",
+    "764.6",
+    "Liters"
+  ],
+  [
+    "Cubic Yards",
+    "1,616",
+    "Pints (Liq.)"
+  ],
+  [
+    "Cubic Yards",
+    "807.9",
+    "Quarts (Liq.)"
+  ],
+  [
+    "Cubic Yards/Min",
+    "0.45",
+    "Cubic Feet/Sec"
+  ],
+  [
+    "Cubic Yards/Min",
+    "3.367",
+    "Gallons/Sec"
+  ],
+  [
+    "Cubic Yards/Min",
+    "12.74",
+    "Liters/Sec"
+  ],
+  [
+    "Decigrams",
+    "0.1",
+    "Grams"
+  ],
+  [
+    "Deciliters",
+    "0.1",
+    "Liters"
+  ],
+  [
+    "Decimeters",
+    "0.1",
+    "Meters"
+  ],
+  [
+    "Degrees (angle)",
+    "60",
+    "Minutes"
+  ],
+  [
+    "Degrees (angle)",
+    "0.01745",
+    "Radians"
+  ],
+  [
+    "Degrees (angle)",
+    "3,600",
+    "Seconds"
+  ],
+  [
+    "Degrees/Sec",
+    "0.01745",
+    "Radians/Sec"
+  ],
+  [
+    "Degrees/Sec",
+    "0.1667",
+    "Revolutions/Min"
+  ],
+  [
+    "Degrees/Sec",
+    "0.02778",
+    "Revolution/Sec"
+  ],
+  [
+    "Dekagrams",
+    "10",
+    "Gram"
+  ],
+  [
+    "Dekaliters",
+    "10",
+    "Liters"
+  ],
+  [
+    "Dekameters",
+    "10",
+    "Meters"
+  ],
+  [
+    "Drams",
+    "27.34375",
+    "Grains"
+  ],
+  [
+    "Drams",
+    "0.0625",
+    "Dunces"
+  ],
+  [
+    "Drams",
+    "1.771845",
+    "Grams"
+  ],
+  [
+    "Fathoms",
+    "6",
+    "Feet"
+  ],
+  [
+    "Feet",
+    "30.48",
+    "Centimeters"
+  ],
+  [
+    "Feet",
+    "12",
+    "Inches"
+  ],
+  [
+    "Feet",
+    "0.3048",
+    "Meters"
+  ],
+  [
+    "Feet",
+    "0.36",
+    "Varas (Texas)"
+  ],
+  [
+    "Feet",
+    "1/3",
+    "Yards"
+  ],
+  [
+    "Feet of Water",
+    "0.0295",
+    "Atmospheres"
+  ],
+  [
+    "Feet of Water",
+    "0.8826",
+    "Inches of Mercury"
+  ],
+  [
+    "Feet of Water",
+    "0.03048",
+    "Kgs/Sq. Cm"
+  ],
+  [
+    "Feet of Water",
+    "62.43",
+    "Lbs/Sq. Ft"
+  ],
+  [
+    "Feet of Water",
+    "0.4335",
+    "Lbs/Sq. In"
+  ],
+  [
+    "Feet/Min",
+    "0.508",
+    "Centimeters/Sec"
+  ],
+  [
+    "Feet/Min",
+    "0.01667",
+    "Feet/Sec"
+  ],
+  [
+    "Feet/Min",
+    "0.01829",
+    "Kilometers/Hr"
+  ],
+  [
+    "Feet/Min",
+    "0.3048",
+    "Meters/Min"
+  ],
+  [
+    "Feet/Min",
+    "0.01136",
+    "Miles/Hr"
+  ],
+  [
+    "Freet/Sec",
+    "0.68182",
+    "Miles per Hour"
+  ],
+  [
+    "Feet. Sec/Sec",
+    "30.48",
+    "Cms/Sec/Sec"
+  ],
+  [
+    "Feet/Sec/Sec",
+    "0.3048",
+    "Meters/Sec/Sec"
+  ],
+  [
+    "Foot-pounds",
+    "0.001286",
+    "British Thermal Unit"
+  ],
+  [
+    "Foot-pounds",
+    "0.000000505",
+    "Horsepower-hrs"
+  ],
+  [
+    "Foot-pounds",
+    "0.003241",
+    "Kilogram-calories"
+  ],
+  [
+    "Foot-pounds",
+    "0.1383",
+    "Kilogram-meters"
+  ],
+  [
+    "Foot-pounds",
+    "0.0000003766",
+    "Kilowatt-hrs"
+  ],
+  [
+    "Foot-pounds/min",
+    "0.001286",
+    "British Thermal Unit/min"
+  ],
+  [
+    "Foot-pounds/min",
+    "0.01667",
+    "Foot-pounds/sec"
+  ],
+  [
+    "Foot-pounds/min",
+    "0.0000303",
+    "Horsepower"
+  ],
+  [
+    "Foot-pounds/min",
+    "0.0003241",
+    "Kg-calories/min"
+  ],
+  [
+    "Foot-pounds/min",
+    "0.0000226",
+    "Kilowatts"
+  ],
+  [
+    "Foot-pounds/sec",
+    "0.07717",
+    "B.T. Units/min"
+  ],
+  [
+    "Foot-pounds/sec",
+    "0.001818",
+    "Horsepower"
+  ],
+  [
+    "Foot-pounds/sec",
+    "0.01945",
+    "Kg-calories/min"
+  ],
+  [
+    "Foot-pounds/sec",
+    "0.001356",
+    "Kilowatts"
+  ],
+  [
+    "Gallons (U.S.)",
+    "0.02381",
+    "Barrel"
+  ],
+  [
+    "Gallons (U.S.)",
+    "0.83267",
+    "Gallons (Imperial)"
+  ],
+  [
+    "Gallons ",
+    "3,785",
+    "Cubic Centimeters"
+  ],
+  [
+    "Gallons ",
+    "0.1337",
+    "Cubic Feet"
+  ],
+  [
+    "Gallons ",
+    "231",
+    "Cubic Inches"
+  ],
+  [
+    "Gallons ",
+    "0.003785",
+    "Cubic Meters"
+  ],
+  [
+    "Gallons ",
+    "0.00495",
+    "Cubic Yards"
+  ],
+  [
+    "Gallons ",
+    "3.785",
+    "Liters"
+  ],
+  [
+    "Gallons ",
+    "8",
+    "Pints (Liq.)"
+  ],
+  [
+    "Gallons ",
+    "4",
+    "Quarts (Liq.)"
+  ],
+  [
+    "Gallons (Imperial)",
+    "1.20095",
+    "Gallons (U.S.)"
+  ],
+  [
+    "Gallons (Imperial)",
+    "277.419",
+    "Cubic Inches"
+  ],
+  [
+    "Gallons Water",
+    "8.3453",
+    "Pounds of Water"
+  ],
+  [
+    "Gallons/min",
+    "1.429",
+    "Barrels per Hour"
+  ],
+  [
+    "Gallons/min",
+    "0.1337",
+    "Cu. Ft. Per minute"
+  ],
+  [
+    "Gallons/min",
+    "34.286",
+    "Barrels per Day"
+  ],
+  [
+    "Gallons/min",
+    "0.06308",
+    "Liters/Sec"
+  ],
+  [
+    "Gallons/min",
+    "8.0208",
+    "Cu. Ft./Hr"
+  ],
+  [
+    "Gallons/min",
+    "0.002228",
+    "Cu. Ft./Sec"
+  ],
+  [
+    "Gallons of Water/min",
+    "6.0086",
+    "Tons Water/24 hrs"
+  ],
+  [
+    "Grains (Troy)",
+    "1",
+    "Grains (avoir)"
+  ],
+  [
+    "Grains (Troy)",
+    "0.0648",
+    "Grams"
+  ],
+  [
+    "Grains (Troy)",
+    "0.04167",
+    "Pennyweights (Troy)"
+  ],
+  [
+    "Grains (Troy)",
+    "0.0020833",
+    "Ounces (Troy)"
+  ],
+  [
+    "Grains/U.S. Gal",
+    "17.118",
+    "Parts/million"
+  ],
+  [
+    "Grains/U.S. Gal",
+    "142.86",
+    "Lbs/million gal"
+  ],
+  [
+    "Grains/Imperial gal",
+    "14.286",
+    "Parts/million"
+  ],
+  [
+    "Grams",
+    "980.7",
+    "Dynes"
+  ],
+  [
+    "Grams",
+    "15.43",
+    "Grains"
+  ],
+  [
+    "Grams",
+    "0.001",
+    "Kilograms"
+  ],
+  [
+    "Grams",
+    "1,000",
+    "Milligrams"
+  ],
+  [
+    "Grams",
+    "0.03527",
+    "Ounces (avoir)"
+  ],
+  [
+    "Grams",
+    "0.03215",
+    "Ounces (Troy)"
+  ],
+  [
+    "Grams",
+    "0.002205",
+    "Pounds"
+  ],
+  [
+    "Grams/Cm",
+    "0.0056",
+    "Pounds/Inch"
+  ],
+  [
+    "Grams/Cu. Cm",
+    "62.43",
+    "Pounds/Cubic-foot"
+  ],
+  [
+    "Grams/Cu. Cm",
+    "0.03613",
+    "Pounds/Cubic-Inch"
+  ],
+  [
+    "Grams/Liter",
+    "58.417",
+    "Grains/gal"
+  ],
+  [
+    "Grams/Liter",
+    "8.345",
+    "Pounds/1000 gals"
+  ],
+  [
+    "Grams/Liter",
+    "0.062427",
+    "Pounds/Cubic-foot"
+  ],
+  [
+    "Grams/Liter",
+    "1,000",
+    "Parts/million"
+  ],
+  [
+    "Hectare",
+    "2.471",
+    "Acres"
+  ],
+  [
+    "Hectare",
+    "0.01",
+    "Square Kilometer"
+  ],
+  [
+    "Hectograms",
+    "100",
+    "Grams"
+  ],
+  [
+    "Hectoliters",
+    "100",
+    "Liters"
+  ],
+  [
+    "Hectowatts",
+    "100",
+    "Watts"
+  ],
+  [
+    "Horsepower",
+    "42.44",
+    "B.T.U/min"
+  ],
+  [
+    "Horsepower",
+    "33,000",
+    "Foot-lbs/Min"
+  ],
+  [
+    "Horsepower",
+    "550",
+    "Foot-lbs/Sec"
+  ],
+  [
+    "Horsepower",
+    "1.014",
+    "Horsepower (Metric)"
+  ],
+  [
+    "Horsepower",
+    "10.7",
+    "Kg.-calories/Min"
+  ],
+  [
+    "Horsepower",
+    "0.7457",
+    "Kilowatts"
+  ],
+  [
+    "Horsepower",
+    "745.7",
+    "Watts"
+  ],
+  [
+    "Horsepower (boiler)",
+    "33,479",
+    "B.T.U/Hr"
+  ],
+  [
+    "Horsepower (boiler)",
+    "9.803",
+    "Kilowatts"
+  ],
+  [
+    "Horsepower-hours",
+    "2,547",
+    "British Thermal Units"
+  ],
+  [
+    "Horsepower-hours",
+    "1,980,000",
+    "Foot-lbs"
+  ],
+  [
+    "Horsepower-hours",
+    "641.7",
+    "Kilogram-calories"
+  ],
+  [
+    "Horsepower-hours",
+    "272,700",
+    "Kilogram-meters"
+  ],
+  [
+    "Horsepower-hours",
+    "0.7457",
+    "Kilowatts-hours"
+  ],
+  [
+    "Inches",
+    "2.54",
+    "Centimeters"
+  ],
+  [
+    "Inches of Mercury",
+    "0.03342",
+    "Atmospheres"
+  ],
+  [
+    "Inches of Mercury",
+    "1.133",
+    "Feet of Water"
+  ],
+  [
+    "Inches of Mercury",
+    "0.03453",
+    "Kgs/Sq. Cm"
+  ],
+  [
+    "Inches of Mercury",
+    "0.7073",
+    "Lbs/Sq. Ft"
+  ],
+  [
+    "Inches of Mercury",
+    "0.4912",
+    "Lbs/Sq. In"
+  ],
+  [
+    "Inches of Water",
+    "0.0024658",
+    "Atmospheres"
+  ],
+  [
+    "Inches of Water",
+    "0.07355",
+    "Inches of Mercury"
+  ],
+  [
+    "Inches of Water",
+    "0.00254",
+    "Kgs/Sq. Cm"
+  ],
+  [
+    "Inches of Water",
+    "0.5781",
+    "Ounces/Sq. Inch"
+  ],
+  [
+    "Inches of Water",
+    "5.202",
+    "Lbs/Sq. Ft"
+  ],
+  [
+    "Inches of Water",
+    "0.03613",
+    "Lbs/Sq. Inch"
+  ],
+  [
+    "Kilograms",
+    "980,665",
+    "Dynes"
+  ],
+  [
+    "Kilograms",
+    "2.205",
+    "Lbs"
+  ],
+  [
+    "Kilograms",
+    "0.001102",
+    "Tons (Short)"
+  ],
+  [
+    "Kilograms",
+    "1,000",
+    "Grams"
+  ],
+  [
+    "Kilograms-meter",
+    "7.233",
+    "Ft-Lbs"
+  ],
+  [
+    "Kilograms/meter",
+    "0.672",
+    "Lbs/Ft"
+  ],
+  [
+    "Kilograms/Sq. Cm",
+    "0.9678",
+    "Atmospheres"
+  ],
+  [
+    "Kilograms/Sq. Cm",
+    "32.81",
+    "Feet of Water"
+  ],
+  [
+    "Kilograms/Sq. Cm",
+    "28.96",
+    "Inches of Merkury"
+  ],
+  [
+    "Kilograms/Sq. Cm",
+    "2.048",
+    "Lbs/Sq. Foot"
+  ],
+  [
+    "Kilograms/Sq. Cm",
+    "14.22",
+    "Lbs/Sq. Inch"
+  ],
+  [
+    "Kgs/Sq. Milimeter",
+    "1,000,000",
+    "Kgs/Sq. Meter"
+  ],
+  [
+    "Kiloliters",
+    "1,000",
+    "Liters"
+  ],
+  [
+    "Kilometers",
+    "100,000",
+    "Centimeters"
+  ],
+  [
+    "Kilometers",
+    "3,281",
+    "Feet"
+  ],
+  [
+    "Kilometers",
+    "1,000",
+    "Meters"
+  ],
+  [
+    "Kilometers",
+    "0.6214",
+    "Miles"
+  ],
+  [
+    "Kilometers",
+    "0.5396",
+    "Miles (nautical)"
+  ],
+  [
+    "Kilometers",
+    "1,094",
+    "Yards"
+  ],
+  [
+    "Kilometers/hr",
+    "27.78",
+    "Centimeters/sec"
+  ],
+  [
+    "Kilometers/hr",
+    "54.68",
+    "Feet/min"
+  ],
+  [
+    "Kilometers/hr",
+    "0.9113",
+    "Feet/sec"
+  ],
+  [
+    "Kilometers/hr",
+    "0.5396",
+    "Knots"
+  ],
+  [
+    "Kilometers/hr",
+    "16.67",
+    "Meters/min"
+  ],
+  [
+    "Kilometers/hr",
+    "0.6214",
+    "Miles/hr"
+  ],
+  [
+    "Kms/hr/sec",
+    "27.78",
+    "Cms/sec/sec"
+  ],
+  [
+    "Kms/hr/sec",
+    "0.9113",
+    "Ft/sec/sec"
+  ],
+  [
+    "Kms/hr/sec",
+    "0.2778",
+    "Meters/sec/sec"
+  ],
+  [
+    "Kilowatts",
+    "56.92",
+    "British thermal units/min"
+  ],
+  [
+    "Kilowatts",
+    "44,250",
+    "Foot-Lbs/Min"
+  ],
+  [
+    "Kilowatts",
+    "737.6",
+    "Foot-Lbs/Sec"
+  ],
+  [
+    "Kilowatts",
+    "1.341",
+    "Horsepower"
+  ],
+  [
+    "Kilowatts",
+    "14.34",
+    "Kg-calories/min"
+  ],
+  [
+    "Kilowatts",
+    "1,000",
+    "Watts"
+  ],
+  [
+    "Kilowatt-hours",
+    "3,415",
+    "British Thermal Units"
+  ],
+  [
+    "Kilowatt-hours",
+    "2,655,000",
+    "Foot-Lbs"
+  ],
+  [
+    "Kilowatt-hours",
+    "1.341",
+    "Horsepower-hrs"
+  ],
+  [
+    "Kilowatt-hours",
+    "860.5",
+    "Kilogram-calories"
+  ],
+  [
+    "Kilowatt-hours",
+    "367,100",
+    "Kilogram-meters"
+  ],
+  [
+    "Knot",
+    "1",
+    "Nautical Miles per Hour"
+  ],
+  [
+    "Knot",
+    "1.151",
+    "Statute Mile per Hour"
+  ],
+  [
+    "Link (Surveyor's)",
+    "7.92",
+    "Inches"
+  ],
+  [
+    "Liters",
+    "1,000",
+    "Cubic Centimeters"
+  ],
+  [
+    "Liters",
+    "0.03531",
+    "Cubic Feet"
+  ],
+  [
+    "Liters",
+    "61.02",
+    "Cubic Inches"
+  ],
+  [
+    "Liters",
+    "0.001",
+    "Cubic Meters"
+  ],
+  [
+    "Liters",
+    "0.001308",
+    "Cubic Yards"
+  ],
+  [
+    "Liters",
+    "0.2642",
+    "Gallons"
+  ],
+  [
+    "Liters",
+    "2.113",
+    "Pints (Liq.)"
+  ],
+  [
+    "Liters",
+    "1.057",
+    "Quarts (Liq.)"
+  ],
+  [
+    "Liters/min",
+    "0.0005886",
+    "Cubic Ft/Sec"
+  ],
+  [
+    "Liters/min",
+    "0.004403",
+    "Gals/Sec"
+  ],
+  [
+    "Meters",
+    "100",
+    "Centimeters"
+  ],
+  [
+    "Meters",
+    "3.281",
+    "Feet"
+  ],
+  [
+    "Meters",
+    "39.37",
+    "Inches"
+  ],
+  [
+    "Meters",
+    "0.001",
+    "Kilometers"
+  ],
+  [
+    "Meters",
+    "1,000",
+    "Millimeters"
+  ],
+  [
+    "Meters",
+    "1.094",
+    "Yards"
+  ],
+  [
+    "Meters/min",
+    "1.667",
+    "Centimeters/Sec"
+  ],
+  [
+    "Meters/min",
+    "3.281",
+    "Feet/Min"
+  ],
+  [
+    "Meters/min",
+    "0.05468",
+    "Feet/Sec"
+  ],
+  [
+    "Meters/min",
+    "0.06",
+    "Kilmeters/Hr"
+  ],
+  [
+    "Meters/min",
+    "0.03728",
+    "Miles/Hr"
+  ],
+  [
+    "Meters/Sec",
+    "196.8",
+    "Feet/min"
+  ],
+  [
+    "Meters/Sec",
+    "3.281",
+    "Feet/Sec"
+  ],
+  [
+    "Meters/Sec",
+    "3.6",
+    "Kilometers/hr"
+  ],
+  [
+    "Meters/Sec",
+    "0.06",
+    "Kilometers/Min"
+  ],
+  [
+    "Meters/Sec",
+    "2.337",
+    "Miles/hr"
+  ],
+  [
+    "Meters/Sec",
+    "0.03728",
+    "Miles/Min"
+  ],
+  [
+    "Microns",
+    "0.000001",
+    "Meters"
+  ],
+  [
+    "Miles",
+    "160,900",
+    "Centimeters"
+  ],
+  [
+    "Miles",
+    "5,280",
+    "Feet"
+  ],
+  [
+    "Miles",
+    "1.609",
+    "Kilometers"
+  ],
+  [
+    "Miles",
+    "1,760",
+    "Yards"
+  ],
+  [
+    "Miles",
+    "1,900.80",
+    "Varas (Texas)"
+  ],
+  [
+    "Mile (nautical)",
+    "6080.7",
+    "Feet"
+  ],
+  [
+    "Mile (nautical)",
+    "1.15",
+    "Miles (statute)"
+  ],
+  [
+    "Miles/hr",
+    "44.7",
+    "Centimeters/Sec"
+  ],
+  [
+    "Miles/hr",
+    "88",
+    "Feet/Min"
+  ],
+  [
+    "Miles/hr",
+    "1.467",
+    "Feet/Sec"
+  ],
+  [
+    "Miles/hr",
+    "1.609",
+    "Kilometers/Hr"
+  ],
+  [
+    "Miles/hr",
+    "0.8684",
+    "Knots"
+  ],
+  [
+    "Miles/hr",
+    "26.82",
+    "Meters/Min"
+  ],
+  [
+    "Miles/min",
+    "2,682",
+    "Centimeters/Sec"
+  ],
+  [
+    "Miles/min",
+    "88",
+    "Feet/Sec"
+  ],
+  [
+    "Miles/min",
+    "1.609",
+    "Kilometers/Min"
+  ],
+  [
+    "Miles/min",
+    "60",
+    "Miles/Hr"
+  ],
+  [
+    "Milliers",
+    "1,000",
+    "Kilograms"
+  ],
+  [
+    "Milligrams",
+    "0.001",
+    "Grams"
+  ],
+  [
+    "Milliliters",
+    "0.001",
+    "Liters"
+  ],
+  [
+    "Millimeters",
+    "0.1",
+    "Centimeters"
+  ],
+  [
+    "Millimeters",
+    "0.03937",
+    "Inches"
+  ],
+  [
+    "Milligrams/liter",
+    "1",
+    "Parts/Million"
+  ],
+  [
+    "Million gals/day",
+    "1.54723",
+    "Cubic feet/Sec"
+  ],
+  [
+    "Miner's inches",
+    "1.5",
+    "Cubic Ft/min"
+  ],
+  [
+    "Minute (angle)",
+    "0.0002909",
+    "Radians"
+  ],
+  [
+    "Ounces",
+    "16",
+    "Drams"
+  ],
+  [
+    "Ounces",
+    "437.5",
+    "Grains"
+  ],
+  [
+    "Ounces",
+    "0.0625",
+    "Pounds"
+  ],
+  [
+    "Ounces",
+    "28.349527",
+    "Grams"
+  ],
+  [
+    "Ounces",
+    "0.9115",
+    "Ounces (Troy)"
+  ],
+  [
+    "Ounces",
+    "0.0000279",
+    "Tons (Long)"
+  ],
+  [
+    "Ounces",
+    "0.00002835",
+    "Tons (Metric)"
+  ],
+  [
+    "Ounces (Troy)",
+    "480",
+    "Grains"
+  ],
+  [
+    "Ounces (Troy)",
+    "20",
+    "pennyweight (Troy)"
+  ],
+  [
+    "Ounces (Troy)",
+    "0.08333",
+    "Pounds (Troy)"
+  ],
+  [
+    "Ounces (Troy)",
+    "31.103481",
+    "Grams"
+  ],
+  [
+    "Ounces (Troy)",
+    "1.09714",
+    "Ounces (avoir)"
+  ],
+  [
+    "Ounces (fluid)",
+    "1.805",
+    "Cubic Inches"
+  ],
+  [
+    "Ounces (fluid)",
+    "0.02957",
+    "Liters"
+  ],
+  [
+    "Ounces/Sq. Inch",
+    "0.0625",
+    "Lbs/Sq. In"
+  ],
+  [
+    "Parts /Million",
+    "0.0584",
+    "Grains/U.S. Gal"
+  ],
+  [
+    "Parts /Million",
+    "0.070716",
+    "Grains/Imperial Gal"
+  ],
+  [
+    "Parts /Million",
+    "8.345",
+    "Lbs/Milion gal"
+  ],
+  [
+    "Pennyweight (Troy)",
+    "24",
+    "Grains"
+  ],
+  [
+    "Pennyweight (Troy)",
+    "1.55517",
+    "Grams"
+  ],
+  [
+    "Pennyweight (Troy)",
+    "0.05",
+    "Ounces (troy)"
+  ],
+  [
+    "Pennyweight (Troy)",
+    "0.0041667",
+    "Pounds (Troy)"
+  ],
+  [
+    "Pounds",
+    "16",
+    "Ounces"
+  ],
+  [
+    "Pounds",
+    "256",
+    "Drams"
+  ],
+  [
+    "Pounds",
+    "7,000",
+    "Grains"
+  ],
+  [
+    "Pounds",
+    "0.0005",
+    "Tons (Short)"
+  ],
+  [
+    "Pounds",
+    "453.5924",
+    "Grams"
+  ],
+  [
+    "Pounds",
+    "1.21528",
+    "Pounds (Troy)"
+  ],
+  [
+    "Pounds",
+    "14.5833",
+    "Ounces (Troy)"
+  ],
+  [
+    "Pounds (Troy)",
+    "5760",
+    "Grains"
+  ],
+  [
+    "Pounds (Troy)",
+    "240",
+    "Pennyweight (Troy)"
+  ],
+  [
+    "Pounds (Troy)",
+    "12",
+    "Ounces (Troy)"
+  ],
+  [
+    "Pounds (Troy)",
+    "373.24177",
+    "Grams"
+  ],
+  [
+    "Pounds (Troy)",
+    "0.822857",
+    "Pounds (avoir)"
+  ],
+  [
+    "Pounds (Troy)",
+    "13.1657",
+    "Ounces (avoir)"
+  ],
+  [
+    "Pounds (Troy)",
+    "0.00036735",
+    "Tons (Long)"
+  ],
+  [
+    "Pounds (Troy)",
+    "0.00041143",
+    "Tons (Short)"
+  ],
+  [
+    "Pounds (Troy)",
+    "0.00037324",
+    "Tons (Metric)"
+  ],
+  [
+    "Pounds of Water",
+    "0.01602",
+    "Cubic Feet"
+  ],
+  [
+    "Pounds of Water",
+    "27.68",
+    "Cubic Inches"
+  ],
+  [
+    "Pounds of Water",
+    "0.1198",
+    "Gallons"
+  ],
+  [
+    "Pounds/Cubic Foot",
+    "0.01602",
+    "Grams/Cubic Cm"
+  ],
+  [
+    "Pounds/Cubic Foot",
+    "16.02",
+    "Kgs/Cubic meter"
+  ],
+  [
+    "Pounds/Cubic Foot",
+    "0.0005787",
+    "Lbs/Cubic Inch"
+  ],
+  [
+    "Pounds/Cubic Foot",
+    "27.68",
+    "Grams/Cubic Cm"
+  ],
+  [
+    "Pounds/Cubic Foot",
+    "27,680",
+    "Kgs/Cubic meter"
+  ],
+  [
+    "Pounds/Cubic Foot",
+    "1,728",
+    "Lbs/Cubic Foot"
+  ],
+  [
+    "Pounds of Water/min",
+    "0.000267",
+    "Cubic Ft/Sec"
+  ],
+  [
+    "Pounds/Foot",
+    "1.488",
+    "Kgs/Meter"
+  ],
+  [
+    "Pounds/Gallons",
+    "8.337",
+    "Grams/Cubic Cm"
+  ],
+  [
+    "Pounds/Inch",
+    "178.6",
+    "Grams/Cm"
+  ],
+  [
+    "Pounds/Sq. Foot",
+    "0.01602",
+    "Feet of Water"
+  ],
+  [
+    "Pounds/Sq. Foot",
+    "0.0004883",
+    "Kgs/Sq. Cm"
+  ],
+  [
+    "Pounds/Sq. Foot",
+    "0.006945",
+    "Pounds/Sq. Inch"
+  ],
+  [
+    "Pounds/Sq. Inch",
+    "0.06804",
+    "Atmospheres"
+  ],
+  [
+    "Pounds/Sq. Inch",
+    "2.307",
+    "Feet of Water"
+  ],
+  [
+    "Pounds/Sq. Inch",
+    "2.036",
+    "Inches of Merkury"
+  ],
+  [
+    "Pounds/Sq. Inch",
+    "0.07031",
+    "Kgs/Sq. Cm"
+  ],
+  [
+    "Quarts (dry)",
+    "67.2",
+    "Cubic Inches"
+  ],
+  [
+    "Quarts (liquid)",
+    "57.75",
+    "Cubic Inches"
+  ],
+  [
+    "Quarts (liquid)",
+    "0.946",
+    "Liter"
+  ],
+  [
+    "Quintal",
+    "0.50802",
+    "CWT (hundred weight)"
+  ],
+  [
+    "Quintal (Argentina)",
+    "101.28",
+    "Pounds"
+  ],
+  [
+    "Quintal (Brazil)",
+    "129.54",
+    "Pounds"
+  ],
+  [
+    "Quintal (Castile,Peru)",
+    "101.43",
+    "Pounds"
+  ],
+  [
+    "Quintal (Chile)",
+    "101.41",
+    "Pounds"
+  ],
+  [
+    "Quintal (Mexico)",
+    "101.47",
+    "Pounds"
+  ],
+  [
+    "Quintal (Metric)",
+    "220.46",
+    "Pounds"
+  ],
+  [
+    "Rod",
+    "16.5",
+    "Feet"
+  ],
+  [
+    "Rod",
+    "25",
+    "Link"
+  ],
+  [
+    "Square Centimeter",
+    "0.155",
+    "Square Inch"
+  ],
+  [
+    "Square Foot",
+    "0.0929",
+    "Square Meter"
+  ],
+  [
+    "Square Foot",
+    "0.1296",
+    "Square Vara (Texas)"
+  ],
+  [
+    "Square Inch",
+    "6.452",
+    "Square Centimeters"
+  ],
+  [
+    "Square Kilometer",
+    "0.3861",
+    "Square Mile"
+  ],
+  [
+    "Square Meter",
+    "10.76",
+    "Square Feet"
+  ],
+  [
+    "Square Mile",
+    "2.59",
+    "Square Kilometers"
+  ],
+  [
+    "Square Varas (Texas)",
+    "7.716",
+    "Square Feet"
+  ],
+  [
+    "Square Mile",
+    "640",
+    "Acre"
+  ],
+  [
+    "Temp (°C) + 273",
+    "1",
+    "Abs. Temp. (°C)"
+  ],
+  [
+    "Temp (°C) + 17.78",
+    "1.8",
+    "Temp. (°F)"
+  ],
+  [
+    "Temp (°F) + 460",
+    "1",
+    "Abs. Temp. (°F)"
+  ],
+  [
+    "Temp (°F) - 32",
+    "0.555",
+    "Temp. (°C)"
+  ],
+  [
+    "Tons (Long)",
+    "1,016",
+    "Kilograms"
+  ],
+  [
+    "Tons (Long)",
+    "2,240",
+    "Pounds"
+  ],
+  [
+    "Tons (Long)",
+    "1.12",
+    "Tons (Short)"
+  ],
+  [
+    "Tons (Metric)",
+    "1,000",
+    "Kilograms"
+  ],
+  [
+    "Tons (Metric)",
+    "2,205",
+    "Pounds"
+  ]
+]

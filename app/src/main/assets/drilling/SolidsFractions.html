@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Solids Fractions</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+        <p>Maximum recommended solids fractions (SF)<br /> </p>
+        <p>SF = (2.917 x MW) - 14.17<br /> </p>
+        <p>Maximum recommended low gravity solids (LGS)</p>
+
+        <img src="img/sf/for1.png">
+        <p>Where ;</p>
+        <p>SF &nbsp;= maximum recommended solids fractions (% by vol)<br /> MW &nbsp;= mud weight (ppg)<br /> LGS = maximum recommended low gravity solids (% by vol)<br /> </p>
+        <p>Sample Case : Mud weight =  <input type="text" id="for11" style="width:50px;text-align:right;" value="0"> ppg<br /> </p>
+        <p>Determine : Maximum recommended solids (% by volume)<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Low gravity solids fraction (% by volume)<br /> </p>
+        
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung1">Calculate</button> 
+
+        <br/>
+        <p>Maximum recommended solids fractions (SF), % by volume :<br /> </p>
+        <h4>
+          <div id="hasil1"></div>
+        </h4>
+        <br/>
+          Low gravity solids (LGS), % by volume :
+        <br/>
+        <h4>
+          <div id="hasil2"></div>
+        </h4>
+            <br/>
+            </div>
+    </body>
+	
+  <script src="js/jquery.min.js"></script>
+  <script>
+      $("input[type='text']").click(function () {
+          $(this).select();
+      });
+  </script>  
+  
+	<script>
+
+	hitung1.onclick = function(){
+		document.getElementById('hasil1').innerHTML = ((2.917 * document.getElementById('for11').value) - 14.17).toFixed(2) + ' % by volume';
+    var hasil1 = (2.917 * document.getElementById('for11').value) - 14.17;
+    document.getElementById('hasil2').innerHTML =(((hasil1/100)-(0.3125*((document.getElementById('for11').value/8.33)-1)))*200).toFixed(1) + ' % by volume';
+	}
+	</script>
+	
+	
+</html>

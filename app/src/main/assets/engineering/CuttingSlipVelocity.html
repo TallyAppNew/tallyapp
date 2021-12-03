@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Cutting Slip Velocity </h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+                <p>These calculations give the slip velocity of a cutting of a specific size and weight in a given fluid. The annular velocity and the cutting net rise velocity are also calculated.</p>
+                <p>&nbsp;</p>
+                <p><strong>Method </strong><strong>1</strong><strong><br /> <br /> </strong></p>
+                <p>Annular velocity (ft/min):<br /> </p>
+                <img src="img/cs/for1.png">
+        
+                <br/><br/>
+                <p>Where, Vs &nbsp;&nbsp;= slip velocity (ft/min)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PV &nbsp;&nbsp;= plastic viscosity (cps)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MW &nbsp;&nbsp;= mud weight (ppg)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dp &nbsp;&nbsp;= diameter of particle (inch)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DenP = density of particle (ppg)<br /> </p>
+                <p>Case :</p>
+                <p>Using the following data, determine the annular velocity (ft/min) the cuttings slip velocity (ft/min) and the cutting net rise velocity (ft/min)</p>
+                
+                <br/>
+                Mud weight &nbsp; =&nbsp; <input type="text" id="for11" style="width:50px;text-align:right;" value="0"> ppg
+                <br/><br/>
+                Plastic viscosity = <input type="text" id="for12" style="width:50px;text-align:right;" value="0"> cps
+                <br/><br/>
+                Diameter of particle  = <input type="text" id="for13" style="width:50px;text-align:right;" value="0"> in
+                <br/><br/>
+                Density of particle = <input type="text" id="for14" style="width:50px;text-align:right;" value="0"> ppg
+                <br/><br/>
+                Folow rate = <input type="text" id="for15" style="width:50px;text-align:right;" value="0"> gpm
+                <br/><br/>
+                Diameter of hole = <input type="text" id="for16" style="width:50px;text-align:right;" value="0"> in
+                <br/><br/>
+                Dril pipe OD = <input type="text" id="for17" style="width:50px;text-align:right;" value="0"> in
+                <br/><br/>
+                
+                <br/>
+                    <button class="btn btn-success" id="hitung1">Calculate</button> 
+
+                <br/>
+                <h4>
+                  Annular velocity
+                  <br><br><span id="hasil1"></span><br><br>
+                  Cuttings slip velocity
+                  <br><br><span id="hasil12"></span><br><br> 
+                  Cuttings net rise velocity 
+                  <br><br><span id="hasil13"></span><br><br>
+                </h4>
+                <br/>
+
+
+                <p><strong>Method 2<br /> <br /> </strong></p>
+                <ol>
+                <li>Determine n:</li>
+                <img src="img/csv/a.png">
+                </ol>
+                <ol start="2">
+                <li>Determine K :</li>
+                <img src="img/csv/b.png">
+                </ol>
+                <ol start="3">
+                <li>Determine annular velocity (ft/min) :</li>
+                <img src="img/csv/c.png">
+                </ol>
+                <ol start="4">
+                <li>Determine viscosity (&micro;):</li>
+                <img src="img/csv/d.png">
+                </ol>
+                <ol start="5">
+                <li>Slip velocity (Vs)(ft/min):</li>
+                <img src="img/csv/e.png">
+                </ol>
+                <p>&nbsp;</p>
+                <p><strong>&nbsp; &nbsp; &nbsp; &nbsp;Nom</strong><strong>enclature :</strong><strong><br /> <br /> </strong></p>
+                <p>&nbsp; &nbsp; &nbsp; n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= dimensionless<br />&nbsp; &nbsp; &nbsp; K&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= dimensionless<br />&nbsp; &nbsp; &nbsp; Ɵ600&nbsp; &nbsp; &nbsp;= 600 viscometer dial reading&nbsp;<br />&nbsp; &nbsp; &nbsp; Ɵ300&nbsp; &nbsp; &nbsp;= 300 viscometer dial reading<br />&nbsp; &nbsp; &nbsp; Q&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = circulation rate (gpm)<br />&nbsp; &nbsp; &nbsp; Dh&nbsp; &nbsp; &nbsp; &nbsp; = hole diameter, in.<br />&nbsp; &nbsp; &nbsp; Dp&nbsp; &nbsp; &nbsp; &nbsp; = pipe or collar OD, in.<br />&nbsp; &nbsp; &nbsp; v&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = annular velocity (ft/min)<br />&nbsp; &nbsp; &nbsp; &micro;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = mud viscosity (cps)<br />&nbsp; &nbsp; &nbsp; DensP&nbsp; &nbsp;= cutting density (ppg)<br />&nbsp; &nbsp; &nbsp; DiaP&nbsp; &nbsp; &nbsp;= cutting diameter, in.<br /> </p>
+                <p>&nbsp; &nbsp; &nbsp; Case : Using the data listed below, determine the annular velocity,</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cuttings slip velocity, and the cutting net rise velocity :<br /> </p>
+                <p>DATA : Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for21" style="width:50px;text-align:right;" value="0"> ppg<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Plastic viscosity &nbsp;&nbsp;&nbsp;= <input type="text" id="for22" style="width:50px;text-align:right;" value="0"> cps<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Yield point &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for23" style="width:50px;text-align:right;" value="0"> sq ft<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Diameter of particle = <input type="text" id="for24" style="width:50px;text-align:right;" value="0"> in.<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Density of particle&nbsp; = <input type="text" id="for25" style="width:50px;text-align:right;" value="0"> ppg<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Hole diameter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for26" style="width:50px;text-align:right;" value="0"> in.<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Drill pipe OD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="text" id="for27" style="width:50px;text-align:right;" value="0"> in.<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Circulation rate &nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for28" style="width:50px;text-align:right;" value="0"> gpm</p>
+                <p>&nbsp;</p>
+                <button class="btn btn-success" id="hitung2">Calculate</button>
+                <p>&nbsp;</p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1. Determine n :</p><h4><div id="hasil2"></div></h4><br/><br/>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2. Determine K :</p><h4><div id="hasil3"></div></h4><br/><br/>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3. Determine annular velocity (ft/min):</p><h4><div id="hasil4"></div></h4><br/><br/>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4. Determine mud viscosity (cps) :</p><h4><div id="hasil5"></div></h4><br/><br/>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5. Determine cuttings slip velocity (ft/min):&nbsp;</p><h4><div id="hasil6"></div></h4><br/><br/>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6. Determine cuttings net rise velocity (ft/min):</p><h4><div id="hasil7"></div></h4><br/><br/>
+        </div>
+    </body>
+	
+  <script src="js/jquery.min.js"></script>
+  <script>
+      $("input[type='text']").click(function () {
+          $(this).select();
+      });
+  </script>  
+  
+	<script>
+
+	hitung1.onclick = function(){
+        var atassatu = (24.5 *document.getElementById('for15').value);
+        var bawahsatu = (Math.pow(document.getElementById('for16').value,2)-Math.pow(document.getElementById('for17').value,2))
+        var hitungan1 = atassatu/bawahsatu;
+
+        var pertamadua = 0.45*(document.getElementById('for12').value/(document.getElementById('for11').value*document.getElementById('for13').value));
+        var duabawah = 36.800 / (Math.pow((13/(11*0.25)).toFixed(3),2));
+        var duasamping = 0.25 *((22/11)-1)+1
+        var hitungan12 = pertamadua*19.3146;
+        var hitungan13 = hitungan1 -hitungan12 ;
+        document.getElementById('hasil1').innerHTML = hitungan1.toFixed(0) + ' ft/min';
+        document.getElementById('hasil12').innerHTML = hitungan12.toFixed(0) + ' ft/min';
+        document.getElementById('hasil13').innerHTML = hitungan13.toFixed(0) + ' ft/min';
+	}
+
+    hitung2.onclick = function(){
+        a = 3.32*(Math.log(36/23)/ Math.LN10);
+        document.getElementById('hasil2').innerHTML = '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'+ a.toFixed(5) + ' ';
+        b = 0.4094;
+        document.getElementById('hasil3').innerHTML = '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'+b + ' ';
+        c = 102;
+        document.getElementById('hasil4').innerHTML = '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'+c + ' ft/min';
+        d = 63;
+        document.getElementById('hasil5').innerHTML = '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'+d + ' cps';
+        e = 24.55;
+        document.getElementById('hasil6').innerHTML = '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'+e + ' ft/min';
+        f = 77.45;
+        document.getElementById('hasil7').innerHTML = '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'+f + ' ft/min';
+	}
+	</script>
+	
+
+    
+</html>

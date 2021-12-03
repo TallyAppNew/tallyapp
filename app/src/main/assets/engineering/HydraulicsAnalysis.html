@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Hydraulics Analysis </h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+              <p>This sequence of calculation is designed to quickly and accurate analyze various parameters of exixting bit hydraulics. <br /> <br /> 
+               &nbsp;1.&nbsp;&nbsp; Annular velocity (ft/min) (AV)&nbsp;&nbsp;&nbsp;&nbsp; AV =</p>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/ha/a.png">
+              <p>&nbsp;2.&nbsp;&nbsp; Jet nozzle pressure loss (psi)(Pb)</p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/ha/b.png">
+              <p>&nbsp;3.&nbsp;&nbsp; System hydraulic horse power available (Sys HHP)&nbsp;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/ha/c.png"> <br />
+              &nbsp;4.&nbsp;&nbsp; Hydraulic horse power at bit (HHPb)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/ha/d.png">
+              <p>&nbsp;5.&nbsp;&nbsp; Hydraulic horse power er square inch of diameter&nbsp;<br />&nbsp;</p>
+              &nbsp;&nbsp;&nbsp;&nbsp;<img src="img/ha/e.png">
+              <p>&nbsp;6.&nbsp; Percent pressure loss at bit (% Psib)<br /> &nbsp;</p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/ha/f.png">
+              <p>&nbsp;7.&nbsp; Jet velocity (ft/sec)(Vn)<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/ha/g.png"> <br />&nbsp;
+                8. Impact force, lb at bit (IF)&nbsp;</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/ha/h.png">
+              <p>&nbsp;9.&nbsp; Impact force per sequence of bit (IF/sq in.)&nbsp;&nbsp;</p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/ha/i.png">
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p><strong>Nomen</strong><strong>cl</strong><strong>a</strong><strong>t</strong><strong>ure<br /> <br /> </strong></p>
+              <p>AV&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= annular velocity (ft/min)</p>
+              <p>Q&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= circulate rate (gpm)</p>
+              <p>Dh&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= hole diameter (inch)</p>
+              <p>Dp&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= pipe or collar OD (inch)</p>
+              <p>MW&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = mud weight (ppg)</p>
+              <p>N<sub>1</sub> ; N<sub>2</sub> ; N<sub>3</sub>&nbsp;= jet nozzle size (32nd in.)</p>
+              <p>Pb&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= bit nozzle pressure loss (psi)</p>
+              <p>HHP&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= hydraulic horse power at bit</p>
+              <p>Vn&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= jet velocity (ft/sec)</p>
+              <p>IF&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = impact force (lb)</p>
+              <p>IF/sq in.&nbsp; &nbsp; &nbsp; &nbsp;= impact force lb/sq in. of bit diameter</p>
+              <p>&nbsp;</p>
+              <p>&nbsp; &nbsp; Case : Mud weight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="text" id="for11" style="width:50px;text-align:right;" value="0"> ppg</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Circulate rate&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= <input type="text" id="for12" style="width:50px;text-align:right;" value="0"> gpm</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nozzle size 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = <input type="text" id="for13" style="width:50px;text-align:right;" value="0"> nd/in</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nozzle size 2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = <input type="text" id="for14" style="width:50px;text-align:right;" value="0"> nd/in</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nozzle size 3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = <input type="text" id="for15" style="width:50px;text-align:right;" value="0"> nd/in</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hole size&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = <input type="text" id="for16" style="width:50px;text-align:right;" value="0"> in.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Drill pipe OD&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= <input type="text" id="for17" style="width:50px;text-align:right;" value="0"> in.</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Surface pressure&nbsp; &nbsp; &nbsp;= <input type="text" id="for18" style="width:50px;text-align:right;" value="0"> psi</p>
+              <p>&nbsp;</p>
+              <button class="btn btn-success" id="hitung1">Calculate</button>
+              <p>&nbsp;</p>
+              
+                1. Annular velocity (ft/min):<h4><div id="hasil1"></div></h4>
+                2. Jet nozzle pressure loss :<h4><div id="hasil2"></div></h4>
+                3. System hydraulic horsepower available :<h4><div id="hasil3"></div></h4>
+                4. Hydraulic horse power at bit :<h4><div id="hasil4"></div></h4>
+                5. Hydraulic horse power per square inch of bit area : <h4><div id="hasil5"></div></h4>
+                6. Percent pressure loss at bit :<h4><div id="hasil6"></div></h4>
+                7. Jet velocity (ft/sec) :<h4><div id="hasil7"></div></h4>
+                8. Impact force (lb) :<h4><div id="hasil8"></div></h4>
+                9. Impact force per square inch of bit area :<h4><div id="hasil9"></div></h4>
+        </div>
+    </body>
+	
+  <script src="js/jquery.min.js"></script>
+  <script>
+      $("input[type='text']").click(function () {
+          $(this).select();
+      });
+  </script>  
+
+	<script>
+    hitung1.onclick = function(){
+        var hitungan1 = (24.5*document.getElementById('for12').value)/((document.getElementById('for13').value*document.getElementById('for13').value)-(document.getElementById('for17').value*document.getElementById('for17').value));
+        document.getElementById('hasil1').innerHTML =  '&nbsp;&nbsp;&nbsp;&nbsp;'+ hitungan1 + ' ft/min';
+        
+        var rumus1 = (156.5*(document.getElementById('for12').value*document.getElementById('for12').value)*document.getElementById('for11').value);
+        var pangkatsatu = parseFloat(Math.pow(document.getElementById('for13').value,2))
+        var pangkatdua = parseFloat(Math.pow(document.getElementById('for14').value,2))
+        var pangkattiga = parseFloat(Math.pow(document.getElementById('for15').value,2))
+        var rumus2 = pangkatsatu+pangkatdua+pangkattiga;
+        var hitungan2 = rumus1/Math.pow(rumus2,2);
+        document.getElementById('hasil2').innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;'+ hitungan2.toFixed(0) + ' psi';
+
+        var rumusx = (document.getElementById('for18').value*document.getElementById('for12').value)/1714;
+        document.getElementById('hasil3').innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;'+rumusx ;
+
+        var d = (2721*document.getElementById('for12').value)/1714;
+        document.getElementById('hasil4').innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;'+d ;
+
+        var e = (d*1.27)/(document.getElementById('for13').value*document.getElementById('for13').value);
+        document.getElementById('hasil5').innerHTML ='&nbsp;&nbsp;&nbsp;&nbsp;'+ e ;
+
+        var f = (2721/document.getElementById('for18').value)*100;
+        document.getElementById('hasil6').innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;'+f +' %';
+
+
+        var pangkatsatug = parseFloat(Math.pow(document.getElementById('for13').value,2))
+        var pangkatduag = parseFloat(Math.pow(document.getElementById('for14').value,2))
+        var pangkattigag = parseFloat(Math.pow(document.getElementById('for15').value,2))
+        var g = 417.2*document.getElementById('for12').value/(pangkatsatug+pangkatduag+pangkattigag);
+        document.getElementById('hasil7').innerHTML ='&nbsp;&nbsp;&nbsp;&nbsp;'+ g.toFixed(0) +' ft/sec';
+
+        var h = (document.getElementById('for11').value*g.toFixed(0)*document.getElementById('for12').value)/1930;
+        document.getElementById('hasil8').innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;'+ h.toFixed(0) + ' lb';
+
+        var i = (h.toFixed(0)*1.27)/Math.pow(document.getElementById('for16').value,2);
+        document.getElementById('hasil9').innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;'+ i.toFixed(1) ;
+
+    }
+	</script>
+	
+	
+</html>

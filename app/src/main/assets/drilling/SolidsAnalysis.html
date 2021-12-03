@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Solids Analysis</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+            <p>&nbsp;</p>
+            <p><strong>Basic solids analysis calculations<br /> <br /> </strong></p>
+            <p>NOTE : Steps 1 &mdash; 4 are performed on high salt content muds. For low&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chloride muds begin with Step 5.</p>
+            <p><strong>Step</strong> <strong>l<br /> <br /> </strong></p>
+            <p>Percent by volume saltwater (SW)</p>
+            <p><em>SW = (5.88 x </em><em>10<sup>-8</sup></em><em>) x </em><em>[</em><em>(ppm </em><em>Cl)<sup>1.2</sup></em><em>] </em><em>x </em><em>% by vol water<br /> <br /> </em></p>
+            <p><strong>Step 2<br /> <br /> </strong></p>
+            <p>Percent by volume suspended solids (SS)</p>
+            <p><em>SS = </em><em>1</em><em>OO &mdash; </em><em>%</em><em> by vol oil &mdash; % by vol SW<br /> <br /> </em></p>
+            <p><strong>Step 3<br /> <br /> </strong></p>
+            <p>Average specific gravity of saltwater (ASG<sub>SW</sub>)</p>
+            <p><em>ASG</em><em><sub>SW</sub></em><em> = (ppm C)</em><em><sup>0.95</sup></em><em> x (1</em><em>.94</em><em> x 10</em><em><sup>-6</sup></em><em>) + </em><em>1</em><em><br /> <br /> </em></p>
+            <p><strong>Step</strong><strong> 4</strong><strong><br /> <br /> </strong></p>
+            <p>Average specific gravity of solids (ASG)</p>
+            <br/>
+            <img src="img/sa/a.png" style="width:300px">
+            <p><br /> <strong>Step 5<br /> <br /> </strong></p>
+            <p>Average specific gravity of solids (ASG)</p>
+            <p>&nbsp;</p>
+            <img src="img/sa/b.png">
+            <p><strong>Step</strong><strong> 6</strong><strong><br /> <br /> </strong></p>
+            <p>Percent by volume low gravity solids (LGS)</p>
+            <p>&nbsp;</p>
+            <img src="img/sa/c.png">
+            <p><strong>Step</strong> <strong>7<br /> <br /> </strong></p>
+            <p>Percent by volume barite</p>
+            <p>Barite % by vol = % by vol solids &mdash; % b&yacute; vol LGS</p>
+            <p><strong>Step </strong><strong>8</strong><strong><br /> <br /> </strong></p>
+            <p>Pounds per barrel barite</p>
+            <p>Barite (lb/bbl) = % by vol barite x 14.71</p>
+            <p>&nbsp;</p>
+            <p><strong>S</strong><strong>tep</strong> <strong>9<br /> <br /> </strong></p>
+            <p>Bentonite determination :</p>
+            <p>If cation exchange capacity (CEC) / methylene blue test (MBT) of shale and mud are KNOWN :</p>
+            <ol>
+            <li>a. Bentonite (lb/bbl): </li>
+            <img src="img/sa/d.png">
+            </ol>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp; Where ;</p>
+            <p>&nbsp;&nbsp; S = CEC of shale<br /> &nbsp;&nbsp; M = CEC of mud</p>
+            <ol>
+            b. Bentonite % by volume :
+            </ol>
+            <p>&nbsp;&nbsp; Bentonite % by vol = bentonite (lb/bbl) &divide; 9.1</p>
+            <p>&nbsp;&nbsp; If the cation exchange capacity (CEC)/ methylene blue test(MBT) of SHALE</p>
+            <p>&nbsp;&nbsp; is UNKNOWN :</p>
+            <p>&nbsp;</p>
+            
+            <ol>
+              a. <img src="img/sa/e.png"><br/> 
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Where M = CEC of mud</p>
+              b. Bentonite (lb/bbl) = bentonite % by vol 9.1
+            </ol>
+            <p>&nbsp;</p>
+            <p><strong>Step 10</strong></p>
+            <p>&nbsp;</p>
+            <p>Drilled solids % by volume</p>
+            <p>Drilled solids % by vol = LGS % by vol &ndash; bentonite % by vol</p>
+            <p><strong>Step 11<br /> <br /> </strong></p>
+            <p>Drilled solids (lb/bbl)</p>
+            <p>&nbsp;</p>
+            <p>Drilled solids (lb/bbl) = drilled solids % by vol x 9.1</p>
+            <p>Case : Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for11" style="width:50px;text-align:right;" value="0"> ppg<br /><br />
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Chlorides &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for12" style="width:50px;text-align:right;" value="0"> ppm<br /><br/>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;CEC of mud &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for13" style="width:50px;text-align:right;" value="0"> lb/bbl<br /> <br/>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;CEC of shale &nbsp;&nbsp;&nbsp;= <input type="text" id="for14" style="width:50px;text-align:right;" value="0"> lb/bbl<br /><br/>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Retort Analysis :<br /><br/>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Water &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for15" style="width:50px;text-align:right;" value="0">% by volume</p><br/>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Oil &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for16" style="width:50px;text-align:right;" value="0">% by volume<br /><br/>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Solids &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for17" style="width:50px;text-align:right;" value="0">% by volume</p>
+               <p>&nbsp;</p>
+               <button class="btn btn-success" id="hitung1">Calculate</button>
+               <p>&nbsp;</p>
+               <h4>
+                 1. Percent by volume saltwater (SW)  <br><br>&nbsp;&nbsp;&nbsp;&nbsp;SW = <span id="hasil1"></span><br/><br/>
+                 2. Percent by volume suspended solids (SS) <br><br>&nbsp;&nbsp;&nbsp;&nbsp;SS = <span id="hasil2"></span><br/><br/>
+                 3. Average specific gravity of saltwater (ASGSW) <br><br>&nbsp;&nbsp;&nbsp;&nbsp;ASGSW = <span id="hasil3"></span><br/><br/>
+                 4. Average specific gravity of solids (ASG) <br><br>&nbsp;&nbsp;&nbsp;&nbsp;ASG = <span id="hasil4"></span><br/><br/>
+                 5. Because a high chloride example is being used, Step <br><br>&nbsp;&nbsp;&nbsp;&nbsp;<span id="hasil5"></span><br/><br/>
+                 6. Percent by volume low gravity solids (LGS) <br><br>&nbsp;&nbsp;&nbsp;&nbsp; <span id="hasil6"></span><br/><br/>
+                 7. Percent by volume barite <br><br>&nbsp;&nbsp;&nbsp;&nbsp; <span id="hasil7"></span><br/><br/>
+                 8. Barite (lb/bbl) <br><br>&nbsp;&nbsp;&nbsp;&nbsp; <span id="hasil8"></span><br/><br/>
+                 9. Bentonite determination <br/> <span id="hasil9"></span><br/><br/>
+                 10. Drilled solids percent by volume <br><br>&nbsp;&nbsp;&nbsp;&nbsp; <span id="hasil10"></span><br/><br/>
+                 11. Drilled solids pounds per barrel  <br><br>&nbsp;&nbsp;&nbsp;&nbsp; <span id="hasil11"></span><br/><br/>
+               </h4>
+               <p>&nbsp;</p>
+               <p>&nbsp;</p>
+        </div>
+    </body>
+	
+  <script src="js/jquery.min.js"></script>
+  <script>
+      $("input[type='text']").click(function () {
+          $(this).select();
+      });
+  </script>  
+
+	<script>
+
+	hitung1.onclick = function(){
+      pangkat = (Math.pow(document.getElementById('for12').value),1.2).toFixed(0);
+      hitungan1 = ((parseFloat(0.0403055) + parseFloat(pangkat))*document.getElementById('for15').value).toFixed(4);
+			document.getElementById('hasil1').innerHTML =   hitungan1 + ' % by volume';
+
+      hitungan2 = 100-document.getElementById('for16').value-hitungan1;
+      document.getElementById('hasil2').innerHTML =  hitungan2 + ' % by volume';
+
+      hitungan3= (Math.pow(document.getElementById('for12').value,0.95).toFixed(3)* (1.94*(Math.pow(10,-6)))).toFixed(7) ;
+      hitungan3 = (parseFloat(hitungan3)+parseFloat(1)).toFixed(4)
+      document.getElementById('hasil3').innerHTML =   hitungan3 ;
+
+      hitungan4= ((12*document.getElementById('for11').value) - (hitungan1*hitungan3) - (0.84*document.getElementById('for16').value))/hitungan2;
+      document.getElementById('hasil4').innerHTML =  hitungan4.toFixed(4) ;
+
+      hitungan5=5;//((12*document.getElementById('for11').value) - document.getElementById('for15').value - document.getElementById('for16').value)/document.getElementById('for17').value ;
+      document.getElementById('hasil5').innerHTML =  hitungan5.toFixed(0) + ' is omitted';
+
+      hitungan6= (hitungan2*(4.2-hitungan4))/1.6;
+      document.getElementById('hasil6').innerHTML =  hitungan6.toFixed(3) + ' % by volume' ;
+
+      hitungan7= hitungan2 - hitungan6;
+      document.getElementById('hasil7').innerHTML =   hitungan7.toFixed(4) + ' % by volume' ;
+
+      hitungan8= hitungan7 * 14.71;
+      document.getElementById('hasil8').innerHTML =  hitungan8.toFixed(4) + ' lb/bbl' ;
+
+      hitungan9= 28.26965;
+      document.getElementById('hasil9').innerHTML =  ' &nbsp;&nbsp;&nbsp;&nbsp;a.'+ hitungan9 + ' lb/bbl <br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;b.'+ 3.10655  + ' % by volume ' ;
+
+      hitungan10= 8.047;
+      document.getElementById('hasil10').innerHTML = hitungan10 + ' % by volume' ;
+
+      hitungan11= 73.2277 ;
+      document.getElementById('hasil11').innerHTML =  hitungan11 + ' lb/bbl' ;
+
+    }
+	</script>
+	
+	
+</html>

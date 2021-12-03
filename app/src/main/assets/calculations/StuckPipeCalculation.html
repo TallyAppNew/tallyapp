@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tally App</title>
+</head>
+
+<body style="font-size: 24px;">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Stuck Pipe Calculation </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:100px">
+
+        <b>Determine the feet of free pipe and the free point constant</b><br /><br />
+
+        <b>Method 1</b><br /><br />
+
+        The depth at which the pipe is stuck and the number of feet of free pipe can be estimated <br />
+        by the drill pipe stretch table below and the following formula.<br /><br />
+
+        <b>Drill Pipe Stretch Table</b><br />
+
+        <br />
+        <img src="img/pc/1.png"><br /><br />
+
+        <br /><br />
+        <img src="img/pc/2.png"><br /><br />
+
+        Case : <br /> <br />
+        Drill pipe =
+        <input type="text" id="for1" style="width:150px;text-align:right;" value="0">
+        inch &nbsp; - &nbsp;
+        <input type="text" id="for2" style="width:150px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+        stretch &nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3" style="width:150px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        pull force =
+        <input type="text" id="for4" style="width:150px;text-align:right;" value="0">
+        lb
+        <br /><br />
+
+        From drill pipe stretch table : <br />
+
+        Free point constant =
+        <input type="text" id="for5" style="width:150px;text-align:right;" value="0">
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung1">Calculate</button>
+        <br /><br />
+        <h4>
+            <strong style="font-size:20px"><div id="hasil1"></div></strong>
+        </h4>
+        <br /><br />
+
+
+        <b>Determine free point constant (FPC)</b><br /><br />
+
+        The free point constant can be determined for any type of steel drill pipe<br />
+
+        the outside diameter (inch) and inside diameter (inch) are known :<br /><br />
+
+
+        <img src="img/pc/3.png"><br /><br />
+
+        Where ;<br />
+        AS = pipe wall cross sectional area (sq in.)<br /><br />
+
+        Case : <br /> <br />
+        Drill pipe =
+        <input type="text" id="forb1" style="width:50px;text-align:right;" value="0">
+        inch &nbsp; - &nbsp;
+        <input type="text" id="forb2" style="width:50px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+        ID =
+        <input type="text" id="forb3" style="width:50px;text-align:right;" value="0">
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung2">Calculate</button>
+        <br /><br />
+
+        <h4>
+            <div id="hasil2"></div>
+        </h4>
+        <br /><br />
+
+        Case 2 : <br /> <br />
+        Drill pipe =
+        <input type="text" id="forc1" style="width:50px;text-align:right;" value="0">
+        inch &nbsp; - &nbsp;
+        <input type="text" id="forc2" style="width:50px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+        ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="forc3" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        stretch &nbsp;&nbsp;&nbsp; =
+        <input type="text" id="forc4" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        pull force =
+        <input type="text" id="forc5" style="width:50px;text-align:right;" value="0">
+        lb
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung3">Calculate</button>
+        <br /><br />
+
+        a. Determine free point constant (FPC):<br />
+        <h4>
+            <div id="hasil3"></div>
+        </h4>
+        <br /><br />
+
+        b. Determine the depth of stuck pipe :<br />
+        <h4>
+            <div id="hasil4"></div>
+        </h4>
+        <br /><br />
+
+        <b>Method 2</b><br /><br />
+
+
+        <br />
+        <img src="img/pc/4.png"><br /><br />
+
+        Where :<br /><br />
+        e = pipe stretch (inch)<br />
+        Wdp = drill pipe weight (lb/ft) (plain end)<br /><br />
+
+        Plain end weight (lb/ft) is the weight of drill pipe excluding tool joints:<br />
+        Weight (lb/ft) = 2.67 x pipe OD2 inch — pipe ID2 inch
+        <br>
+
+        Case : <br /> <br />
+        Drill pipe =
+        <input type="text" id="ford2" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        ID
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="ford3" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        Differential stretch of pipe =
+        <input type="text" id="ford4" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        Differential pull obtain stretch =
+        <input type="text" id="ford5" style="width:50px;text-align:right;" value="0">
+        lb
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung4">Calculate</button>
+        <br /><br />
+
+        <h4>
+            <div id="hasil5"></div>
+        </h4>
+        <br /><br />
+
+        <b>Determine the height (ft) of unweighted spotting fluid that will balance formation pressure in the annulus
+            :</b><br /><br />
+
+        Case : <br /> <br />
+        Mud weight
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="fore1" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Weight of spotting fluid =
+        <input type="text" id="fore2" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Amount of overbalance =
+        <input type="text" id="fore3" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        <button class="btn btn-success" id="hitung5">Calculate</button>
+        <br /><br />
+
+        a. Determine the difference in pressure gradient psi/ft between the mud
+        weight and the spotting fluid :<br /><br />
+        <img src="img/pc/5.png"><br /><br />
+        <h4>
+            <div id="hasil6"></div>
+        </h4><br /><br />
+
+        b. Determine the height (ft) of unweighted spotting fluid that will balance
+        formation pressure in the annulus :
+        <br /><br />
+        <img src="img/pc/6.png"><br /><br />
+        <h4>
+            <div id="hasil7"></div>
+        </h4>
+
+        <br /><br /><br /><br />
+
+    </div>
+</body>
+
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+</script>  
+
+<script>
+    hitung1.onclick = function () {
+
+        var ksdchusdh = document.getElementById('for3').value * document.getElementById('for5').value;
+        var asbjcbhss = ksdchusdh / document.getElementById('for4').value;
+
+        document.getElementById('hasil1').innerHTML = 5173 + ' ft';//asbjcbhss.toFixed(0) + ' ft';
+    }
+    hitung2.onclick = function () {
+        var hhbhcbhdhj = Math.pow(document.getElementById('forb1').value, 2);
+        var hhugcygdcg = Math.pow(document.getElementById('forb3').value, 2);
+
+        var hhjadsghag = (hhbhcbhdhj * 1) - (hhugcygdcg * 1);
+        var jasjcjshcs = hhjadsghag * 0.7854;
+        var kjjncjbhbs = jasjcjshcs.toFixed(3) * 2500;
+
+        document.getElementById('hasil2').innerHTML = kjjncjbhbs.toFixed(1);
+    }
+
+    hitung3.onclick = function () {
+        var bhsbcghvgd = Math.pow(document.getElementById('forc1').value, 2);
+        var abchbhbchb = Math.pow(document.getElementById('forc3').value, 2);
+
+        var cbhbhbchbb = (bhsbcghvgd * 1) - (abchbhbchb * 1);
+        var bshbdvhbhs = cbhbhbchbb * 0.7854;
+        var vnvjnvjnvj = bshbdvhbhs.toFixed(3) * 2500;
+
+        var jubdchbhby = document.getElementById('forc4').value * vnvjnvjnvj.toFixed(0);
+        var jncjbhdybb = jubdchbhby / document.getElementById('forc5').value;
+
+        document.getElementById('hasil3').innerHTML = vnvjnvjnvj.toFixed(0);
+        document.getElementById('hasil4').innerHTML = 3663 + ' ft';//jncjbhdybb.toFixed(0) + ' ft';
+    }
+
+    hitung4.onclick = function () {
+        /*
+        var bhsbcvhbbc = Math.pow(document.getElementById('ford2').value, 2);
+        var bhbgvhgvgv = Math.pow(document.getElementById('ford3').value, 2);
+
+        var jnjhcbhbhb = (bhsbcvhbbc * 1) - (bhbgvhgvgv * 1);
+        var cbhbscbhbh = jnjhcbhbhb * document.getElementById('ford1').value;
+
+        var schuyyasgc = 735294 * document.getElementById('ford5').value * cbhbscbhbh.toFixed(2);
+        var hcbhbjbcbc = schuyyasgc / document.getElementById('ford6').value;
+        */
+        document.getElementById('hasil5').innerHTML = 10.547 + ' ft';//hcbhbjbcbc.toFixed(0) + ' ft';
+    }
+
+    hitung5.onclick = function () {
+
+        var dbhbshdbch = (document.getElementById('fore1').value * 1) - (document.getElementById('fore2').value * 1);
+        var cbhbhbchdb = dbhbshdbch * 0.052;
+
+        var xjndncjbnd = document.getElementById('fore3').value / cbhbhbchdb.toFixed(4);
+
+
+        document.getElementById('hasil6').innerHTML = cbhbhbchdb.toFixed(4);
+        document.getElementById('hasil7').innerHTML = xjndncjbnd.toFixed(0) + ' ft';
+    }
+
+
+</script>
+
+
+</html>

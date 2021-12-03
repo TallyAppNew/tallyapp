@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tally App</title>
+</head>
+
+<body style="font-size: 20px;">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Volumes & Strokes </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:100px">
+
+        Case : <br /> <br />
+        Drill pipe &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for1" style="width:50px;text-align:right;" value="0">
+        inch &nbsp; - &nbsp;
+        <input type="text" id="for2" style="width:50px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+        Inside diameter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        Length
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for4" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Drill collars — OD &nbsp;&nbsp; =
+        <input type="text" id="for5" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        Inside diameter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for6" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        Length
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for7" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Casing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for8" style="width:50px;text-align:right;" value="0">
+        inch &nbsp; - &nbsp;
+        <input type="text" id="for9" style="width:50px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+        Inside diameter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for10" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        Length
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for11" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Pump data &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for12" style="width:50px;text-align:right;" value="0">
+        inch &nbsp; by &nbsp;
+        <input type="text" id="for13" style="width:50px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+        Efficiency &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for14" style="width:50px;text-align:right;" value="0">
+        %
+        <br /><br />
+        Pump output &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for15" style="width:50px;text-align:right;" value="0">
+
+        <br /><br />
+        Hole size &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for16" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung1">Calculate</button>
+        <br /><br />
+
+        <b>Drill string volume</b><br /><br />
+        <img src="img/vs/1.png" style="width:80%;height:100px"><br /><br />
+
+        a. Drill pipe volume (bbl) :<br /><br />
+        <h4>
+            <div id="hasil1"></div>
+        </h4>
+        <br /><br />
+
+        b. Drill collar volume (bbl) :<br /><br />
+        <h4>
+            <div id="hasil2"></div>
+        </h4>
+        <br /><br />
+
+        c. Total drill string volume :<br /><br />
+        <h4>
+            <div id="hasil3"></div>
+        </h4>
+        <br /><br />
+
+        <b>Annular volume</b><br /><br />
+        <img src="img/vs/2.png" style="width:80%;height:100px"><br /><br />
+
+        a. Drill collar / open hole :<br /><br />
+        <h4>
+            <div id="hasil4"></div>
+        </h4>
+        <br /><br />
+
+        b. Drill pipe / open hole :<br /><br />
+        <h4>
+            <div id="hasil5"></div>
+        </h4>
+        <br /><br />
+
+        c. Drill pipe / cased hole :<br /><br />
+        <h4>
+            <div id="hasil6"></div>
+        </h4>
+        <br /><br />
+
+        d. Total annular volume :<br /><br />
+        <h4>
+            <div id="hasil7"></div>
+        </h4>
+        <br /><br />
+
+        <b>Strokes</b><br /><br />
+        <img src="img/vs/3.png" ><br /><br />
+
+        a. Surface to bit strokes :<br /><br />
+        <h4>
+            <div id="hasil8"></div>
+        </h4>
+        <br /><br />
+
+        b. Bit to surface (or bottoms-up strokes):<br /><br />
+        <h4>
+            <div id="hasil9"></div>
+        </h4>
+        <br /><br />
+
+        c. Total strokes required to pump from the kelly to the shale shaker :<br /><br />
+        <h4>
+            <div id="hasil10"></div>
+        </h4>
+        <br /><br />
+
+
+
+
+        <br /><br /><br /><br />
+
+    </div>
+</body>
+
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+</script>  
+
+<script>
+    hitung1.onclick = function () {
+
+        var ascxascbh = Math.pow(document.getElementById('for3').value, 2);
+        var jascdhasv = ascxascbh / 1029.4;
+        var ascijasus = jascdhasv.toFixed(5) * document.getElementById('for4').value;
+
+        var ashascsvc = Math.pow(document.getElementById('for6').value, 2);
+        var zcvgycgsy = ashascsvc / 1029.4;
+        var sahbhcsbc = zcvgycgsy * document.getElementById('for7').value;
+
+        var asdascbdd = (ascijasus.toFixed(2) * 1) + (sahbhcsbc.toFixed(2) * 1);
+
+        var sacbhschc = Math.pow(document.getElementById('for16').value, 2);
+        var dcnsdchdc = Math.pow(document.getElementById('for5').value, 2);
+        var kasxjsnxx = (sacbhschc * 1) - (dcnsdchdc * 1);
+        var shasbcshs = kasxjsnxx / 1029.4;
+        var aschuishc = shasbcshs.toFixed(4) * document.getElementById('for7').value;
+
+        var asxbhsbxh = Math.pow(document.getElementById('for16').value, 2);
+        var asxvgscbe = Math.pow(document.getElementById('for1').value, 2);
+        var asdbascbh = (asxbhsbxh * 1) - (asxvgscbe * 1);
+        var scajsccbd = asdbascbh / 1029.4;
+        var sagbhbbxv = scajsccbd.toFixed(5) * 4900;
+
+        var sxojcnjnc = Math.pow(document.getElementById('for10').value, 2);
+        var pcjnbdhcc = Math.pow(document.getElementById('for1').value, 2);
+        var ascbhcbch = (sxojcnjnc * 1) - (pcjnbdhcc * 1);
+        var sdasdaede = ascbhcbch / 1029.4;
+        var bhbgcgdhc = sdasdaede.toFixed(6) * document.getElementById('for11').value;
+
+        var ascnnjhnb = (aschuishc.toFixed(2) * 1) + (sagbhbbxv.toFixed(1) * 1);
+        var jascknjnc = (ascnnjhnb * 1) + (bhbgcgdhc.toFixed(2) * 1);
+
+        var psdkjisnx = asdascbdd.toFixed(2) / document.getElementById('for15').value;
+
+        var ysbhjabsc = jascknjnc.toFixed(2) / document.getElementById('for15').value;
+
+        var osdjbshdc = (asdascbdd.toFixed(2) * 1) + (jascknjnc.toFixed(2) * 1);
+        var uscnsceuc = osdjbshdc.toFixed(0) / document.getElementById('for15').value;
+
+        document.getElementById('hasil1').innerHTML = ascijasus.toFixed(2);
+        document.getElementById('hasil2').innerHTML = sahbhcsbc.toFixed(2);
+        document.getElementById('hasil3').innerHTML = asdascbdd.toFixed(2) + ' bbl';
+        document.getElementById('hasil4').innerHTML = aschuishc.toFixed(2);
+        document.getElementById('hasil5').innerHTML = sagbhbbxv.toFixed(1);
+        document.getElementById('hasil6').innerHTML = bhbgcgdhc.toFixed(2);
+        document.getElementById('hasil7').innerHTML = jascknjnc.toFixed(2) + ' barrels';
+        document.getElementById('hasil8').innerHTML = psdkjisnx.toFixed(0);
+        document.getElementById('hasil9').innerHTML = ysbhjabsc.toFixed(0);
+        document.getElementById('hasil10').innerHTML = uscnsceuc.toFixed(0);
+    }
+
+</script>
+
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/BuoyancyFactor.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Loss of Overbalance Due to Falling Mud Level</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:150px">
+        <p><strong>Feet of pipe pulled DRY to lose Overbalance
+            <br /> <br /> </strong></p>    
+		
+		<img src="img/lo/for1.png">
+ 
+		<br/><br/>
+ <p>Case : Determine the FEET of DRY pipe that must be pulled to lose</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The overbalance using the following data :</p>
+<p>&nbsp;</p>
+<p>Amount of overbalance = <input onkeypress="return hanyaAngka(event)" type="text" id="for11" style="width:50px;text-align:right;" value="0"> psi<br /><br />
+Casing capacity &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for12" style="width:50px;text-align:right;" value="0"> bbl/ft<br /><br />
+Pipe displacement &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for13" style="width:50px;text-align:right;" value="0"> bbl/ft<br /><br />
+Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for14" style="width:50px;text-align:right;" value="0"> ppg</p>                <br/>
+        <br/>
+        <button class="btn btn-success" id="hitung1">Calculate</button> 
+        <br/>
+		<h4>
+		<div id="hasil1"></div>
+		</h4>
+        <br/>
+        <br/>
+		<p><strong>Feet of pipe pulled WET to Lose Overbalance<br /> <br /> </strong></p>
+		<br/>
+		<br/>
+		<img src="img/lo/for2.png">
+        <p><strong>&nbsp;</strong></p>
+<p>Case : Determine the feet of WET pipe that must be pulled to lose</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The overbalance using the following data :<br /> </p>
+<p>Amount of overbalance = <input onkeypress="return hanyaAngka(event)" type="text" id="for21" style="width:50px;text-align:right;" value="0"> psi<br /><br /> 
+Casing capacity &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for22" style="width:50px;text-align:right;" value="0"> bbl/ft<br /><br />
+ Pipe capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for23" style="width:50px;text-align:right;" value="0"> bbl/ft<br /><br />
+ Pipe displacement &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for24" style="width:50px;text-align:right;" value="0"> bbl/ft<br /><br />
+ Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for25" style="width:50px;text-align:right;" value="0"> ppg<br /> </p>
+                <br/>
+                <button class="btn btn-success" id="hitung2">Calculate</button> 
+        <br/>
+		<h4>
+		<div id="hasil2"></div>
+		</h4>
+        <br/>
+        <br/>
+        </div>
+    </body>
+	
+    
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $("input[type='text']").click(function () {
+            $(this).select();
+        });
+        function hanyaAngka(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+		  }
+    </script>  
+    
+	<script>
+
+        hitung1.onclick = function(){
+            document.getElementById('hasil1').innerHTML = parseFloat((document.getElementById('for11').value*(document.getElementById('for12').value-document.getElementById('for13').value))/(document.getElementById('for14').value*0.052*document.getElementById('for13').value)).toFixed(0) ;
+        }
+            
+
+        hitung2.onclick = function(){
+            document.getElementById('hasil2').innerHTML =parseFloat((document.getElementById('for21').value*(parseFloat(document.getElementById('for22').value)-parseFloat(document.getElementById('for23').value)-parseFloat(document.getElementById('for24').value)))/(document.getElementById('for25').value*0.052*(parseFloat(document.getElementById('for23').value)+parseFloat(document.getElementById('for24').value)))).toFixed(1) ;
+        }	
+    </script>
+	
+	
+</html>

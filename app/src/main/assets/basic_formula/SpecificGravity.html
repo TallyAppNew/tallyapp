@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/BuoyancyFactor.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Specific Gravity</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+       <p><strong>Specific Gravity using mud weight (ppg)</strong></p>
+        <p>&nbsp;</p>
+        <p>SG = mud weight (ppg) &divide; 8.33</p>
+        <p>&nbsp;</p>
+        <p>Case : <input onkeypress="return hanyaAngka(event)" type="text" id="for11" style="width:50px;text-align:right;" value="0"> ppg fluid</p>
+        <br/>
+                <button class="btn btn-success" id="hitung1">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil1"></div>
+		</h4>
+        <br/>
+        <br/>
+        <p><strong>Specific Gravity using pressure gradient (psi/ft)</strong></p>
+        <p>&nbsp;</p>
+        <p>SG = pressure gradient (psi/ft) &divide; 0.433</p>
+        <p>&nbsp;</p>
+        <p>Case : pressure gradient = <input onkeypress="return hanyaAngka(event)" type="text" id="for21" style="width:50px;text-align:right;" value="0"> si/ft</p>
+        <br/>
+                <button class="btn btn-success" id="hitung2">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil2"></div>
+		</h4>
+        <br/>
+        <br/>
+        <p><strong>Specific Gravity using mud weight (lb/ft<sup>3</sup>)</strong></p>
+        <p>&nbsp;</p>
+        <p>SG = mud weight (lb/ft<sup>3</sup>) &divide; 62.4<br /> </p>
+        <p>Case : mud weight = <input onkeypress="return hanyaAngka(event)" type="text" id="for31" style="width:50px;text-align:right;" value="0"> lb/ft<sup>3</sup><br /> </p>
+        <br/>
+                <button class="btn btn-success" id="hitung3">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil3"></div>
+		</h4>
+        <br/>
+        <br/>
+        <p><strong>Convert specific gravity to mud weight</strong><strong> (</strong><strong>ppg</strong><strong>)</strong><strong><br /> <br /> </strong></p>
+        <p>Mud Weight (ppg) = specific gravity x 8.33<br /> </p>
+        <p>Case : specific gravity <input onkeypress="return hanyaAngka(event)" type="text" id="for41" style="width:50px;text-align:right;" value="0"><br /> </p>
+                <br/>
+                <button class="btn btn-success" id="hitung4">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil4"></div>
+		</h4>
+        <br/>
+        <br/>
+        <p><strong>Convert Specific Gravity to Pressure Gradient (psi/ft)</strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <p>Pressure Gradient (psi/ft) = Specific Gravity x 0.433</p>
+        <p>&nbsp;</p>
+        <p>Case : Specific Gravity = <input onkeypress="return hanyaAngka(event)" type="text" id="for51" style="width:50px;text-align:right;" value="0"></p>
+        <br/>
+                <button class="btn btn-success" id="hitung5">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil5"></div>
+		</h4>
+        <br/>
+        <br/>
+
+        <p><strong>Convert Specific Gravity to Mud Weight (lb/ft<sup>3</sup>)</strong></p>
+        <p><strong>&nbsp;</strong></p>
+        <p>Mud Weight (lb/ft<sup>3</sup>) = specific gravity x 62.4</p>
+        <p>&nbsp;</p>
+        <p>Case : Specific Gravity = <input onkeypress="return hanyaAngka(event)" type="text" id="for61" style="width:50px;text-align:right;" value="0"></p>
+        <br/>
+                <button class="btn btn-success" id="hitung6">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil6"></div>
+		</h4>
+        <br/>
+        <br/>
+        </div>
+    </body>
+	
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $("input[type='text']").click(function () {
+            $(this).select();
+        });
+        function hanyaAngka(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode != 46 && charCode > 31 
+              && (charCode < 48 || charCode > 57))
+              return false;
+
+            return true;
+        }
+    </script>  
+    
+	<script>
+
+	hitung1.onclick = function(){
+		document.getElementById('hasil1').innerHTML = parseFloat((document.getElementById('for11').value)/8.33).toFixed(1)  ;
+	}
+		
+
+	hitung2.onclick = function(){
+		document.getElementById('hasil2').innerHTML = parseFloat((document.getElementById('for21').value)/0.433).toFixed(2) ;
+	}	
+
+    hitung3.onclick = function(){
+		document.getElementById('hasil3').innerHTML = parseFloat((document.getElementById('for31').value)/62.4).toFixed(2) ;
+	}
+    
+    hitung4.onclick = function(){
+		document.getElementById('hasil4').innerHTML = (document.getElementById('for41').value)*8.33 ;
+	}
+
+    hitung5.onclick = function(){
+		document.getElementById('hasil5').innerHTML = (document.getElementById('for51').value)*0.433 ;
+	}
+
+    hitung6.onclick = function(){
+		document.getElementById('hasil6').innerHTML = (document.getElementById('for61').value)*62.4 ;
+	}
+    
+    </script>
+	
+	
+</html>

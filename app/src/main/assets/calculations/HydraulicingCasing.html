@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tally App</title>
+</head>
+
+<body style="font-size: 15px;">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Hydraulicing Casing </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:100px">
+
+        These calculations will determine if the casing will hydraulic out (move upward) when cementing
+        <br /> <br />
+
+        These calculations will determine if the casing will hydraulic out (move upward) when cementing
+        <br>
+        <strong>Determine the difference in pressure gradient (psi/ft) between the cement and the mud</strong>
+        <br>
+        psi/ft = [(cement wt (ppg) — mud wt  (ppg)] x 0.052
+
+        <br><br>
+        <strong>Determine the differential pressure (DP) between the cement and the mud </strong>
+        <br>
+        DP (psi) = difference in pressure gradient (psi/ft) x casing length (ft)
+
+        <br><br>
+        <strong>Determine the area (sq in.) below the shoe</strong>
+        <br>
+        Area (sq in.) = casing diameter2 inch x 0.7854
+        <br><br>
+
+        <strong>Determine the Upward Force (F)(lb). This is the weight total force, acting at the bottom of the shoe</strong>
+        <br>
+        Force  = area (sq in.) x differential pressure between cement & mud (psi)
+        (lb)
+        <br><br>
+        <strong>Determine the Downward Force (W)(lb). This is the weight of the casing </strong>
+        <br>
+        Weight (lb) = casing wt (lb/ft) x length (ft) x buoyancy factor
+        <br><br>
+
+        <strong>Ðetermine the difference in force (lb)</strong>
+        <br>
+
+        Differential force (lb) = upward force (lb) — downward force (lb)
+        <br><br>
+
+        <strong>Pressure required to balance the forces so that the casing will not hydraulic out (move upward)</strong>
+        <br>
+        Psi = force (lb) ÷ area (sq in.)
+        <br><br>
+
+        <strong>Mud weight increase to balance pressure</strong>
+        <br>
+
+        Mud Weight (ppg)=[(Pressure required to@balance forces (psi))]  ÷0.052 ÷casing length (ft)
+        <br>
+        New mud weight (ppg)
+        <br>
+        Mud wt (ppg) = mud wt increase (ppg) ÷ mud wt (ppg)
+        <br><br>
+        <strong>Check the forces with the new mud weight</strong>
+        <br>
+
+        a. psi/ft = [(cement wt (ppg) — mud wt (ppg)] x 0.052<br>
+        b. psi = difference in pressure gradients (psi/ft) x casing length (ft)<br>
+        c. Upward force (lb) = pressure (psi) x area (sq in.)<br>
+        d. Difference in force (lb) = upward force (lb) - downward force (lb)<br>
+
+        <br><br>
+
+        Case : <br /> <br />
+        Casing size &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="for1" style="width:50px;text-align:right;" value="0">
+        inch &nbsp; - &nbsp;
+        <input onkeypress="return hanyaAngka(event)" type="text" id="for2" style="width:50px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+        Cement weight
+        &nbsp;&nbsp;&nbsp; =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="for3" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Mud weight
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="for4" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Buoyancy factor &nbsp;&nbsp; =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="for5" style="width:50px;text-align:right;" value="0">
+
+        <br /><br />
+        Well depth &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="for6" style="width:50px;text-align:right;" value="0">
+        ft 
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung1">Calculate</button>
+        <br /><br />
+
+        Determine the difference in pressure gradient (psi/ft) between the cement and the mud<br /><br />
+        <h4>
+            <div id="hasil1"></div>
+        </h4>
+        <br /><br />
+
+        Determine the differential pressure between the cement and the mud<br /><br />
+        <h4>
+            <div id="hasil2"></div>
+        </h4>
+        <br /><br />
+
+        Determine the area (sq in.) below the shoe<br /><br />
+        <h4>
+            <div id="hasil3"></div>
+        </h4>
+        <br /><br />
+
+        Determine the upward force. This is the total force acting at the bottom of the shoe<br /><br />
+        <h4>
+            <div id="hasil4"></div>
+        </h4>
+        <br /><br />
+
+        Determine the downward force. This is the weight of the casing<br /><br />
+        <h4>
+            <div id="hasil5"></div>
+        </h4>
+        <br /><br />
+
+        Determine the difference in force (lb)<br /><br />
+        <h4>
+            <div id="hasil6"></div>
+        </h4>
+        <br /><br />
+
+        Pressure required to balance the forces so that the casing will not hydraulic out (move upward)<br /><br />
+        <h4>
+            <div id="hasil7"></div>
+        </h4>
+        <br /><br />
+
+        Mud weight increase to balance pressure<br /><br />
+        <h4>
+            <div id="hasil8"></div>
+        </h4>
+        <br /><br />
+
+        New mud weight (ppg)<br /><br />
+        <h4>
+            <div id="hasil9"></div>
+        </h4>
+        <br /><br />
+
+        Check the forces with the new mud weight<br /><br />
+        <h4>
+            A. <span id="hasil10"></span>
+        </h4><br />
+        <h4>
+            B. <span id="hasil11"></span>
+        </h4><br />
+        <h4>
+            C. <span id="hasil12"></span>
+        </h4><br />
+        <h4>
+            D. <span id="hasil13"></span>
+        </h4><br />
+        <br /><br />
+
+
+
+        <br /><br /><br /><br />
+
+    </div>
+</body>
+
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+    function hanyaAngka(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+		  }
+</script>  
+
+<script>
+    hitung1.onclick = function () {
+        var shcshdsdi = (document.getElementById('for3').value * 1) - (document.getElementById('for4').value * 1);
+        var oasdjduds = shcshdsdi * 0.052;
+
+        var ijasdbahs = oasdjduds * document.getElementById('for6').value;
+
+        var sdfhnshdh = Math.pow(document.getElementById('for1').value, 2);
+        var jabcbgdcv = 0.7854 * sdfhnshdh;
+
+        var usdfhbffb = ijasdbahs.toFixed(0) * jabcbgdcv.toFixed(1);
+
+        var oasdygasc = document.getElementById('for2').value * document.getElementById('for5').value * document.getElementById('for6').value;
+
+        var oascabycc = (oasdygasc.toFixed(0) * 1) - (usdfhbffb.toFixed(0) * 1);
+
+        var jascvgvcc = 4.9;
+
+        var jkasjduah = jascvgvcc / 0.052 / document.getElementById('for6').value;
+
+        var osdauysgd = (document.getElementById('for4').value * 1) + (jkasjduah.toFixed(1) * 1);
+
+        var oashhasbs = (document.getElementById('for3').value * 1) - (osdauysgd.toFixed(1) * 1);
+        var asdbadbus = oashhasbs * 0.052;
+
+        var asdsckmsn = asdbadbus.toFixed(4) * document.getElementById('for6').value;
+
+        var sdfbhasbd = asdsckmsn.toFixed(2) * jabcbgdcv.toFixed(1);
+
+        var dfsacjssd = (oasdygasc.toFixed(0) * 1) - (sdfbhasbd.toFixed(0) * 1);
+
+        document.getElementById('hasil1').innerHTML = oasdjduds.toFixed(3);
+        document.getElementById('hasil2').innerHTML = ijasdbahs.toFixed(0);
+        document.getElementById('hasil3').innerHTML = jabcbgdcv.toFixed(1) + ' sq in';
+        document.getElementById('hasil4').innerHTML = usdfhbffb.toFixed(0) + ' lb';
+        document.getElementById('hasil5').innerHTML = oasdygasc.toFixed(0) + ' lb';
+        document.getElementById('hasil6').innerHTML = oascabycc.toFixed(0) + ' lb';
+        document.getElementById('hasil7').innerHTML = jascvgvcc;
+        document.getElementById('hasil8').innerHTML = jkasjduah.toFixed(2) + ' ppg';
+        document.getElementById('hasil9').innerHTML = osdauysgd.toFixed(1) + ' ppg';
+        document.getElementById('hasil10').innerHTML = 'psi/ft = ' + asdbadbus.toFixed(4);
+        document.getElementById('hasil11').innerHTML = 'psi = ' +asdsckmsn.toFixed(2);
+        document.getElementById('hasil12').innerHTML = 'Upward force (lb) = ' + sdfbhasbd.toFixed(0) + ' lb';
+        document.getElementById('hasil13').innerHTML = 'Differential force (lb) = ' + dfsacjssd.toFixed(0) + ' lb';
+    }
+
+</script>
+
+
+</html>

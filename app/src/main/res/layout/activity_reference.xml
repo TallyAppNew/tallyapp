@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".ActivityReference">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="API Specification for Oil-Well Cements and Cement Additives, American Petroleum Institute, New York, N.Y., 1972
+\n\nChenevert, Martin E and Reuven Hollo, TI-59 Drilling Engineering Manual, PennWell Publishing Company, Tulsa, 1981
+\n\nCrammer Jr., John L., Basic Drilling Engineering Manual, Penn Well Publishing Company, Tulsa, 1983
+\n\nDrilling Manual, International Association of Drilling Contractors, Houston, Texas, 1982
+\n\nMurchison, Bill, Murchison Drilling Schools Operations Drilling Technology and Well Control Manual, Albuquerque, New Mexico
+\n\nOil-Well Cements and Cement Additives, API Specification lOA, December 1979ic
+\n\nManual Of Drilling Fluids Technology, Baroid Division, N.L. Petroleum Services, Houston, Texas, 1979
+\n\nMudFacts Engineering Handbook, Milchem Incorporated, Houston, Texas, 1984
+\n\nAdams, Neal, Well Control Problems and Solutions. PennWell Publishing Company, Tulsa, OK, 1980.
+\n\nAdams, Neal. Workover Well Control, PennWell Publishing Company, Tulsa, 0K, 1984.
+\n\nGoldsmith, Riley. Why Gas Cut Mud is Not Always Serious Problem, World oil, Oct. 1972.
+\n\nGrayson, Richard and Fred S. Mueller, Pressure Drop Calculations For a Deviated Wellbore, Well Control Trainers Roundtable, April 1991.
+\n\nPetex, Practical Well Control, Petroleum Extension Service University of Texas, Austin, Tx, 1982.
+\n\nWell Control Manual, Baroid Division, N.L. Petroleum Services, Houston, Texas, Austin, Tx, 1982.
+\n\nVarious Well Control Schools/Courses/Manuals  NL Baroid, Houston, Texas  USL Petroleum Training Service, Lafayette, La.  Prentice &amp; Records Enterprises, Inc., Lafayette, La.  Milchem Well Control, Houston, Texas  Petroleum Extension Service, Univ. of Texas, Houston, Texas  Aberdeen Well Control School, Gene Wilson. Aberdeen. Scotland
+\n\nAdams, Neal and Tommy Charrier, Drilling Engineering : A Complete Well Planning Approach, PennWell Publishing Company, Tulsa, 1985.
+\n\nChristman, Stan A., “Offshore Fracture Gradient”,JPT, August 1973.
+\n\nCraig, J.T. and B.V. Randall, “Directional Survey Calculatioin”, Petroleum Engineer, March 1976.
+\n\nEaton, B.A., “Fracture Gradient Prediction and Its Application in Oilfield Operations”, JPT, October 1969.
+\n\nJordan, J.R., and O.J. Shirley,”Application of Drilling Performance Data to Overpressure Detection”, JPT, Nov. 1966.
+\n\nKendal, W.A. and W.C. Goins,”Design and Operations of Jet Bit Programs for Maximu Hydraulic Horsepower, Impact Force, or Jet Velocity”,Transactions of AIME, 1960.
+\n\nMatthews, W.R. and J. Kely,”How to Predict Formation Pressure and Fracture Gradient”,Oil and Gas Journal, February 20,1967.
+\n\nMoore, P.L., Drilling Practices Manual, PennWell Publishing Company, Tulsa, 1974.
+\n\nRehm, B.and R. McClendon,”Measurement of Formation Pressure from Drilling Data”, SPE Paper 3601, AIME Annual fall Meeting, New Orleans, La., 1971.
+\n\nScott, Kenneth F., “ A New Practical Approach to Rotary Drilling Hydraulics”, SPE Paper No. 3530, New Orleans, La., 1971." />
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

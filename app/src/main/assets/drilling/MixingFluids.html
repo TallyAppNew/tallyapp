@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Mixing Fluids  </h1>
+            </div>
+        </div>
+    </nav>
+    <div style="left: 20px;position: absolute;top:100px">
+      <p><strong>Mixing Fluids of Different Densities<br /> <br /> </strong></p>
+      <p><strong>&nbsp;</strong></p>
+      <p>(V<sub>1</sub> D<sub>1</sub>) + (V<sub>2</sub> D<sub>2</sub>) = V<sub>F</sub> D<sub>F</sub></p>
+      <p>&nbsp;</p>
+      <p>Where ;</p>
+      <p>V1 = volume of fluid 1 (bbl, gal, etc.)<br /> D<sub>1</sub> = density of fluid 1 (ppg, lb/ft<sup>3</sup>, etc.)<br /> V<sub>2</sub> = volume of fluid 2 (bU, gal, etc.)<br /> D<sub>2&nbsp; </sub>= density of fluid 2 (ppg, lb/ft<sup>3</sup>, etc.)<br /> V<sub>F</sub> = volume of final fluid mix<br /> D<sub>F</sub> = density of final fluid mix<br /> </p>
+      <p>Sample Case 1 : A limit is placed on the desired volume :<br /> </p>
+      <p>Determine the volume of 11.0 ppg mud and 14.0 ppg mud required to build 300 bbl 11.5 (ppg) mud :<br /> </p>
+      <p>Given : 400 bbl of 11.0 ppg mud on hand, and<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 400 bbl of 14.0 ppg mud on hand<br /> </p>
+      <p>Solution : let V<sub>1</sub> = bbl of 11.0 ppg mud<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V<sub>2</sub> = bbl of 14.0 ppg mud<br /> </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; then a. V<sub>1</sub> + V<sub>2</sub> = 300 bbl<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b. (11.0) V<sub>1</sub> + (14.0) V<sub>2</sub> = (ll.5)(300)<br /> </p>
+      <p>Multiply Equation A by the density of the lowest mud weight (D<sub>1</sub> = 11.0 ppg) and subtract the result from Equation B :<br /> </p>
+      <ol start="11">
+      <li>b. (10) (V<sub>1</sub>) + (14.0)(V<sub>2</sub>) = 3450<br /> a. <u>(11.0) (V<sub>1</sub>) + (11.0)(V<sub>2</sub>) = 3300</u> _</li>
+      </ol>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3.0) (V<sub>2</sub>) = 150<br /> </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 V<sub>2 </sub>= 150<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V<sub>2 </sub>= 150/3<br /> </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 50<br /> </p>
+      <p>Therefore : V<sub>2</sub> = 50 bbl of 14.0 ppg mud<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V<sub>1 </sub>+ V<sub>2 </sub>= 300 bbl<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V<sub>1 </sub>&nbsp;= 300 - 5O<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V<sub>1 </sub>&nbsp;= 250 bbl of ll.O ppg mud<br /> </p>
+      <p>Check : V<sub>1</sub> = 50 bbl<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D<sub>1</sub> = 14.0 ppg<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V<sub>2 </sub>= l50 bbl<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D<sub>2</sub> = 1l.O ppg<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V<sub>F</sub> = 300 bbl<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D<sub>F </sub>= final density (ppg)<br /> </p>
+      <p>(50) (14.0) + (250) (11.0) = 300 D<sub>F</sub><br /> &nbsp;<sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </sub>700 + 2750 = 30O D<sub>F</sub><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3450 = 300 D<sub>F</sub><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3450 &divide; 300 = D<sub>F</sub><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11.5 ppg = D<sub>F</sub><br /> </p>
+      <p>Sample Case 2 : No limit is placed on volume :<br /> </p>
+      <p>Determine the density and volume when the two following muds are mixed together :<br /> </p>
+      <p>Given : 400 bbl of 11.0 ppg mud, and<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 400 bbl of 14.0 ppg mud<br /> </p>
+      <p>Solution : let V<sub>1</sub> = bbl of 11.0 ppg mud<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D<sub>1 </sub>= density of 11.0 ppg mud<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V<sub>2</sub> = bbl of 14.0 ppg mud<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D<sub>2 </sub>= density of 14.0 ppg mud<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V<sub>F</sub> = final volume (bbl)</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D<sub>F </sub>= final density (ppg)<br /> </p>
+      <p>Formula : (V<sub>1</sub> D<sub>1</sub>) + (V<sub>2</sub> D<sub>2</sub>) = V<sub>F</sub> D<sub>F</sub> <br /> </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (400)(11.0) + (400)(14.0) = 800 D<sub>F</sub><br /> </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4400 + 5600 = 8000 D<sub>F</sub><br /> </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10,000 = 800 D<sub>F</sub></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; l0,000 : 800 = D<sub>F</sub><br /> </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12.5 ppg = D<sub>F</sub><br /> </p>
+      <p>Therefore : final volume &nbsp;&nbsp;= 800 bbl<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; final density &nbsp;= 12.5 ppg<br /> </p>
+    </div>
+    </body>
+
+    
+  <script src="js/jquery.min.js"></script>
+  <script>
+      $("input[type='text']").click(function () {
+          $(this).select();
+      });
+  </script>  
+	
+	<script>
+
+	hitung1.onclick = function(){
+    var hitungan1 = document.getElementById('for11').value;
+    if (hitungan1!=0){
+      document.getElementById('hasil1').innerHTML = 11.5 + ' ppg';
+    }
+    else{
+      document.getElementById('hasil1').innerHTML = 0 + ' ppg';
+    }
+  }
+  
+  hitung2.onclick = function(){
+    var hitungan2 = document.getElementById('for21').value;
+    if (hitungan2!=0){
+      document.getElementById('hasil2').innerHTML = 12.5 + ' ppg';
+    }
+    else{
+      document.getElementById('hasil2').innerHTML = 0 + ' ppg';
+    }  
+	}
+	</script>
+	
+	
+</html>

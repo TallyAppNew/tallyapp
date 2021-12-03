@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tally App</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Spotting Pills Calculations </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:100px">
+
+        Calculations Required for Spotting Pills<br />
+
+        The following will be determined :<br /><br />
+
+        a. Barrels of spotting fluid (pill) required<br />
+        b. Pump strokes required to spot the pill<br /><br />
+
+        <p><strong>S</strong><strong>tep</strong> <strong>l<br /> <br /> </strong></p>
+        <p>Determine the annular capacity (bbl/ft) for drill pipe and drill collars in the annulus: </p>
+        <p>&nbsp;</p>
+        <img src="img/spc/a.png">
+        <p>&nbsp;</p>
+        <p><strong>St</strong><strong>e</strong><strong>p</strong><strong> 2</strong><strong><br /> <br /> </strong></p>
+        <p>Determine the volume of pill required in the annulus :</p>
+        <p><em>Vol</em><em>ume (</em><em>b</em><em>bl)</em><em> = annular cap.</em><em>(</em><em>bbl/f</em><em>t)</em><em> x section</em> <em>length</em><em> (</em><em>ft</em><em>)</em><em> x washout factor</em></p>
+        <p>&nbsp;</p>
+        <p><br /> <strong>Step 3<br /> <br /> </strong></p>
+        <p>Determine total volume (bbl) of spotting fluid (pill) required :</p>
+        <p>Barrels = Barrels required in annulus plus barrels to be left in drill</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string</p>
+        <p><strong>Step 4<br /> <br /> </strong></p>
+        <p>Determine drill string capacity (bbl):</p>
+        <p><em>Barrels = drill pipe/drill collar capacity</em><em> (</em><em>bbl</em><em>/</em><em>ft</em><em>)</em><em> x length</em><em> (</em><em>f</em><em>t)</em><em><br /> <br /> </em></p>
+        <p><strong>Step</strong><strong> 5</strong><strong><br /> <br /> </strong></p>
+        <p>Determine strokes required to pump pill :</p>
+        <p><em>Strokes = vol or pill</em><em> (</em><em>bbl</em><em>)</em><em> &divide; pump output</em><em> (</em><em>bb</em><em>l/</em><em>stk</em><em>)</em><em><br /> <br /> </em></p>
+        <p><strong>Step</strong><strong> 6</strong><strong><br /> <br /> </strong></p>
+        <p>Determine number of barrels required to chase pill :</p>
+        <p><em>Barrels = drill string vol </em><em>(bbl) &ndash; vol </em><em>left in drill </em><em>s</em><em>tring</em><em> (bbl)</em><em><br /> <br /> </em></p>
+        <p><strong>Step</strong> <strong>7<br /> <br /> </strong></p>
+        <p>Determine strokes required to chase pill :</p>
+        <p>&nbsp;</p>
+        <img src="img/spc/b.png">
+        <p><strong>&nbsp;</strong></p>
+        <p><strong>Step </strong><strong>8</strong><strong><br /> <br /> </strong></p>
+        <p>Total strokes required to spot the pill :</p>
+        <p>&nbsp;</p>
+        <img src="img/spc/c.png">
+
+        <br /> <br />
+        oil based pill around the drill collars plus =
+        <input type="text" id="for11" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        drill string
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for12" style="width:50px;text-align:right;" value="0">
+        bbl
+        <br /><br />
+
+        Case : <br /> <br />
+        Well depth &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for1" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Hole diameter
+        &nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for2" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        Washout factor
+        &nbsp;&nbsp; =
+        <input type="text" id="for3" style="width:50px;text-align:right;" value="0">
+        %
+        <br /><br />
+        Drill pipe &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for4" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        Capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for5" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        Length &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for6" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Drill collars &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for7" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        Capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for8" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        Length &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for9" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        Pump output &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for10" style="width:50px;text-align:right;" value="0">
+        bbl/stk
+        <br /><br />
+
+        <br /><br />
+        tank to the drill pipe =
+        <input type="text" id="for13" style="width:50px;text-align:right;" value="0">
+        stk
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung1">Calculate</button>
+        <br /><br />
+
+        <b>Step 1</b><br />
+
+        Annular capacity around drill pipe and drill collars :
+        <br /><br />
+        a. Annular capacity around drill collars :
+        <br />
+        <h4>
+            <div id="hasil1"></div>
+        </h4>
+        <br /><br />
+
+        b. Annu1ar capacity around drill pipe :
+        <br />
+        <h4>
+            <div id="hasil2"></div>
+        </h4>
+        <br /><br />
+
+        <b>Step 2</b><br />
+
+        a. Volume opposite drill collars :
+        <br />
+        <h4>
+            <div id="hasil3"></div>
+        </h4>
+        <br /><br />
+
+        b. Volume opposite drill pipe :
+        <br />
+        <h4>
+            <div id="hasil4"></div>
+        </h4>
+        <br /><br />
+
+        c. Total volume (bbl) required in annulus:
+        <br />
+        <h4>
+            <div id="hasil5"></div>
+        </h4>
+        <br /><br />
+
+        <b>Step 3</b><br />
+
+        Total bbl of spotting fluid (pill) required :
+        <br />
+        <h4>
+            <div id="hasil6"></div>
+        </h4>
+        <br /><br />
+
+        <b>Step 4</b><br />
+
+        a. Drill collar capacity (bbl):
+        <br />
+        <h4>
+            <div id="hasil7"></div>
+        </h4>
+        <br /><br />
+
+        b. Drill pipe capacity (bbl):
+        <br />
+        <h4>
+            <div id="hasil8"></div>
+        </h4>
+        <br /><br />
+
+        c. Total drill string capacity (bbl):
+        <br />
+        <h4>
+            <div id="hasil9"></div>
+        </h4>
+        <br /><br />
+
+        <b>Step 5</b><br />
+
+        Determine strokes required to pump pill :
+        <br />
+        <h4>
+            <div id="hasil10"></div>
+        </h4>
+        <br /><br />
+
+        <b>Step 6</b><br />
+
+        Determine bbl required to chase pill :
+        <br />
+        <h4>
+            <div id="hasil11"></div>
+        </h4>
+        <br /><br />
+
+        <b>Step 7</b><br />
+
+        Determine strokes required to chase pill :
+        <br />
+        <h4>
+            <div id="hasil12"></div>
+        </h4>
+        <br /><br />
+
+        <b>Step 8</b><br />
+
+        Determine strokes required to spot the pill :
+        <br />
+        <h4>
+            <div id="hasil13"></div>
+        </h4>
+        <br /><br />
+
+        <br /><br /><br /><br />
+
+    </div>
+</body>
+
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+</script>  
+
+<script>
+    hitung1.onclick = function () {
+        var jsdhsdbhsdh = Math.pow(document.getElementById('for2').value, 2);
+        var izxcbhbdcsh = Math.pow(document.getElementById('for7').value, 2);
+        var jhshcysddsd = (jsdhsdbhsdh * 1) - (izxcbhbdcsh * 1);
+        var satuhabshbd = jhshcysddsd / 1029.4;
+
+        var jshauhcdbas = Math.pow(document.getElementById('for2').value, 2);
+        var ashahshsayu = Math.pow(document.getElementById('for4').value, 2);
+        var kashyagscgv = (jshauhcdbas * 1) - (ashahshsayu * 1);
+        var ksdnaduahcb = kashyagscgv / 1029.4;
+
+        var jschsdbchbs = satuhabshbd.toFixed(5) * document.getElementById('for9').value * 1.20;
+
+        var kanchasdbhd = ksdnaduahcb.toFixed(4) * document.getElementById('for11').value * 1.20;
+
+        var ksahuddbcbd = (jschsdbchbs.toFixed(1) * 1) + (kanchasdbhd.toFixed(1) * 1);
+
+        var jasiewuhfsh = (ksahuddbcbd.toFixed(1) * 1) + (document.getElementById('for12').value * 1);
+
+        var ijisdnusbdb = document.getElementById('for8').value * document.getElementById('for9').value;
+
+        var sdygcgsdgdg = document.getElementById('for5').value * document.getElementById('for6').value;
+
+        var iasdhuaehdh = (ijisdnusbdb.toFixed(2) * 1) + (sdygcgsdgdg.toFixed(2) * 1);
+
+        var iasduewdbhs = jasiewuhfsh.toFixed(1) / document.getElementById('for10').value;
+
+        var ijscaxcbdsb = (iasdhuaehdh.toFixed(1) * 1) - (document.getElementById('for12').value * 1);
+
+        var jyagsycsgdy = ijscaxcbdsb / document.getElementById('for10').value;
+        var isdadsbsyed = (jyagsycsgdy * 1) + (document.getElementById('for13').value * 1);
+
+        var uashduhsdgd = (iasduewdbhs.toFixed(0) * 1) + (isdadsbsyed.toFixed(0) * 1)
+
+
+        document.getElementById('hasil1').innerHTML = satuhabshbd.toFixed(5) + 'bbl/ft';
+        document.getElementById('hasil2').innerHTML = ksdnaduahcb.toFixed(4) + 'bbl/ft';
+        document.getElementById('hasil3').innerHTML = jschsdbchbs.toFixed(1) + 'bbl';
+        document.getElementById('hasil4').innerHTML = kanchasdbhd.toFixed(1) + 'bbl';
+        document.getElementById('hasil5').innerHTML = ksahuddbcbd.toFixed(1) + 'bbl';
+        document.getElementById('hasil6').innerHTML = jasiewuhfsh.toFixed(1) + 'bbl';
+        document.getElementById('hasil7').innerHTML = ijisdnusbdb.toFixed(2) + 'bbl';
+        document.getElementById('hasil8').innerHTML = sdygcgsdgdg.toFixed(2) + 'bbl';
+        document.getElementById('hasil9').innerHTML = iasdhuaehdh.toFixed(1) + 'bbl';
+        document.getElementById('hasil10').innerHTML = iasduewdbhs.toFixed(0);
+        document.getElementById('hasil11').innerHTML = ijscaxcbdsb.toFixed(1);
+        document.getElementById('hasil12').innerHTML = isdadsbsyed.toFixed(0);
+        document.getElementById('hasil13').innerHTML = uashduhsdgd.toFixed(0);
+    }
+
+
+</script>
+
+
+</html>

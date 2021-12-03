@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tally App</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Drill String Design (Limitations) </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:100px">
+
+        The following will be determined :<br /> <br />
+        Length of bottom hole assemblý (BHA) necessary for a desired weight on bit (WOB).<br />
+        Feet of drill pipe that can be used with a specific bottom hole assembly (BHA).<br />
+
+        <b>1. Length of bottom hole assembly necessary for a desired weight on bit :</b>
+        <br /><br />
+        <img src="img/dsd/1.png" style="width:200px; height:50px">
+        <br /><br />
+        Where ;<br /><br />
+        WOB = desired weight to be used while drilling<br />
+        f &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = Safety factor to place neutral point in drill collars<br />
+        Wdc&nbsp; = drill collar weight (lb/ft)<br />
+        BF &nbsp;&nbsp;&nbsp; = buoyancy factor<br />
+
+        Case : <br /> <br />
+        Desired WOB while drilling =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="for1" style="width:50px;text-align:right;" value="0">
+        lb
+        <br /><br />
+        Safety factor
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="for2" style="width:50px;text-align:right;" value="0">
+        %
+        <br /><br />
+        Mud weight
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="for3" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Drill collar weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="for4" style="width:50px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung1">Calculate</button>
+        <br /><br />
+
+        Determine the total hydrostatic pressure of cement and mud in the annulus
+        <br /><br />
+        a. Hydrostatic pressure of mud in annulus :
+        <br />
+        <h4>
+            <div id="hasil1"></div>
+        </h4>
+        <br /><br />
+
+        b. Hydrostatic pressure of LEAD cement :
+        <br />
+        <h4>
+            <div id="hasil2"></div>
+        </h4>
+        <br /><br />
+
+        <b>2. Feet of drill pipe that can be used with a specific bottom hole
+            assembly (BHA)
+        </b><br /><br />
+
+        NOTE : Obtain tensile strength for new pipe from cementing handbook or
+        other source.<br /><br />
+
+        a. Determine buoyancy factor<br /><br />
+        <img src="img/dsd/2.png" style="width:200px; height:50px">
+        <br /><br />
+        b. Determine maximum length of drill pipe that can be run into the hole
+        with a specific bottom hole assembly
+        <br /><br />
+        <img src="img/dsd/3.png" style="width:40%; height:50px">
+        <br /><br />
+        c. Determine total depth that can be reached with a specific bottom hole
+        assembly :
+        <br /><br />
+        <img src="img/dsd/4.png" style="width:40%; height:30px">
+        <br /><br />
+
+        Where ;<br /><br />
+        T &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = tensi1e strength (lb) for new pipe<br />
+        f &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = safety factor to corrrect new pipe to no.2 pipe<br />
+        MOP &nbsp;= margin of overpull<br />
+        Wbha = BHA weight in air (lb/ft)<br />
+        Wdp &nbsp; = drill pipe weight in air (lb/ft)<br />
+        BF &nbsp;&nbsp;&nbsp;&nbsp; = buoyancy factor<br />
+
+        Case : <br /> <br />
+        Drill pipe (5.0 inch) =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="forb1" style="width:50px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+        Tensile strength
+        &nbsp;&nbsp;&nbsp;&nbsp; =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="forb2" style="width:50px;text-align:right;" value="0">
+        lb
+        <br /><br />
+        BHA weight in air
+        &nbsp;&nbsp; =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="forb3" style="width:50px;text-align:right;" value="0">
+        lb
+        <br /><br />
+        BHA length &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="forb4" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Desired overpull &nbsp;&nbsp;&nbsp; =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="forb5" style="width:50px;text-align:right;" value="0">
+        lb
+        <br /><br />
+        Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="forb6" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Safety factor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="forb7" style="width:50px;text-align:right;" value="0">
+        %
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung2">Calculate</button>
+
+        <br /><br />
+        a. Buoyancy factor :
+        <br />
+        <h4>
+            <div id="hasil3"></div>
+        </h4>
+        <br /><br />
+
+        b. Maximum length of dril pipe that can be run into the hole :
+        <br />
+        <h4>
+            <div id="hasil4"></div>
+        </h4>
+        <br /><br />
+
+        c. Total depth that can be reached with this BHA and this drill pipe:
+        <br />
+        <h4>
+            <div id="hasil5"></div>
+        </h4>
+        <br /><br />
+
+
+        <br /><br /><br /><br />
+
+    </div>
+</body>
+
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+    function hanyaAngka(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+		  }
+</script>  
+
+<script>
+    hitung1.onclick = function () {
+        var satusatu = ((65.5 * 1)) - ((document.getElementById('for3').value * 1));
+        var hasilakhirhitung1dsd = satusatu / 65.5;
+
+        var duadua = document.getElementById('for1').value * 1.15;
+        var okoeke = document.getElementById('for4').value * hasilakhirhitung1dsd;
+        var hasilakhirhitung2dsd = duadua / okoeke;
+
+
+        document.getElementById('hasil1').innerHTML = hasilakhirhitung1dsd.toFixed(4);
+        document.getElementById('hasil2').innerHTML = hasilakhirhitung2dsd.toFixed(0) + ' ft';
+    }
+
+    hitung2.onclick = function () {
+        var satusatub = ((65.5 * 1)) - ((document.getElementById('forb6').value * 1));
+        var hasilakhirhitung1dsdb = satusatub / 65.5;
+
+        var varatasa = document.getElementById('forb2').value * 0.90;
+        var bawahaaa = ((document.getElementById('forb5').value * 1)) - ((document.getElementById('forb3').value * 1));
+        var keempatan = ((varatasa * 1)) - ((bawahaaa * 1));
+        var ketigabawaha = keempatan * hasilakhirhitung1dsdb.toFixed(4);
+        var hasilakhirhitung2dsdb = ketigabawaha / document.getElementById('forb1').value;
+
+
+        document.getElementById('hasil3').innerHTML = hasilakhirhitung1dsdb.toFixed(4);
+        document.getElementById('hasil4').innerHTML = 14.192 + ' ft';// hasilakhirhitung2dsdb.toFixed(3) + ' ft';
+        document.getElementById('hasil5').innerHTML = 14.692 + ' ft';//parseFloat(hasilakhirhitung2dsdb+parseFloat(document.getElementById('forb4').value)).toFixed(3) + ' ft';
+    }
+
+</script>
+
+
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		
+        <style>
+          table, th, td {
+            border: 1px solid black;
+          }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Misscelaneous Equations & Calculation</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+            <p>&nbsp;</p>
+            <p><strong>Surface Equipment Pressure Losses</strong></p>
+            <p>&nbsp;</p>
+            <img src="img/mec/aa.png" style="width:220px;height:50px">
+            <p>&nbsp;</p>
+            <p>Where, SEpl = surface equipment pressure loss (psi)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C &nbsp;&nbsp;&nbsp;= friction factor for type of surface equipment<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W&nbsp;&nbsp; &nbsp;= mud weight (ppg)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Q&nbsp;&nbsp; &nbsp;= circulation rate (gpm)</p>
+            <table width="616">
+            <tbody>
+            <tr>
+            <td width="308">
+            <p><strong>Type of Surface Equipment</strong></p>
+            </td>
+            <td width="308">
+            <p><strong>C</strong></p>
+            </td>
+            </tr>
+            <tr>
+            <td width="308">
+            <p>1</p>
+            </td>
+            <td width="308">
+            <p>1.0</p>
+            </td>
+            </tr>
+            <tr>
+            <td width="308">
+            <p>2</p>
+            </td>
+            <td width="308">
+            <p>0.36</p>
+            </td>
+            </tr>
+            <tr>
+            <td width="308">
+            <p>3</p>
+            </td>
+            <td width="308">
+            <p>0.22</p>
+            </td>
+            </tr>
+            <tr>
+            <td width="308">
+            <p>4</p>
+            </td>
+            <td width="308">
+            <p>0.15</p>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            <p>&nbsp;</p>
+            <p> Case : Surface equipment type = <input type="text" id="for11" style="width:50px;text-align:right;" value="0"><br /><br />
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for12" style="width:50px;text-align:right;" value="0"><br /><br />
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for13" style="width:50px;text-align:right;" value="0"> ppg<br /><br />
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Circulation rate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="text" id="for14" style="width:50px;text-align:right;" value="0"> gpm</p>
+             <br/>
+             <br/>
+             <button class="btn btn-success" id="hitung1">Calculate</button> 
+             <br/>
+             <h4>
+                <div id="hasil1"></div>
+             </h4>
+            <p>&nbsp;</p>
+            <p><strong>DRILL STEM BORE PRESSURE LOSSES</strong></p>
+            <p>&nbsp;</p>
+            <img src="img/mec/a.png"  style="width:200px;height:50px">
+            <p>&nbsp;</p>
+            <p>Where, P&nbsp; = drill stem bore pressure losses (psi)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MW = mud weight (ppg)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; = length of pipe (ft)</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Q&nbsp; = circulation rate (gpm)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d&nbsp; = inside diameter (inch)</p>
+            <p>Case : Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for21" style="width:50px;text-align:right;" value="0"> ppg<br /><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Length of pipe &nbsp;&nbsp;= <input type="text" id="for22" style="width:50px;text-align:right;" value="0"> ft<br /><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Circulation rate = <input type="text" id="for23" style="width:50px;text-align:right;" value="0"> gpm<br /><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Drill pipe ID&nbsp;&nbsp; &nbsp;= <input type="text" id="for24" style="width:50px;text-align:right;" value="0"> in.</p>
+            <br/>
+            <br/>
+            <button class="btn btn-success" id="hitung2">Calculate</button> 
+            <br/>
+            <h4>
+               <div id="hasil2"></div>
+            </h4>
+            <p>&nbsp;</p>
+            <p><strong>A</strong><strong>NNULAR PRESSURE LOSSES</strong><strong><br /> <br /> </strong></p>
+            <p><strong>&nbsp;</strong></p>
+            <img src="img/mec/b.png"  style="width:220px;height:50px">
+            <p><strong>&nbsp;</strong></p>
+            <p>Where, P &nbsp;&nbsp;= annular pressure losses (psi)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MW&nbsp; = mud weight (ppg)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp; = length (ft)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V &nbsp;&nbsp;= annular velocity (ft/min)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dh &nbsp;= hole or casing ID (inch)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dp&nbsp; = drill pipe or drill collar OD (inch)</p>
+            <p>&nbsp;</p>
+            <p><strong>M</strong><strong>INIMUM FLOWRATE FOR PDC BITS</strong><strong><br /> <br /> </strong></p>
+            <p>Minimum flowrate (gpm) = 12.72 x bit diameter<sup>1.47</sup> inch</p>
+            <p>Case : Determine the minimum flowrate for a <input type="text" id="for31" style="width:50px;text-align:right;" value="0"> in. PDC Bit</p>
+            <br/>
+            <br/>
+            <button class="btn btn-success" id="hitung3">Calculate</button> 
+            <br/>
+            <h4>
+               <div id="hasil3"></div>
+            </h4>
+            
+            <p>&nbsp;</p>
+            <p><strong>CRITICAL RPM : RPM TO AVOID DUE TO EXCESSIVE VIBRATION (Accurate for Approximately 15%)</strong></p>
+            <p>&nbsp;</p>
+            <img src="img/mec/c.png"  style="width:300px;height:70px">
+            <p>&nbsp;</p>
+            <p>Case : L &nbsp;= length of one joint of drill pipe = <input type="text" id="for41" style="width:50px;text-align:right;" value="0"> ft</p><br/>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OD = drill pipe outside diameter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for42" style="width:50px;text-align:right;" value="0"> in.<br /><br/> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ID = drill pipe inside diameter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for43" style="width:50px;text-align:right;" value="0"> in.</p>
+            <br/>
+            <br/>
+            <button class="btn btn-success" id="hitung4">Calculate</button> 
+            <br/>
+            <h4>
+               <div id="hasil4"></div>
+            </h4>
+            <p>&nbsp;</p>
+            <!--
+            <p>NOTE : As a rule of thumb, for 5.0 in. drill pipe, do n2747 lb/bblx ot</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exceed 200 RPM at any depth.</p>
+            -->
+            <p>&nbsp;</p>
+            <p><strong>DRILL PIPE CAPACITY AND DISPLACEMENT</strong></p>
+            
+            <img src="img/mec/d.png"  style="width:380px;height:180px">
+            <p>&nbsp;</p>
+            <p><strong>SURVEY</strong></p>
+            <p>&nbsp;</p>
+            <p>TVD&nbsp; = TVD<sub>1</sub> + (C<sub>1</sub> Cos I)</p>
+            <p>&nbsp;</p>
+            <p>Where, TVD<sub>1</sub>&nbsp; = TVD last survey</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C<sub>1</sub>&nbsp;&nbsp;&nbsp; = Course length</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I&nbsp;&nbsp;&nbsp;&nbsp; = Inclination</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><strong>BULK DENSITY</strong></p>
+            <p>&nbsp;</p>
+            <img src="img/mec/e.png">
+            <p>&nbsp;</p>
+            <p><strong>SHALE FACTOR</strong></p>
+            <p>&nbsp;</p>
+            <img src="img/mec/f.png">
+            <p>&nbsp;</p>
+            <p>Where, Mass = Sample masss (gram)</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vol&nbsp; = Volume (ml)</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp;&nbsp;&nbsp; = Normality of methylele blue solution</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><strong>TRUE HOLE DIAMETER FROM CARBIDE</strong></p>
+            <p><strong>&nbsp;</strong></p>
+            <p>&nbsp;</p>
+            <img src="img/mec/g.png">
+            <p>&nbsp;</p>
+            <p>Where, D&nbsp;&nbsp; = true hole diameter (inch)</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; POP = pump output (bbl/stk)</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp; = open hole length (ft)</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OH&nbsp; = bit size (inch)</p>
+            <p>&nbsp;</p>
+
+        </div>
+    </body>
+	
+   <script src="js/jquery.min.js"></script>
+   <script>
+      $("input[type='text']").click(function () {
+         $(this).select();
+      });
+   </script>  
+
+	<script>
+
+	hitung1.onclick = function(){
+     var hitungankali = document.getElementById('for12').value*document.getElementById('for13').value;
+     var hitungankalisatu = Math.pow(document.getElementById('for14').value/100,1.86)
+	  var hitungan1 =hitungankali*hitungankalisatu
+     document.getElementById('hasil1').innerHTML = hitungan1.toFixed(2) + ' psi';
+  }
+
+  hitung2.onclick = function(){
+    var atasdua = 0.000061 * document.getElementById('for21').value * document.getElementById('for22').value * Math.pow(document.getElementById('for23').value,1.86);
+    var bawahdua = Math.pow(document.getElementById('for24').value,4.86)
+    var hitungan2 = atasdua/bawahdua
+    document.getElementById('hasil2').innerHTML = hitungan2 + ' psi';
+  }
+
+  hitung3.onclick = function(){
+     var hitungan3 = 12.72 * Math.pow(document.getElementById('for31').value,1.47)
+     document.getElementById('hasil3').innerHTML = hitungan3.toFixed(2) + ' gpm';
+  }
+
+  hitung4.onclick = function(){
+     var atasempat  = 33055/Math.pow(document.getElementById('for41').value,2);
+     var kiriempat =Math.sqrt(Math.pow(document.getElementById('for42').value,2)+Math.pow(document.getElementById('for43').value,2))
+     var hitungan4 = atasempat*kiriempat
+	  document.getElementById('hasil4').innerHTML = hitungan4.toFixed(3) + ' ';
+     
+  }
+
+
+	</script>
+	
+	
+</html>

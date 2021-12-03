@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="buttonGreen" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:colorButtonNormal">#66bb6a</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="buttonGrey" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:colorButtonNormal">@color/colorPrimary</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+</resources>

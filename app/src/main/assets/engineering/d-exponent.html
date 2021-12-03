@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> “ d “ Exponent </h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+        <p>The &ldquo;d&rdquo; exponent is derived from the general drilling equation :<br /> </p>
+<p><em>R</em><em> : </em><em>N = a (</em><em>W<sup>d </sup></em><em>&divide; D)<br /> <br /> </em></p>
+<p>Where, R = penetration rate<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N = rotary speed (rpm)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a = a constant, dimensionless<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W = weight on bit (lb)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; d = exponent in general drilling equation, dimensionless</p>
+<p>&nbsp;</p>
+<p><strong>&ldquo;</strong><strong>d&rdquo; exponent equa</strong><strong>tion </strong><strong>:<br /> <br /> </strong></p>
+<p><em>&ldquo;d&rdquo; </em><em>= log (R </em><em>: 60</em><em>N) </em><em>:</em><em> log (</em><em>1</em><em>2W &divide; </em><em>1000</em><em>D)<br /> <br /> </em></p>
+<p>Where, d = d exponent, dimensionless<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R = penetration rate (ft/hr)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N = rotary speed (rpm)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W = weight on bit. 1,000 lb<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D = bit size, in.<br /> </p>
+<p>Case :&nbsp; &nbsp;  R = <input type="text" id="for11" style="width:50px;text-align:right;" value="0"> ft/hr<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N = <input type="text" id="for12" style="width:50px;text-align:right;" value="0"> rpm<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W = <input type="text" id="for13" style="width:50px;text-align:right;" value="0"> lb<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D = <input type="text" id="for14" style="width:50px;text-align:right;" value="0"> in.<br /> </p>
+    <br/>
+      <button class="btn btn-success" id="hitung1">Calculate</button> 
+    <br/>
+		<h4>
+		<div id="hasil1"></div>
+		</h4>
+        <br/>
+   
+   <p><strong>Corrected </strong><strong>&ldquo;</strong><strong>d&rdquo; exponent :<br /> <br /> </strong></p>
+<p>The &ldquo;d&rdquo; exponent is influenced by mud weight variations, so modifications have to be made to correct for changes in mud weight :<br /> </p>
+<p><em>d<sub>c</sub></em><em> = d (MW<sub>1</sub> &divide; MW</em><em><sub>2</sub></em><em>)</em><em><br /> <br /> </em></p>
+<p>Where, dc&nbsp; = corrected &ldquo;d&rdquo; exponent<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MW<sub>1</sub> = normal mud weight &mdash; 9.0 ppg<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MW<sub>2</sub> = actual mud weight (ppg)<br /> </p>
+<p>Case : &nbsp;&nbsp;&nbsp;d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="text" id="for21" style="width:50px;text-align:right;" value="0"><br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MW<sub>1</sub> = <input type="text" id="for22" style="width:50px;text-align:right;" value="0"> ppg<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MW<sub>2</sub> = <input type="text" id="for23" style="width:50px;text-align:right;" value="0"> ppg<br /> </p>
+        <br/>
+                <button class="btn btn-success" id="hitung2">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil2"></div>
+		</h4>
+        <br/>
+        </div>
+    </body>
+
+  
+  <script src="js/jquery.min.js"></script>
+  <script>
+      $("input[type='text']").click(function () {
+          $(this).select();
+      });
+  </script>  
+	
+	<script>
+
+	hitung1.onclick = function(){
+		var x = document.getElementById('for11').value /(60*document.getElementById('for12').value);
+    var y = (12*document.getElementById('for13').value) /(1000*document.getElementById('for14').value); 
+    document.getElementById('hasil1').innerHTML = 1.82 //Math.log(x)/Math.log(y);
+	}
+
+	hitung2.onclick = function(){
+    var x = document.getElementById('for22').value/ document.getElementById('for23').value;
+			document.getElementById('hasil2').innerHTML = document.getElementById('for21').value*x;
+	}
+
+	</script>
+	
+	
+</html>

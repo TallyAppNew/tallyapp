@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/BuoyancyFactor.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Capacity Formula</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+        
+
+        <p >
+        Annular capacity between casing or hole and drill pipe, tubing or casing <br/>
+        <br/><br/>
+		<img src="img/cf/formula1.png">
+        <br/><br/>
+        Case : hole size (Dh)
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				= 
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for11" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Drill pipe OD (Dp) = 
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for12" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung1">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil1"></div>
+		</h4>
+		
+		
+        <br/><br/>
+		<img src="img/cf/formula2.png">
+        <br/><br/>
+        Case : hole size (Dh)
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				= 
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for21" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Drill pipe OD (Dp) = 
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for22" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung2">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil2"></div>
+		</h4>
+
+        <br/><br/>
+		<img src="img/cf/formula3.png">
+        <br/><br/>
+        Case : hole size (Dh)
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				= 
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for31" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Drill pipe OD (Dp) = 
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for32" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung3">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil3"></div>
+		</h4>
+
+        <br/><br/>
+		<img src="img/cf/formula4.png">
+        <br/><br/>
+        Case : hole size (Dh)
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				= 
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for41" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Drill pipe OD (Dp) = 
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for42" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung4">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil4"></div>
+		</h4>
+		
+		<br/><br/>
+		<img src="img/cf/formula5.png">
+        <br/><br/>
+        Case : hole size (Dh)
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				= 
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for51" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Drill pipe OD (Dp) = 
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for52" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung5">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil5"></div>
+		</h4>
+		
+		<br/><br/>
+		<img src="img/cf/formula6.png">
+        <br/><br/>
+        Case : hole size (Dh)
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				= 
+                &nbsp;<input  onkeypress="return hanyaAngka(event)" type="text" id="for61" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Drill pipe OD (Dp) = 
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for62" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung6">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil6"></div>
+		</h4>
+		
+		<br/><br/>
+		<b>Annular Capacity between casing and multiple strings of tubing</b>
+		<br/>
+		a. Annular capacity between casing and multiple strings of tubing (bbl/ft)
+        
+		<br/><br/>
+		<img src="img/cf/formula7.png">
+        <br/><br/>
+        Case : Using two strings of tubing of same size ;
+		<br/>
+				Dh = casing — 7.O inch — 29 lb/ft  ID =
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for71" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+				<br/>
+				T1 = tubing No.1 — 2-3/8 inch      OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for72" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				T2 = tubing No.2 — 2-3/8 inch      OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for73" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung7">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil7"></div>
+		</h4>
+		
+		<br/>
+		b. Annular capacity between casing and multiple strings of tubing (ft/bbl) 
+        
+		<br/><br/>
+		<img src="img/cf/formula8.png">
+        <br/><br/>
+        Case : Using two strings of tubing of same size ;
+		<br/>
+				Dh = casing — 7.O inch — 29 lb/ft  ID =
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for81" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+				<br/>
+				T1 = tubing No.1 — 2-3/8 inch      OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for82" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				T2 = tubing No.2 — 2-3/8 inch      OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for83" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung8">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil8"></div>
+		</h4>
+
+
+		<br/>
+		c. Annular Capacity between casing and multiple strings of tubing (gal/ft)
+        
+		<br/><br/>
+		<img src="img/cf/formula9.png">
+        <br/><br/>
+        Case : Using two strings of tubing of same size ;
+		<br/>
+				Dh = casing — 7.O inch — 29 lb/ft  ID =
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for91" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+				<br/>
+				T1 = tubing No.1 — 2-3/8 inch      OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for92" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				T2 = tubing No.2 — 3-1/2 inch      OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for93" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung9">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil9"></div>
+		</h4>		
+		
+		<br/>
+		d. Annular capacity between casing and multiple strings of tubing (ft/gal) 
+        
+		<br/><br/>
+		<img src="img/cf/formula10.png">
+        <br/><br/>
+        Case : Using two strings of tubing of same size ;
+		<br/>
+				Dh = casing — 7.O inch — 29 lb/ft  ID =
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for101" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+				<br/>
+				T1 = tubing No.1 — 2-3/8 inch      OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for102" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				T2 = tubing No.2 — 3-1/2 inch      OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for103" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung10">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil10"></div>
+		</h4>		
+		
+		
+		<br/>
+		e. Annular capacity between casing and multiple strings of tubing (ft3/linft) 
+
+        
+		<br/><br/>
+		<img src="img/cf/formula11.png">
+        <br/><br/>
+        Case : Using three of tubing ;
+		<br/>
+				Dh = casing – 9-5/8 inch      ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for111" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+				<br/>
+				T1 = tubing no.1 – 3-1/2 inch  OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for112" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				T2 = tubing no.2 – 3-1/2 inch  OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for113" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				T3 = tubing no.3 – 3-1/2 inch  OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for114" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung11">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil11"></div>
+		</h4>		
+		
+		
+		<br/>
+		f. Annular capacity between casing and multiple strings of tubing (linft/ft3)
+        
+		<br/><br/>
+		<img src="img/cf/formula12.png">
+        <br/><br/>
+        Case : Using three of tubing ;
+		<br/>
+				Dh = casing – 9-5/8 inch      ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for121" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+				<br/>
+				T1 = tubing no.1 – 3-1/2 inch  OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for122" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				T2 = tubing no.2 – 3-1/2 inch  OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for123" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+				T3 = tubing no.3 – 3-1/2 inch  OD &nbsp;&nbsp;&nbsp;&nbsp;=
+                &nbsp;<input  onkeypress="return hanyaAngka(event)" type="text" id="for124" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung12">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil12"></div>
+		</h4>
+		
+		<br/>
+		<br/>
+		<b>Capacity of tubular and open hole : drill pipè, drill collars, tubing, 
+			casing, hole, and any cylindrical object</b>
+			
+		<br/><br/>
+		<img src="img/cf/formula13.png">
+        <br/><br/>
+        Case : Determine the capacity (bbl/ft) of  =
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for131" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+				<br/>
+                <button class="btn btn-success" id="hitung13">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil13"></div>
+		</h4>		
+
+		<br/><br/>
+		<img src="img/cf/formula14.png">
+        <br/><br/>
+        Case : Determine the capacity (ft/bbl) of  =
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for141" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+				<br/>
+                <button class="btn btn-success" id="hitung14">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil14"></div>
+		</h4>
+
+		<br/><br/>
+		<img src="img/cf/formula15.png">
+        <br/><br/>
+        Case : Determine the capacity (gal/ft) of  =
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for151" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+				<br/>
+                <button class="btn btn-success" id="hitung15">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil15"></div>
+		</h4>
+
+		<br/><br/>
+		<img src="img/cf/formula16.png">
+        <br/><br/>
+        Case : Determine the capacity (ft/gal) of  =
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for161" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+				<br/>
+                <button class="btn btn-success" id="hitung16">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil16"></div>
+		</h4>
+
+		<br/><br/>
+		<img src="img/cf/formula17.png">
+        <br/><br/>
+        Case : Determine the capacity (ft3/linft) for  =
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for171" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+				<br/>
+                <button class="btn btn-success" id="hitung17">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil17"></div>
+		</h4>
+
+		<br/><br/>
+		<img src="img/cf/formula18.png">
+        <br/><br/>
+        Case : Determine the capacity (linft/ft3) of  =
+                &nbsp;<input onkeypress="return hanyaAngka(event)" type="text" id="for181" style="width:50px;text-align:right;" value="0"> inch
+                <br/>
+				<br/>
+                <button class="btn btn-success" id="hitung18">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil18"></div>
+		</h4>
+		
+		<br/><br/>
+		<b>Amount of cuttings drilled per foot of hole drilled</b>
+		<br>
+		a. BARRELS of cuttings drilled per foot of hole drilled : 
+		<br/>
+		<img src="img/cf/formula19.png">
+		<br/>
+		Case : Determine the number of barrels of cuttings drilled for  
+				One foot of <input onkeypress="return hanyaAngka(event)" type="text" id="for191" style="width:50px;text-align:right;" value="0"> inch hole drilled with <input onkeypress="return hanyaAngka(event)" type="text" id="for192" style="width:50px;text-align:right;" value="0"> % porosity : 
+				
+		        <br/>
+				<br/>
+                <button class="btn btn-success" id="hitung19">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil19"></div>
+		</h4>
+		
+		
+		<br/><br/>
+		b. CUBIC FEET of cuttings drilled per foot of hole drilled :  
+		<br/>
+		<img src="img/cf/formula20.png">
+		<br/>
+		Case : Determine the number of barrels of cuttings drilled for  
+				One foot of <input onkeypress="return hanyaAngka(event)" type="text" id="for201" style="width:50px;text-align:right;" value="0"> inch hole drilled with <input onkeypress="return hanyaAngka(event)" type="text" id="for202" style="width:50px;text-align:right;" value="0"> % porosity : 
+				
+		        <br/>
+				<br/>
+                <button class="btn btn-success" id="hitung20">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil20"></div>
+		</h4>
+
+		<br/><br/>
+		c. Total solids generated : 
+		<br/>
+		<img src="img/cf/formula21.png">
+		<br/>
+        <p>&nbsp;&nbsp; Where ;</p>
+        <p>&nbsp;&nbsp; W<sub>cg</sub> &nbsp;= solids generated (pounds)</p>
+        <p>&nbsp;&nbsp; Ch &nbsp;= capacity of hole (bbl/ft)<br /> &nbsp;&nbsp; L &nbsp;&nbsp;= footage drilled (ft)<br /> &nbsp;&nbsp; SG &nbsp;= specific gravity of cuttings<br /> &nbsp;&nbsp; P &nbsp;&nbsp;= porosity (%)</p>
+        <p>&nbsp;</p>
+
+		Case : Determine the total pounds óf solids generated in drilling
+		<input onkeypress="return hanyaAngka(event)" type="text" id="for211" style="width:50px;text-align:right;" value="0"> ft of a <input onkeypress="return hanyaAngka(event)" type="text" id="for212" style="width:50px;text-align:right;" value="0"> inch hole <input onkeypress="return hanyaAngka(event)" type="text" id="for213" style="width:50px;text-align:right;" value="0">. 
+			   Specific gravity of cuttings = <input onkeypress="return hanyaAngka(event)" type="text" id="for214" style="width:50px;text-align:right;" value="0"> gr/cc.Porosity = <input onkeypress="return hanyaAngka(event)" type="text" id="for215" style="width:50px;text-align:right;" value="0">% :
+  
+		        <br/>
+				<br/>
+                <button class="btn btn-success" id="hitung21">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil21"></div>
+		</h4>
+	</body>
+	
+	
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $("input[type='text']").click(function () {
+            $(this).select();
+        });
+		function hanyaAngka(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+		}
+    </script>  
+	
+	<script>
+
+	hitung1.onclick = function(){
+		document.getElementById('hasil1').innerHTML = ((((document.getElementById('for11').value*document.getElementById('for11').value)-(document.getElementById('for12').value*document.getElementById('for12').value))/1029.4)) + ' bbl/ft';
+	}
+		
+
+	hitung2.onclick = function(){
+		document.getElementById('hasil2').innerHTML = parseFloat((1029.4/((document.getElementById('for21').value*document.getElementById('for21').value)-(document.getElementById('for22').value*document.getElementById('for22').value)))).toFixed(2) + ' bbl/ft';
+	}	
+	
+	hitung3.onclick = function(){
+		document.getElementById('hasil3').innerHTML = parseFloat(((document.getElementById('for31').value*document.getElementById('for31').value)-(document.getElementById('for32').value*document.getElementById('for32').value))/24.51).toFixed(1) + ' bbl/ft';
+	}	
+	
+	hitung4.onclick = function(){
+		document.getElementById('hasil4').innerHTML = parseFloat(24.51/((document.getElementById('for41').value*document.getElementById('for41').value)-(document.getElementById('for42').value*document.getElementById('for42').value))).toFixed(5) + ' bbl/ft';
+	}
+
+	hitung5.onclick = function(){
+		document.getElementById('hasil5').innerHTML = parseFloat(((document.getElementById('for51').value*document.getElementById('for51').value)-(document.getElementById('for52').value*document.getElementById('for52').value))/183.35).toFixed(6) + ' bbl/ft';
+	}	
+	
+	hitung6.onclick = function(){
+		document.getElementById('hasil6').innerHTML = parseFloat(183.35/((document.getElementById('for61').value*document.getElementById('for61').value)-(document.getElementById('for62').value*document.getElementById('for62').value))).toFixed(3) + ' bbl/ft';
+	}	
+	
+	hitung7.onclick = function(){
+		document.getElementById('hasil7').innerHTML = parseFloat(((document.getElementById('for71').value*document.getElementById('for71').value)-
+		((document.getElementById('for72').value*document.getElementById('for72').value)+(document.getElementById('for73').value*document.getElementById('for73').value)))/1029.4).toFixed(5)
+		+ ' bbl/ft';
+	}	
+
+	hitung8.onclick = function(){
+		document.getElementById('hasil8').innerHTML = parseFloat(1029.4/((document.getElementById('for81').value*document.getElementById('for81').value)-
+		((document.getElementById('for82').value*document.getElementById('for82').value)+(document.getElementById('for83').value*document.getElementById('for83').value)))).toFixed(4)
+		+ ' ft/bbl';
+	}	
+
+	hitung9.onclick = function(){
+		document.getElementById('hasil9').innerHTML = parseFloat(((document.getElementById('for91').value*document.getElementById('for91').value)-
+		((document.getElementById('for92').value*document.getElementById('for92').value)+(document.getElementById('for93').value*document.getElementById('for93').value)))/24.51).toFixed(7)
+		+ ' gal/ft';
+	}
+
+	hitung10.onclick = function(){
+		document.getElementById('hasil10').innerHTML = parseFloat(24.51/((document.getElementById('for101').value*document.getElementById('for101').value)-
+		((document.getElementById('for102').value*document.getElementById('for102').value)+(document.getElementById('for103').value*document.getElementById('for103').value)))).toFixed(7)
+		+ ' ft/gal';
+	}
+	
+	hitung11.onclick = function(){
+		document.getElementById('hasil11').innerHTML = parseFloat(((document.getElementById('for111').value*document.getElementById('for111').value)-
+		((document.getElementById('for112').value*document.getElementById('for112').value)+(document.getElementById('for113').value*document.getElementById('for113').value)+(document.getElementById('for114').value*document.getElementById('for114').value)))/183.35).toFixed(7)
+		+ ' ft<sup>3</sup>/linft';
+	}
+
+	hitung12.onclick = function(){
+		document.getElementById('hasil12').innerHTML = parseFloat(183.35/((document.getElementById('for121').value*document.getElementById('for121').value)-
+		((document.getElementById('for122').value*document.getElementById('for122').value)+(document.getElementById('for123').value*document.getElementById('for123').value)+(document.getElementById('for124').value*document.getElementById('for124').value)))).toFixed(7)
+		+ ' linft/ft<sup>3</sup>';
+	}
+	
+	hitung13.onclick = function(){
+		document.getElementById('hasil13').innerHTML =  (document.getElementById('for131').value*document.getElementById('for131').value)/1029.4 + ' bbl/ft';
+	}
+	
+	hitung14.onclick = function(){
+		document.getElementById('hasil14').innerHTML =  1029.4/(document.getElementById('for141').value*document.getElementById('for141').value) + ' ft/bbl';
+	}
+	
+	hitung15.onclick = function(){
+		document.getElementById('hasil15').innerHTML =  (document.getElementById('for151').value*document.getElementById('for151').value)/24.51 + ' gal/ft';
+	}
+	
+	hitung16.onclick = function(){
+		document.getElementById('hasil16').innerHTML =  24.51/(document.getElementById('for161').value*document.getElementById('for161').value) + ' ft/gal';
+	}
+
+	hitung17.onclick = function(){
+		document.getElementById('hasil17').innerHTML =  (document.getElementById('for171').value*document.getElementById('for171').value)/183.35 + ' linft/ft';
+	}
+	
+	hitung18.onclick = function(){
+		document.getElementById('hasil18').innerHTML =  183.35/(document.getElementById('for181').value*document.getElementById('for181').value) + ' ft/linft';
+	}
+
+	hitung19.onclick = function(){
+		document.getElementById('hasil19').innerHTML = ((document.getElementById('for191').value*document.getElementById('for191').value)/1029.4) 
+		* (1-(document.getElementById('for192').value/100)) ;
+	}
+
+	hitung20.onclick = function(){
+		document.getElementById('hasil20').innerHTML = ((document.getElementById('for201').value*document.getElementById('for201').value)/144) 
+		* (0.7854*(1-(document.getElementById('for202').value/100))) ;
+	}
+
+	hitung21.onclick = function(){
+		document.getElementById('hasil21').innerHTML = 350 * document.getElementById('for213').value*document.getElementById('for211').value *(1-(document.getElementById('for215').value/100) )*document.getElementById('for214').value + ' pounds' ;
+	}	
+
+
+	</script>
+	
+	
+</html>

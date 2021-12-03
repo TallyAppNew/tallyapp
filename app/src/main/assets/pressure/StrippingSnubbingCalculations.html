@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <title>Tally App</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1 style="margin-top:10px"> Stripping/Snubbing Calculations </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:100px">
+        <b>Breakover Point Between Stripping and Snubbing</b>
+        <br/><br/>
+        Case : <br /> <br />
+        Mud weight
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for1" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Drill collars
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for2" style="width:50px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+        Length of drill collars &nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Drill pipe &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for4" style="width:50px;text-align:right;" value="0">
+        in
+        <br /><br />
+        Drill pipe weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for5" style="width:50px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+        Shut-in casing pressure =
+        <input type="text" id="for6" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Buoyancy factor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for7" style="width:50px;text-align:right;" value="0">
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung1">Calculate</button>
+        <br /><br />
+
+        <b>Determine the force (lb) created by wellbore pressure on 6-1/4 in. drill collars :</b> <br /><br />
+        <img src="img/ssc/1.png"><br /><br />
+        <h4>
+            <div id="hasil1a"></div>
+        </h4>
+        <br /><br />
+
+        <b>Determine the weight (lb) of the drill collars ;</b> <br /><br />
+        <img src="img/ssc/2.png"><br /><br />
+        <h4>
+            <div id="hasil1b"></div>
+        </h4>
+        <br /><br />
+
+        <b>Additional weight required from drill pipa :</b> <br /><br />
+        <img src="img/ssc/3.png"><br /><br />
+        <h4>
+            <div id="hasil1c"></div>
+        </h4>
+        <br /><br />
+
+        <b>Length of drill pipe required to reach breakover point :</b> <br /><br />
+        <img src="img/ssc/4.png"><br /><br />
+        <h4>
+            <div id="hasil1d"></div>
+        </h4>
+        <br /><br />
+
+        <b>Length of drill string to reach breakover point :</b> <br /><br />
+        <img src="img/ssc/5.png"><br /><br />
+        <h4>
+            <div id="hasil1e"></div>
+        </h4>
+        <br /><br />
+
+        <b>Minimum Surface Pressure Before Stripping is Possible</b> <br /><br />
+        <img src="img/ssc/6.png"><br /><br />
+        Case : <br /> <br />
+        Drill Collar OD
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for1b1" style="width:50px;text-align:right;" value="0">
+        in
+        <br /><br />
+        ID
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for1b2" style="width:50px;text-align:right;" value="0">
+        in
+        <br /><br />
+        Weight
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for1b" style="width:50px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+        Length of one stand =
+        <input type="text" id="for2b" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung2">Calculate</button>
+        <br /><br />
+
+        <h4>
+            <div id="hasil2"></div>
+        </h4>
+        <br /><br />
+
+        <b>Height Gain From Stripping into Influx</b><br /><br />
+        <img src="img/ssc/7.png" ><br /><br />
+
+        Where,<br /><br />
+        L = length of pipe stripped (ft)<br />
+        Cdp = capacity of drill pipe, drill collars or tubing (bbl/ft)<br />
+        Ddp = displacement of drill pipe, drill collars or tubing (bbl/ft)<br />
+        Ca = annular capacity (bbl/ft)<br /><br />
+
+        Sample Case : If 300 ft of 5.0 in. driil pipe — 19.5 lb/ft is stripped into<br/>
+        An Influx in a 12-1/4 in. hole, determine the height (ft)<br/>
+        gained :<br/><br/>
+
+        Case : <br /> <br />
+        Drill pipe capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for1c" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        Drill pipe displacement &nbsp;&nbsp; =
+        <input type="text" id="for2c" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        Length drill pipe stripped =
+        <input type="text" id="for3c" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Annular capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for4c" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung3">Calculate</button>
+        <br /><br />
+
+        <h4>
+            <div id="hasil3"></div>
+        </h4>
+        <br /><br />
+
+        <b>Casing Pressure Increase From Stripping Into Influx</b><br /><br />
+        <img src="img/ssc/8.png"><br /><br />
+
+        Case : <br /> <br />
+        Gain in height &nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for1d" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Gradient of mud &nbsp; =
+        <input type="text" id="for2d" style="width:50px;text-align:right;" value="0">
+        psi/ft
+        <br /><br />
+        Gradient of influx =
+        <input type="text" id="for3d" style="width:50px;text-align:right;" value="0">
+        psi/ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung4">Calculate</button>
+        <br /><br />
+
+        <h4>
+            <div id="hasil4"></div>
+        </h4>
+        <br /><br />
+
+        <b>Volume of Mud to Bleed to Maintain Constant Bottom hole</b><br />
+        <b>Pressure with a Gas Bubble Rising</b><br /><br />
+        With pipe in the hole :<br /><br />
+        <img src="img/ssc/9.png"><br /><br />
+
+        Where ;<br /><br />
+        Vmud = volume of mud (bbl) that must be bled to maintain constant
+        bottomhole pressure with a gas bubble rising.<br />
+        Dp = incremental pressure steps that the casing pressure will be allowed
+        to increase.<br />
+        Ca = annular capacity (bbl/ft)<br /><br />
+
+        Case : <br /> <br />
+        Casing pressure increase per step =
+        <input type="text" id="for1e" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Gradient of mud &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for2e" style="width:50px;text-align:right;" value="0">
+        psi/ft
+        <br /><br />
+        Annular capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3e" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung5">Calculate</button>
+        <br /><br />
+
+        <h4>
+            <div id="hasil5"></div>
+        </h4>
+        <br /><br />
+
+        With no pipe in hole:<br /><br />
+        <img src="img/ssc/10.png"><br /><br />
+
+        Where,<br /><br />
+        Ch = hole size or casing ID, in.<br /><br />
+
+        Case : <br /> <br />
+        Casing pressure increase per step =
+        <input type="text" id="for1f" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Gradient of mud &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for2f" style="width:50px;text-align:right;" value="0">
+        psi/ft
+        <br /><br />
+        Annular capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3f" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung6">Calculate</button>
+        <br /><br />
+
+        <h4>
+            <div id="hasil6"></div>
+        </h4>
+        <br /><br />
+
+        <b>Maximum Allowable Surface Pressure (MASP) Governed by the Formation</b><br /><br />
+        <img src="img/ssc/11.png"><br /><br />
+
+        Case : <br /> <br />
+        Maximum allowable mud weight =
+        <input type="text" id="for1g" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for2g" style="width:50px;text-align:right;" value="0">
+        psi/ft
+        <br /><br />
+        Casing seat TVD &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3g" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung7">Calculate</button>
+        <br /><br />
+
+        <h4>
+            <div id="hasil7"></div>
+        </h4>
+        <br /><br />
+
+        <b>Maximum Allowable Surface Pressure (MASP) Governed by Casing Burst Pressure</b><br /><br />
+        <img src="img/ssc/12.png"><br /><br />
+
+        Case : <br /> <br />
+        Casing burst pressure &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for1h" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Casing setting depth &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for2h" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Mud weight behind casing =
+        <input type="text" id="for3h" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Mud weight in use &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for4h" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Casing safety factor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for5h" style="width:50px;text-align:right;" value="0">
+        %
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung8">Calculate</button>
+        <br /><br />
+
+        <h4>
+            <div id="hasil8"></div>
+        </h4>
+        <br /><br />
+
+        <br /><br /><br /><br />
+    </div>
+
+    
+</body>
+
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+</script>  
+
+<script>
+    hitung1.onclick = function () {
+        var bvsadjhsj = Math.pow(6.25, 2);
+        var basdjhjss = bvsadjhsj * 0.7854 * document.getElementById('for6').value;
+
+        var bsshjsjss = document.getElementById('for2').value * document.getElementById('for3').value * document.getElementById('for7').value;
+
+        var kasdghgus = (basdjhjss.toFixed(0) * 1) - (bsshjsjss.toFixed(0) * 1);
+
+        var kasdhhssu = document.getElementById('for5').value * document.getElementById('for7').value;
+        var dskjsdihx = kasdghgus.toFixed(0) / kasdhhssu;
+
+        var xsdkjisdi = (document.getElementById('for3').value * 1) + (dskjsdihx.toFixed(0) * 1);
+
+        document.getElementById('hasil1a').innerHTML = basdjhjss.toFixed(0) + ' lb';
+        document.getElementById('hasil1b').innerHTML = bsshjsjss.toFixed(0) + ' lb';
+        document.getElementById('hasil1c').innerHTML = kasdghgus.toFixed(0) + ' lb';
+        document.getElementById('hasil1d').innerHTML = dskjsdihx.toFixed(0) + ' ft';
+        document.getElementById('hasil1e').innerHTML = xsdkjisdi.toFixed(0) + ' ft';
+
+    }
+
+    hitung2.onclick = function () {
+        var nsdbjsdhj = document.getElementById('for1b').value * document.getElementById('for2b').value;
+        var bsdhghsdg = Math.pow(document.getElementById('for1b1').value, 2);
+        var dsdjhjshd = bsdhghsdg * 0.7854;
+        var dsdjhsdss = nsdbjsdhj / dsdjhjshd;
+
+        document.getElementById('hasil2').innerHTML = dsdjhsdss.toFixed(0) + ' psi';
+
+    }
+
+    hitung3.onclick = function () {
+        var bsdjhjsds = (document.getElementById('for1c').value * 1) + (document.getElementById('for2c').value * 1);
+        var csdhuhdee = bsdjhjsds * document.getElementById('for3c').value;
+        var bsdjhjsff = csdhuhdee / document.getElementById('for4c').value;
+
+        document.getElementById('hasil3').innerHTML = bsdjhjsff.toFixed(1) + ' ft';
+
+    }
+
+    hitung4.onclick = function () {
+        var bcasdjhsd = (document.getElementById('for2d').value * 1) - (document.getElementById('for3d').value * 1);
+        var vsdfjhgjd = bcasdjhsd * document.getElementById('for1d').value;
+
+        document.getElementById('hasil4').innerHTML = vsdfjhgjd.toFixed(0) + ' psi';
+
+    }
+
+    hitung5.onclick = function () {
+        var dfhjdfhhe = document.getElementById('for1e').value * document.getElementById('for3e').value;
+        var vdjhshfef = dfhjdfhhe / document.getElementById('for2e').value;
+
+        document.getElementById('hasil5').innerHTML = vdjhshfef.toFixed(1) + ' bbl';
+
+    }
+
+    hitung6.onclick = function () {
+        var xcdhjhsdw = document.getElementById('for1f').value * document.getElementById('for3f').value;
+        var csdkjijsd = xcdhjhsdw / document.getElementById('for2f').value;
+
+        document.getElementById('hasil6').innerHTML = csdkjijsd.toFixed(2) + ' bbl';
+
+    }
+
+    hitung7.onclick = function () {
+        var basdkhjsd = (document.getElementById('for1g').value * 1) - (document.getElementById('for2g').value * 1);
+        var casdjhhss = basdkhjsd * 0.052 * document.getElementById('for3g').value;
+
+        document.getElementById('hasil7').innerHTML = casdjhhss.toFixed(0) + ' psi';
+
+    }
+
+    hitung8.onclick = function () {
+        var casjdbjbs = document.getElementById('for1h').value * (document.getElementById('for5h').value/100);
+        var jsdjjbjsd = parseFloat(document.getElementById('for4h').value) - parseFloat(document.getElementById('for3h').value);
+        var dsdhjhsdj = jsdjjbjsd * 0.052 * document.getElementById('for2h').value;
+        var ksdksdjis = parseFloat(casjdbjbs) - parseFloat(dsdhjhsdj );
+        
+        document.getElementById('hasil8').innerHTML = ksdksdjis.toFixed(0) + ' psi';
+
+    }
+
+
+
+</script>
+</html>

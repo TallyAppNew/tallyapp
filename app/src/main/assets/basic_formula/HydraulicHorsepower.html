@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/BuoyancyFactor.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Hydraulic Horsepower </h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+        <img src="img/hh/formula1.png">
+		<p><span data-contrast="auto">W</span><span data-contrast="auto">here&nbsp;</span><span data-contrast="auto">;</span><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		<p><span data-contrast="auto">HHP = hydraulic horsepower</span>&nbsp;<br /><span data-contrast="auto">P&nbsp;</span><span data-contrast="auto">&nbsp;&nbsp;</span><span data-contrast="auto">= circulating pressure</span><span data-contrast="auto">&nbsp;(</span><span data-contrast="auto">psi</span><span data-contrast="auto">)</span>&nbsp;<br /><span data-contrast="auto">Q&nbsp;</span><span data-contrast="auto">&nbsp;&nbsp;</span><span data-contrast="auto">= circulating rate</span><span data-contrast="auto">&nbsp;(</span><span data-contrast="auto">gpm</span><span data-contrast="auto">)</span>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		<p><span data-contrast="auto">Case&nbsp;</span><span data-contrast="auto">: circulating pressure = <input onkeypress="return hanyaAngka(event)" type="text" id="for11" style="width:50px;text-align:right;" value="0"> psi</span>&nbsp;<br /><br />
+		<span data-contrast="auto">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span data-contrast="auto">circulating&nbsp;</span><span data-contrast="auto">ra</span><span data-contrast="auto">t</span><span data-contrast="auto">e&nbsp;</span><span data-contrast="auto">&nbsp; &nbsp; &nbsp; &nbsp;=</span><span data-contrast="auto">&nbsp;<input  onkeypress="return hanyaAngka(event)" type="text" id="for12" style="width:50px;text-align:right;" value="0">&nbsp;</span><span data-contrast="auto">gpm</span>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+    <br/>
+    <button class="btn btn-success" id="hitung1">Calculate</button> 
+</p>
+
+<h4>
+<div id="hasil1"></div>
+</h4>
+
+<br/>
+<br/>
+</div>
+</body>
+	
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+    function hanyaAngka(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+		}
+</script>  
+
+	<script>
+
+  hitung1.onclick = function(){
+		document.getElementById('hasil1').innerHTML = parseFloat(((document.getElementById('for11').value)*(document.getElementById('for12').value))/1714).toFixed(2)  ;
+	}
+  </script>
+	
+</html>

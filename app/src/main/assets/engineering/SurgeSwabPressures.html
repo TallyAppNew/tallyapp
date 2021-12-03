@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Surge & Swab Pressures </h1>
+			</div>
+		  </div>
+		</nav>
+        <div style="left: 20px;position: absolute;top:100px">
+          <p>&nbsp;</p>
+          <p><strong>Method 1<br /> <br /> </strong></p>
+          <ol>
+          <li>Determine n :<br /> </li>
+          <img src="img/ssp/a.png" style="width:130px;height:50px;">
+          </ol>
+          <ol start="2">
+          <li>Determine K :<br /> </li>
+          <img src="img/ssp/b.png" style="width:100px;height:40px;">
+          </ol>
+          <ol start="3">
+          <li>Determine velocity (ft/min):<br /> </li>
+          
+          <p>&nbsp;&nbsp; For plugged flow :<br /> </p>
+          <img src="img/ssp/c.png" style="width:190px;height:50px;">
+          <p>&nbsp;&nbsp; For open pipe :</p>
+          <img src="img/ssp/d.png" style="width:190px;height:50px;">
+          </ol>
+          <p>&nbsp;</p>
+          <ol start="4">
+          <li>Maximum pipe velocity :<br /> </li>
+          <p>&nbsp;&nbsp; Vm = 1.5 x v <br /> </p>
+          </ol>
+          <ol start="5">
+          <li>Determine pressure losses :<br /> </li>
+          <img src="img/ssp/e.png" style="width:260px;height:50px;">
+          </ol>
+          <p>&nbsp;</p>
+          <p><strong>&nbsp;&nbsp; </strong><strong>Nomenclature :<br /> <br /> </strong></p>
+          <p>&nbsp;&nbsp; N&nbsp; &nbsp; &nbsp; &nbsp; = dimensionless<br /> &nbsp;&nbsp; K&nbsp; &nbsp; &nbsp; &nbsp; = dimensionless<br /> &nbsp;&nbsp; &#952; 600&nbsp; = 600 viscometer dial reading<br /> &nbsp;&nbsp; &#952; 300&nbsp; = 300 viscometer dial reading<br /> &nbsp;&nbsp; v&nbsp; &nbsp; &nbsp; &nbsp; = fluid velocity (ft/min)<br /> &nbsp;&nbsp; Vp&nbsp; &nbsp; &nbsp; = pipe velocity (fi/min)<br /> &nbsp;&nbsp; Vm&nbsp; &nbsp; &nbsp;= maximum pipe velocity (ft/min)<br /> &nbsp;&nbsp; Ps&nbsp; &nbsp; &nbsp; = pressure loss (psi)<br /> &nbsp;&nbsp; L&nbsp; &nbsp; &nbsp; &nbsp; = pipe length (ft)<br /> &nbsp;&nbsp; Dh&nbsp; &nbsp; &nbsp;= hole diameter (inch)<br /> &nbsp;&nbsp; Dp&nbsp; &nbsp; &nbsp;= drill pipe or drill collar OD (inch)<br /> &nbsp;&nbsp; Di&nbsp; &nbsp; &nbsp; = drill pipe or drill collar ID (inch)<br /> </p>
+          <p>Case 1 : Determine surge pressure for plugged pipe :<br /> &nbsp;</p>
+          <p>Data : Well depth&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= <input type="text" id="for11" style="width:50px;text-align:right;" value="0"> ft</p>
+          <p><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Hole size&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = <input type="text" id="for12" style="width:50px;text-align:right;" value="0"> in.&nbsp;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Drill pipe OD&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = <input type="text" id="for13" style="width:50px;text-align:right;" value="0"> in.</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Drill pipe ID&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= <input type="text" id="for14" style="width:50px;text-align:right;" value="0"> in.</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Drill collar&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = <input type="text" id="for15" style="width:50px;text-align:right;" value="0"> ID</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Drill collar length&nbsp; &nbsp; &nbsp; &nbsp; = <input type="text" id="for16" style="width:50px;text-align:right;" value="0"> ft</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for17" style="width:50px;text-align:right;" value="0"> ppg</p>
+          <p>&nbsp;</p>
+          <p>Viscometer readings :<br /> </p>
+          <p>&#952; 600 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for18" style="width:50px;text-align:right;" value="0"><br /><br />
+             &#952; 300 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for19" style="width:50px;text-align:right;" value="0"><br /> 
+             Average pipe running speed = <input type="text" id="for110" style="width:50px;text-align:right;" value="0"> ft/min<br /> </p>
+          <ol>
+            <br/>
+            <br/>
+              <button class="btn btn-success" id="hitung1">Calculate</button> 
+            <br/>
+            <br/>
+          <li>Determine n :</li>
+            <h4>
+              <div id="hasil1"></div>
+            </h4>
+          </ol>
+          <p>&nbsp;</p>
+          <ol start="2">
+          <li>Determine K:</li>
+            <h4>
+              <div id="hasil2"></div>
+            </h4>
+          </ol>
+          <p>&nbsp;</p>
+          <ol start="3">
+          <li>Determine velocity (ft/min):&nbsp;</li>
+            <h4>
+              <div id="hasil3"></div>
+            </h4>
+          </ol>
+          <p>&nbsp;</p>
+          <ol start="4">
+          <li>Determine maximum pipe velocity (ft/min) :<br /> </li>
+            <h4>
+              <div id="hasil4"></div>
+            </h4>
+          </ol>
+          <p>&nbsp;</p>
+          <ol start="5">
+          <li>Determine pressure loss (psi):</li>
+            <h4>
+              <div id="hasil5"></div>
+            </h4> 
+         </ol>
+         
+          <p>&nbsp;</p>
+          <p>Therefore, this pressure is added to the hydrostatic pressure of the mud in the wellbore.</p>
+          <p>If, however, the swab pressure is desired, this pressure would be subtracted from the hydrostatic pressure.<br /> </p>
+          <p>&nbsp; &nbsp; &nbsp; Case 2 : Determine surge pressure for open pipe :<br /> </p>
+          <ol>
+            <img src="img/ssp/f.png">
+          </ol>
+          <p>&nbsp;</p>
+          <p>Therefore, this pressure would be added to the hydrostatic pressure of the mud in the wellbore.<br /> If, however, the swab pressure is desired, this pressure would be subtracted from the hydrostatic pressure of the mud in the wellbore.<br /> </p>
+          <p><strong>Method 2<br /> <br /> </strong></p>
+          <p>Surge and swab pressures<br /> </p>
+          <p>Assume : 1. Plugged pipe<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2. Laminar flow around drill pipe<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3. Turbulent flow around drill collars</p>
+          <p>&nbsp;</p>
+          <p>These calculations outline the procedure and calculations necessary to determine the increase or decrease in equivalent mud weight (bottomhole pressure) due to pressure surges caused by pulling or running pipe. These calculations assume that the end of the pipe is plugged (as in running casing with a float shoe or drill pipe with bit and jet nozzles in place), not open ended.<br /> </p>
+          <ol>
+          <strong>A. Surge pressure around drill pipe :<br /> <br /> </strong>
+          <li>Estimated annular fluid velocity (v) around drill pipe :</li>
+          <img src="img/ssp/g.png">
+          </ol>
+          <ol start="2">
+            <li>Maximum pipe velocity (Vm):<br /> </li>
+            <p>&nbsp;&nbsp; Vm = v x 1.5<br /> </p>
+          </ol>
+          <ol start="3">
+          <li>Calculate n :<br /> </li>
+          <img src="img/ssp/h.png">
+          <li>Calculate K :<br /> </li>
+          <img src="img/ssp/i.png">
+          <li>Calculate the shear rate (Ym) of the mud moving around the pipe :<br /> </li>
+          <img src="img/ssp/j.png">
+          </ol>
+          <ol start="6">
+          <li>Calculate the shear stress (T) of the mud moving around the pipe :<br /> </li>
+          <img src="img/ssp/k.png">
+          </ol>
+          <ol start="7">
+          <li>Calculate the pressure (Ps) decrease for the interval :</li>
+          <img src="img/ssp/l.png">
+          </ol>
+          <p>&nbsp;</p>
+          <ol>
+          <strong>B</strong><strong>. Surge pressure around drill collars : <br /> <br /> </strong>
+          <li>Calculate the estimated annular fluid velocity (v) around the drill</li>
+          
+          <p>&nbsp;&nbsp; Collars :<br /> </p>
+          <img src="img/ssp/l.png">
+          </ol>
+          <p>&nbsp;</p>
+          <ol start="2">
+          <li>Calculate maximum pipe velocity (Vm):<br /> </li>
+          <p>&nbsp;&nbsp; Vm = v x 1.5<br /> </p>
+          </ol>
+          <ol start="3">
+          <li>Convert the equivalent velocity of the mud due to pipe movement to</li>
+          
+          <p>&nbsp;&nbsp; equivalent f&igrave;owrate (Q):<br /> </p>
+          <img src="img/ssp/n.png">
+          
+          </ol>
+          <p>&nbsp;</p>
+          <ol start="4">
+          <li>Calculate the pressure loss for each interval (Ps):<br /> </li>
+          <img src="img/ssp/o.png">
+          </ol>
+          <p>&nbsp;</p>
+          <ol>
+              <strong>C. Total surge pressure converted to mud weight :</strong><br />
+          <p>&nbsp;&nbsp; Total surge (or swab) pressures :<br /> </p>
+          <p>&nbsp;&nbsp; psi = Ps (drill pipe) + Ps (drill collars)<br /> </p>
+          </ol>
+          <ol>
+              <strong>D. If surge pressure is desired :</strong><br />
+          
+          <p>&nbsp;&nbsp; SP (ppg) = Ps &divide; 0.052 &divide; TVD (ft) &ldquo;+&rdquo; MW (ppg)<br /> </p>
+              <strong>E. If swab pressure is desired :</strong><br />
+          <p>&nbsp;&nbsp; SP (ppg) = PS &divide; 0.052 + TVD (ft) &ldquo;&mdash;&ldquo; MW (ppg)</p>
+          <p>&nbsp;</p>
+          <p><br /> </p>
+          <p>Case : Determine both the surge and swab pressure for the data</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Listed below :<br /> </p>
+          <p>Data : Mud weight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;= <input type="text" id="for21" style="width:50px;text-align:right;" value="0"> ppg<br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Plastic viscosity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for22" style="width:50px;text-align:right;" value="0"> cps<br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Yield point &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for23" style="width:50px;text-align:right;" value="0"> sq ft<br /> <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hole diameter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for24" style="width:50px;text-align:right;" value="0"> in.<br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Drill pipe OD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for25" style="width:50px;text-align:right;" value="0"> in.<br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Drill pipe length &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for26" style="width:50px;text-align:right;" value="0"> ft<br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Drill collar OD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for27" style="width:50px;text-align:right;" value="0"> in.<br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Drill collar length &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for28" style="width:50px;text-align:right;" value="0"> ft<br /><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pipe running speed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for29" style="width:50px;text-align:right;" value="0"> ft/min<br /> </p>
+          <p>&nbsp;</p>
+          <ol>
+          <br/>
+            <button class="btn btn-success" id="hitung2">Calculate</button> 
+          <br/>
+          <h4>
+          </ol>
+          <p>&nbsp;</p>
+          <ol>
+          <strong>A. Arou</strong><strong>n</strong><strong>d drill pipe :<br /> <br /> </strong>
+          <li>Calculate annular fluid velocity (v) around drill pipe :<br /> </li>
+            <h4>
+              <div id="hasil6"></div>
+            </h4>    
+          </ol>
+          <ol start="2">
+          <li>Calculate maximum pipe velocity (Vm):<br /> </li>
+            <h4>
+              <div id="hasil7"></div>
+            </h4>    
+          </ol>
+         <p style="margin-left: 4%;">
+          NOTE : Determine n and K from the plastic viscosity and yield point as </br>
+          Follows :</br>
+          PV + YP = &#952; 300 reading</br>
+          &#952;300 reading + PV = &#952; 600 reading</br>
+          Sample Case :</p>
+          <p style="margin-left: 6%;">
+                PV =  <input type="text" id="for31" style="width:50px;text-align:right;" value="0"></br>
+                YP         = <input type="text" id="for32" style="width:50px;text-align:right;" value="0"> </br>
+                <br/>
+                  <button class="btn btn-success" id="hitung3">Calculate</button> 
+                <br/>
+          </p>
+          <ol start="3">
+          <li>Calculate n :</li>
+            <h4>
+              <div id="hasil8"></div>
+            </h4>    
+          </ol>
+          <ol start="4">
+          <li>Calculate K :<br /> </li>
+            <h4>
+              <div id="hasil9"></div>
+            </h4>    
+          </ol>
+          <ol start="5">
+          <li>Calculate the shear rate (Ym) of the mud moving around the pipe :<br /> </li>
+            <h4>
+              <div id="hasil10"></div>
+            </h4>    
+          </ol>
+          <ol start="6">
+          <li>Calculate the shear stress (T) of the mud moving around the pipe :</li>
+            <h4>
+              <div id="hasil11"></div>
+            </h4>    
+          </ol>
+          <ol start="7">
+          <li>Calculate the pressure decrease (Ps) for the interval :<br /> </li>
+            <h4>
+              <div id="hasil12"></div>
+            </h4>    
+          </ol>
+          <ol>
+          <strong>B. Around drill collars :<br /> <br /> </strong>
+          <li>Calculate the estimated annular fluid velocity (v) around the drill</li>
+            <p>&nbsp;&nbsp; collars :<br /> </p>
+            <h4>
+              <div id="hasil13"></div>
+            </h4> 
+          </ol>
+          <ol start="2">
+            <li>Calculate maximum pipe velocity (Vm):<br /> </li>
+            <h4>
+              <div id="hasil14"></div>
+            </h4> 
+          </ol>
+          <ol start="3">
+            <li>Convert the equivalent velocity of the mud due to pipe movement to</li>
+            <p>&nbsp;&nbsp; equivalent flowrate (Q):<br /> </p>
+            <h4>
+              <div id="hasil15"></div>
+            </h4> 
+          </ol>
+          <ol start="4">
+            <li>Calculate the pressure loss (Ps) for the interval :<br /> </li>
+            <h4>
+              <div id="hasil16"></div>
+            </h4>
+          </ol>
+          <ol>
+          <strong>C. Total pressures :<br /> <br /> </strong>
+            <h4>
+              <div id="hasil17"></div>
+            </h4>
+          </ol>
+          <ol>
+          <strong>D. Pressure converted to mud weight</strong><strong> (</strong><strong>ppg</strong><strong>)</strong><strong>:<br /> <br /> </strong>
+            <h4>
+              <div id="hasil18"></div>
+            </h4>
+          </ol>
+          
+          <ol>
+          <strong>E. If surge pressure is desired :<br /> <br /> </strong>
+            <h4>
+              <div id="hasil19"></div>
+            </h4>
+          </ol>
+          
+          <ol>
+          <strong>F. If swab presure is desired :</strong><strong> <br /> <br /> </strong>
+            <h4>
+              <div id="hasil20"></div>
+            </h4>  
+          </ol>
+          
+        </div>
+    </body>
+	
+  <script src="js/jquery.min.js"></script>
+  <script>
+      $("input[type='text']").click(function () {
+          $(this).select();
+      });
+  </script>  
+
+	<script>
+
+	hitung1.onclick = function(){
+    var satu  = 3.32*(Math.log(document.getElementById('for18').value/document.getElementById('for19').value)/ Math.LN10)
+    document.getElementById('hasil1').innerHTML =  satu.toFixed(4) + ' ';
+    
+    var dua = document.getElementById('for19').value/Math.pow(511,satu);
+    document.getElementById('hasil2').innerHTML =  dua.toFixed(3) + ' ';
+
+    var tiga = (0.45+(Math.pow(document.getElementById('for13').value,2)/(Math.pow(7.875,2)-Math.pow(document.getElementById('for13').value,2))))*document.getElementById('for110').value;
+    document.getElementById('hasil3').innerHTML =  tiga.toFixed(0) + ' ft/min';
+  
+    var empat = tiga*1.5;
+    document.getElementById('hasil4').innerHTML =  empat.toFixed(0) + ' ft/min';
+
+    var lima = Math.pow(268.8*1.1798,satu)*(7464.6/1012.5) ;
+    document.getElementById('hasil5').innerHTML =  lima + ' ';
+  
+  }
+
+  hitung2.onclick = function(){
+    var enam  = (parseFloat(0.45) + parseFloat(Math.pow(document.getElementById('for25').value,2)/(Math.pow(document.getElementById('for24').value,2)-Math.pow(document.getElementById('for25').value,2)))) *document.getElementById('for29').value
+    document.getElementById('hasil6').innerHTML =  enam.toFixed(0) + ' ft/min';
+    
+    var tujuh = enam *1.5;
+    document.getElementById('hasil7').innerHTML =  tujuh.toFixed(0) + ' ft/min';
+  }
+  hitung3.onclick = function(){
+    var enam  = (parseFloat(0.45) + parseFloat(Math.pow(document.getElementById('for25').value,2)/(Math.pow(document.getElementById('for24').value,2)-Math.pow(document.getElementById('for25').value,2)))) *document.getElementById('for29').value
+    document.getElementById('hasil6').innerHTML =  enam.toFixed(0) + ' ft/min';
+    
+    var tujuh = enam *1.5;
+    document.getElementById('hasil7').innerHTML =  tujuh.toFixed(0) + ' ft/min';
+
+
+    var pertamadelapan = parseFloat(document.getElementById('for31').value) + parseFloat(document.getElementById('for32').value)
+    var keduadelapan = parseFloat(document.getElementById('for31').value)+pertamadelapan
+    var delapan =(3.32 * (Math.log(pertamadelapan/keduadelapan)/ Math.LN10))*-1;
+    document.getElementById('hasil8').innerHTML =  delapan.toFixed(4) + ' ';
+  
+    var sembilan =pertamadelapan/ Math.pow(511,delapan);
+    document.getElementById('hasil9').innerHTML =  sembilan.toFixed(3) + ' ';
+
+    var atassepuluh = (2.4*tujuh);
+    var bawahsepuluh = (parseFloat(document.getElementById('for24').value)-parseFloat(document.getElementById('for25').value))
+    var sepuluh = atassepuluh/bawahsepuluh ;
+    document.getElementById('hasil10').innerHTML =  sepuluh.toFixed(1) + ' ';
+  
+    var sebelas = sembilan*(Math.pow(sepuluh,delapan));
+    document.getElementById('hasil11').innerHTML =  sebelas.toFixed(2) + ' ';
+    
+    var kiriduabelas = (3.33*sebelas)/(document.getElementById('for24').value-document.getElementById('for25').value)
+    var kananduabelas = (document.getElementById('for26').value/1000)
+    var duabelas = kiriduabelas*kananduabelas;
+    document.getElementById('hasil12').innerHTML =  duabelas.toFixed(0) + ' psi';
+
+    var tigabelas = (0.45+((Math.pow(document.getElementById('for27').value,2))/(Math.pow(document.getElementById('for24').value,2)-Math.pow(document.getElementById('for27').value,2))))*document.getElementById('for29').value;
+    document.getElementById('hasil13').innerHTML =  tigabelas.toFixed(0) + ' ft/min';
+
+    var empatbelas = tigabelas*1.5;
+    document.getElementById('hasil14').innerHTML =  empatbelas.toFixed(2) + ' ft/min';
+
+    var ataslimabelas =empatbelas* (Math.pow(document.getElementById('for24').value,2)-Math.pow(document.getElementById('for27').value,2))
+    var limabelas = (ataslimabelas)/24.5;
+    document.getElementById('hasil15').innerHTML =  limabelas.toFixed(1) + ' ';
+
+    var atasenambelas = 0.000077 * Math.pow(document.getElementById('for21').value,0.8) * Math.pow(limabelas,1.8) * Math.pow(document.getElementById('for22').value,0.2) * document.getElementById('for28').value
+    var bawahenambelas = Math.pow(parseFloat(document.getElementById('for24').value) - parseFloat(document.getElementById('for27').value),3) * Math.pow(parseFloat(document.getElementById('for24').value) + parseFloat(document.getElementById('for27').value),1.8) 
+    var enambelas =atasenambelas/ bawahenambelas;
+    document.getElementById('hasil16').innerHTML =  enambelas.toFixed(1) + ' psi';
+
+    var tujuhbelas = duabelas+enambelas;
+    document.getElementById('hasil17').innerHTML =  tujuhbelas.toFixed(1) + ' psi';
+
+    var delapanbelas = tujuhbelas/0.052/15000;
+    document.getElementById('hasil18').innerHTML =  delapanbelas.toFixed(2) + ' ';
+
+    var sembilanbelas = parseFloat(document.getElementById('for21').value)+parseFloat(delapanbelas);
+    document.getElementById('hasil19').innerHTML =  sembilanbelas.toFixed(2) + ' ppg';
+
+    var duapuluh =parseFloat(document.getElementById('for21').value)-parseFloat(delapanbelas);;
+    document.getElementById('hasil20').innerHTML =  duapuluh.toFixed(2) + ' ppg';
+  
+  }
+	</script>
+	
+	
+</html>

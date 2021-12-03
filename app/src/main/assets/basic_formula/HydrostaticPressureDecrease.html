@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/BuoyancyFactor.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Hydrostatic Pressure Decrease</h1>
+			</div>
+		  </div>
+		</nav>
+		
+    <div style="left: 20px;position: absolute;top:150px">
+    <strong>Hydrostatic Pressure (HP) Decrease When Pulling Pipe Out of the Hole</strong>
+    <br>
+    <br>
+    When pulling DRY pipe
+    <br>
+    <br>
+    <strong> Step l :</strong>
+    <br>         
+		<img src="img/hpd/1.png">
+    <br>
+    <strong>Step 2 :</strong>
+    <br>
+    <img src="img/hpd/2.png">
+		<br/><br/>
+        <p>Case : Determine the hydrostatic pressure decrease when pulling DRY 
+          Pipe out of the hole :</p>
+        <br>
+        <br>
+        Number of stands pulled  = <input onkeypress="return hanyaAngka(event)" type="text" id="for11" style="width:50px;text-align:right;" value="0">
+        <br><br>
+        Average length per stand = <input onkeypress="return hanyaAngka(event)" type="text" id="for12" style="width:50px;text-align:right;" value="0"> ft
+        <br><br>
+        Pipe displacement        = <input onkeypress="return hanyaAngka(event)" type="text" id="for13" style="width:50px;text-align:right;" value="0"> bbl/ft
+        <br><br>
+        Casing capacity          = <input onkeypress="return hanyaAngka(event)" type="text" id="for14" style="width:50px;text-align:right;" value="0"> bbl/ft
+        <br><br>
+        Mud weight               = <input onkeypress="return hanyaAngka(event)" type="text" id="for15" style="width:50px;text-align:right;" value="0"> ppg
+          <br/>
+          <br/>
+          <button class="btn btn-success" id="hitung1">Calculate</button> 
+
+        <br/>
+		<h4>
+    <strong>Step 1</strong>
+		<div id="hasil11"></div>
+    <br/>
+    <strong>Step 2</strong>
+		<div id="hasil12"></div>
+		</h4>
+    <br>
+    <br>
+    <strong>When pulling WET pipe</strong>
+    <br>
+    <br>
+    <strong>Step l</strong>
+    <br>
+    <img src="img/hpd/3.png">
+    <br>
+    <br>
+    <strong>Step 2</strong>
+    <br>
+    <img src="img/hpd/4.png">
+    <br/>
+    <br>
+    Case : Determine the hydrostatic pressure decrease when pulling WET 
+       Pipe Out of hole :
+    <br>
+    <br>
+    Number of stands pulled = <input onkeypress="return hanyaAngka(event)" type="text" id="for21" style="width:50px;text-align:right;" value="0">
+    <br><br>
+    Avenge length per stand = <input onkeypress="return hanyaAngka(event)" type="text" id="for22" style="width:50px;text-align:right;" value="0"> ft
+    <br><br>
+    Pipe displacement       = <input onkeypress="return hanyaAngka(event)" type="text" id="for23" style="width:50px;text-align:right;" value="0"> bbl/ft
+    <br><br>
+    Pipe capacity           = <input onkeypress="return hanyaAngka(event)" type="text" id="for24" style="width:50px;text-align:right;" value="0"> bbl/ft
+    <br><br>
+    Casing capacity         = <input onkeypress="return hanyaAngka(event)" type="text" id="for25" style="width:50px;text-align:right;" value="0"> bbl/ft
+    <br><br>
+    Mud weight              = <input onkeypress="return hanyaAngka(event)" type="text" id="for26" style="width:50px;text-align:right;" value="0"> ppg
+    <br/>
+    <br/>
+    <button class="btn btn-success" id="hitung2">Calculate</button> 
+      <br/>
+    <h4>
+    <strong>Step 1</strong>
+    <div id="hasil21"></div>
+    <br/>
+    <strong>Step 2</strong>
+    <div id="hasil22"></div>
+    </h4>
+
+        <br/>
+        </div>
+    </body>
+	
+    
+  <script src="js/jquery.min.js"></script>
+  <script>
+      $("input[type='text']").click(function () {
+          $(this).select();
+      });
+      function hanyaAngka(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+		  }
+  </script>  
+
+	<script>
+
+	hitung1.onclick = function(){
+    var hasil = parseFloat(document.getElementById('for11').value*document.getElementById('for12').value*document.getElementById('for13').value) .toFixed(2)
+		document.getElementById('hasil11').innerHTML = "Barrels Displaced  = " + parseFloat(document.getElementById('for11').value*document.getElementById('for12').value*document.getElementById('for13').value).toFixed(2) ;
+    document.getElementById('hasil12').innerHTML = "HP Decrease (psi) = " + parseFloat((hasil /(document.getElementById('for14').value-document.getElementById('for13').value))* (0.052*document.getElementById('for15').value)).toFixed(2) + ' psi';
+  }
+	hitung2.onclick = function(){
+    var hasil2 = parseFloat(document.getElementById('for21').value*document.getElementById('for22').value*(parseFloat(document.getElementById('for24').value)+parseFloat(document.getElementById('for23').value))).toFixed(4);
+		document.getElementById('hasil21').innerHTML = "Barrels Displaced  = " + parseFloat(document.getElementById('for21').value*document.getElementById('for22').value*(parseFloat(document.getElementById('for24').value)+parseFloat(document.getElementById('for23').value))).toFixed(4) ;
+    document.getElementById('hasil22').innerHTML = "HP (psi)  = " + parseFloat((hasil2 / (document.getElementById('for25').value-(parseFloat(document.getElementById('for23').value)+parseFloat(document.getElementById('for24').value))))*(0.052*document.getElementById('for26').value)).toFixed(2)+ ' psi';
+  }
+
+  </script>
+	
+</html>

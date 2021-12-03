@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tally App</title>
+</head>
+
+<body style="font-size: 19px;">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Ton-Mile (TM) Calculations </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:100px">
+
+        All types of ton-mile service should be calculated and recorded in order to obtain a true picture <br />
+        of the total service received from the rotary drilling line.
+        These include :<br /><br />
+
+        1. Round trip ton-miles<br />
+        2. Drilling or “connection” ton-miles<br />
+        3. Coring ton-miles<br />
+        4. Ton-miles setting casing<br />
+        5. Short-trip ton-miles<br />
+
+        <br />
+        <img src="img/tmc/1.png" style="width:80%;height:100px"><br /><br />
+
+        Where ;<br /><br />
+        RTTM = round trip ton-miles<br />
+        Wp = buoyed weight of drill pipe (lb/ft)<br />
+        D = depth of hole (ft)<br />
+        Lp = length of one stand of drill pipe (ave) (ft)<br />
+        Wb = weight of traveling block assembly (lb)<br />
+        Wc = buoyed weight of drill collars in mud minus the buoyed weight of the<br />
+        same length of drill pipe (lb)<br />
+        <br />
+        2000 = number of pounds in one ton<br />
+        5280 = number of feet in one mile<br /><br />
+
+
+
+        Case : <br /> <br />
+
+        Mud weight
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for1" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Measured depth &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for2" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Drill pipe weight
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3" style="width:50px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+        Drill collar weight
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for4" style="width:50px;text-align:right;" value="0">
+        lb/ft
+        <br /><br />
+        Drill collar length
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for5" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Traveling block assembly &nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for6" style="width:50px;text-align:right;" value="0">
+        lb
+        <br /><br />
+        Average length of one stand =
+        <input type="text" id="for7" style="width:50px;text-align:right;" value="0">
+        ft (double)
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung1">Calculate</button>
+        <br /><br />
+
+        a. Buoyancy factor :<br /><br />
+        <h4>
+            <div id="hasil1"></div>
+        </h4>
+        <br /><br />
+
+        b. Buoyed weight of drill pipe in mud (b/ft) (Wp):<br /><br />
+        <h4>
+            <div id="hasil2"></div>
+        </h4>
+        <br /><br />
+
+        c. Buoyed weight of drill collars in mud minus the buoyed weight of the
+        same length of drill pipe (lb) (Wc):
+        <br /><br />
+        <h4>
+            <div id="hasil3"></div>
+        </h4>
+        <br /><br />
+
+        <b>Round Trip Ton - Miles</b>
+        <br /><br />
+        <h4>
+            <div id="hasil4"></div>
+        </h4>
+        <br /><br />
+
+        <b>Drilling or “Connection” ton-miles</b><br /><br />
+
+        The ton-miles work performed in drilling operations is expressed in terms of work performed in making round
+        trips.
+        <br />These are the actual ton-miles of work in drilling down the length of a section of pipe
+        <br />(usually approximately 30 ft) plus picking up, connecting, and starting to drill with the next section.
+        <br /><br />
+        To determine connection or drilling ton-miles, <br />
+        take 3 times (ton-miles for current round trip minus ton-miles for previous round trip):<br /><br />
+
+        <img src="img/tmc/2.png"><br /><br />
+
+        Where ;<br /><br />
+        Td = drilling or “connection” ton-miles<br />
+        T2 = ton-miles for one round trip — depth where drilling stopped before
+        coming out of hole<br />
+        T1 = ton-miles for one round trip — depth where drilling started<br />
+
+        Case : <br /> <br />
+
+        Ton-miles for trip @ 4600 ft =
+        <input type="text" id="forb1" style="width:50px;text-align:right;" value="0">
+        <br /><br />
+        Ton-miles for trip @ 4000 ft =
+        <input type="text" id="forb2" style="width:50px;text-align:right;" value="0">
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung2">Calculate</button>
+        <br /><br />
+
+        <h4>
+            <div id="hasil5"></div>
+        </h4>
+        <br /><br />
+
+        <b>Ton-miles during coring operations</b><br /><br />
+
+        The ton-miles of work performed in coring operations, <br />
+        as for drilling operations is expressed in terms of work performed in making round trips.<br /><br />
+
+        To determine ton-miles while coring, take 2 times ton-miles for one round trip at the depth <br />
+        where coring stopped minus ton-miles for one round trip at the depth where coring began ;<br /><br />
+
+        <img src="img/tmc/3.png"><br /><br />
+
+        Where ;<br /><br />
+        Tc = ton-miles while coring<br />
+        T4 = ton-miles for one round trip — depth where coring stopped before
+        coming out of hole<br />
+        T3 = ton-miles for one round trip — depth where coring started after going
+        in hole<br /><br />
+
+        <b>Ton-miles setting casing</b><br /><br />
+
+        The calculations of the ton-miles for the operation of setting casing should be determined as for drill
+        pipe,<br />
+        but with the buoyed weight of the casing being used, and with the result being multiplied by one-half, <br />
+        because setting casing is a one-way (1/2 round trip) operation. <br />
+        Ton-miles for setting casing can be determined from the following formula :<br /><br />
+
+        <img src="img/tmc/4.png"><br /><br />
+
+        Where ;<br /><br />
+        Tc = ton-miles setting casing<br />
+        Wp = buoyed weight of casing (lb/ft)<br />
+        Lcs = length of one joint of casing (ft)<br />
+        Wb = weight of traveling block assembly (lb)<br /><br />
+
+        <b>Ton-miles while making short trip</b><br /><br />
+
+        The ton-miles of work performed in short trip operations as for drilling and coring operations, <br />
+        is also expressed in terms of round trips. <br />
+        Analysis shows that the ton-miles of work done in making a short trip is equal to <br />
+        the difference in round trip ton-miles for the two depths in question.<br /><br />
+
+        <img src="img/tmc/5.png"><br /><br />
+
+        Where ;<br /><br />
+        Tst = ton-miles for short trip<br />
+        T6 = ton-miles for one round trip at the deeper depth, the depth of the
+        bit before starting the short trip<br />
+        T5 = ton-miles for one round trip at the shallower depth, the depth that
+        the bit is pulled up to<br /><br />
+
+
+
+        <br /><br /><br /><br />
+
+    </div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+</script>  
+
+<script>
+    hitung1.onclick = function () {
+
+        var jhbhsgavs = (65.5 * 1) - (document.getElementById('for1').value * 1);
+        var ijsidjsbx = jhbhsgavs / 65.5;
+
+        var uadhsbdbs = document.getElementById('for3').value * ijsidjsbx.toFixed(4);
+
+        var sncjnjdbc = ijsidjsbx.toFixed(4) * document.getElementById('for5').value * document.getElementById('for4').value;
+        var uhasuihcs = ijsidjsbx.toFixed(4) * document.getElementById('for5').value * document.getElementById('for3').value;
+        var uhscjhhbx = (sncjnjdbc.toFixed(0) * 1) - (uhasuihcs.toFixed(0) * 1);
+
+        var ijsdfjhsh = (document.getElementById('for2').value * 1) + (document.getElementById('for7').value * 1);
+        var askjcnxsb = document.getElementById('for2').value * 2;
+        var ijscnjnjb = document.getElementById('for6').value * 2;
+        var scjijscjs = (ijscnjnjb * 1) + (uhscjhhbx.toFixed(0) * 1);
+
+        var jsjncbjss = uadhsbdbs.toFixed(2) * document.getElementById('for2').value * ijsdfjhsh;
+        var jajxnjhbs = askjcnxsb * scjijscjs;
+
+        var hahcdgdyy = (jsjncbjss * 1) + (jajxnjhbs * 1);
+
+        var hhbsajbsc = 5280 * 2000;
+
+        var ijishadhh = hahcdgdyy / hhbsajbsc;
+
+        document.getElementById('hasil1').innerHTML = ijsidjsbx.toFixed(4);
+        document.getElementById('hasil2').innerHTML = uadhsbdbs.toFixed(2) + ' lb/ft';
+        document.getElementById('hasil3').innerHTML = uhscjhhbx.toFixed(0) + ' lb';
+        document.getElementById('hasil4').innerHTML = ijishadhh.toFixed(1);
+    }
+    hitung2.onclick = function () {
+        var djhasjdhjh = (document.getElementById('forb1').value * 1) - (document.getElementById('forb2').value * 1);
+        var jhjsahjhas = 3 * djhasjdhjh;
+
+        document.getElementById('hasil5').innerHTML = jhjsahjhas.toFixed(1) + ' ton-miles';
+    }
+
+
+</script>
+
+
+</html>

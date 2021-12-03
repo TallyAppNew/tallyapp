@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Tank Capacity Calculations </h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+         <p><strong>Rectangular Tanks With Flat Bottoms</strong></p>
+          <p>&nbsp;</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Side&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             End</p>
+          <p>&nbsp;</p>
+          <img src="img/tcc/a.png">
+          <p>Case 1 : Determine the total capacity of a rectangular tank with</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Flat bottom using the following data :<br /> </p>
+          <p>Length = <input type="text" id="for11" style="width:50px;text-align:right;" value="0"> ft
+            <br />
+            <br /> Width&nbsp; = <input type="text" id="for12" style="width:50px;text-align:right;" value="0"> ft
+            <br />
+            <br />
+             Depth&nbsp; = <input type="text" id="for13" style="width:50px;text-align:right;" value="0"> ft<br /> </p>
+          <br /> 
+          <p>&nbsp;</p>
+          <button class="btn btn-success" id="hitung1">Calculate</button> 
+          <p>&nbsp;</p>
+          <b><div id="hasil1"></div></b>
+          <p>&nbsp;</p>
+          <p> Case : Determine the capacity of this same tank with only <input type="text" id="for14" style="width:50px;text-align:right;" value="0"> ft Of fluid in it :<br /> </p>
+          <p>&nbsp;</p>
+          <button class="btn btn-success" id="hitung2">Calculate</button> 
+          <p>&nbsp;</p>
+          <b><div id="hasil2"></div></b>
+          <p>&nbsp;</p>
+          <p><strong>Rectangular Tanks with Sloping Sides : <br /> <br /> </strong></p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; side &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            end<br /> </p>
+          <img src="img/tcc/b.png">
+          <p>Case : Determine the total tank capacity using the following data :<br /> </p>
+          <p>Length&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for21" style="width:50px;text-align:right;" value="0">ft<br /><br/>
+             Width<sub>1</sub> (top)&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;= <input type="text" id="for22" style="width:50px;text-align:right;" value="0"> ft<br /> <br/>
+             Width<sub>2</sub> (bottom) = <input type="text" id="for23" style="width:50px;text-align:right;" value="0"> ft<br /><br/>
+              Depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for24" style="width:50px;text-align:right;" value="0"> ft<br /> </p>
+          <p>&nbsp;</p>
+          <button class="btn btn-success" id="hitung3">Calculate</button> 
+          <p>&nbsp;</p>
+          <b><div id="hasil3"></div></b>
+          <p>&nbsp;</p>
+          <p><strong>Circular Cylindrical Tanks</strong></p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <img src="img/tcc/c.png">
+          <p>Case : Determine the total capacity of a culindrical tank with the</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; following dimensions :</p>
+          <p>&nbsp;</p>
+          <p>Height&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="text" id="for41" style="width:50px;text-align:right;" value="0"> ft</p>
+          <p>Diameter&nbsp; = <input type="text" id="for42" style="width:50px;text-align:right;" value="0"> ft</p>
+          <p>&nbsp;</p>
+          <button class="btn btn-success" id="hitung4">Calculate</button> 
+          <p>&nbsp;</p>
+          <b><div id="hasil4"></div></b>
+          <p>&nbsp;</p>
+          <p><strong>Tapered Cylindrical Tanks</strong></p>
+          <img src="img/tcc/d.png">
+            <p>&nbsp;</p>
+          <p>Where, V<sub>c</sub>&nbsp; = volume of cylindrical section (bbl)</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; r<sub>c</sub>&nbsp; = radius of cylindrical section (ft)</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; h<sub>c</sub>&nbsp; = height of cylindrical section (ft)</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V<sub>t</sub>&nbsp; = volume of tapered section (bbl)</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; h<sub>t</sub>&nbsp; = height of tapered section (ft)</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; r<sub>b</sub>&nbsp; = radius of bottom (ft)</p>
+          <p>&nbsp;</p>
+          <p>Case : Determine the total volume of a cylindrical tank with the</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; following dimensions :</p>
+          <p>&nbsp;</p>
+          <p>Height of cylindrical section = <input type="text" id="for51" style="width:50px;text-align:right;" value="0"> ft</p><br/>
+          <p>Radius of cylindrical section = <input type="text" id="for52" style="width:50px;text-align:right;" value="0"> ft</p><br/>
+          <p>Height of tapered section&nbsp;&nbsp;&nbsp;&nbsp; = <input type="text" id="for53" style="width:50px;text-align:right;" value="0"> ft</p><br/>
+          <p>Radius at bottom&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="text" id="for54" style="width:50px;text-align:right;" value="0"> ft</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <button class="btn btn-success" id="hitung5">Calculate</button> 
+          <p>&nbsp;</p>
+          <b><div id="hasil5"></div></b>
+          <p>&nbsp;</p>
+          <p><strong>Horizontal Cylindrical Tank</strong></p>
+          <p>&nbsp;</p>
+          <ol>
+          <li>Total tank capacity :</li>
+          <img src="img/tcc/e.png">
+          </ol>
+          <p>&nbsp;</p>
+          <p>&nbsp;&nbsp;Case : Determine the total volume of the following tank :</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;&nbsp; Length&nbsp;&nbsp; = <input type="text" id="for61" style="width:50px;text-align:right;" value="0"> ft</p><br/>
+          <p>&nbsp;&nbsp; Radius&nbsp;&nbsp; = <input type="text" id="for62" style="width:50px;text-align:right;" value="0"> ft</p><br/>
+
+          <button class="btn btn-success" id="hitung6">Calculate</button> 
+          <p>&nbsp;</p>
+          <b><div id="hasil6"></div></b>
+          <p>&nbsp;</p>
+
+          <ol start="2">
+          <li>Partial volume :</li>
+          <img src="img/tcc/f.png">
+          </ol>
+          <p>&nbsp;</p>
+          <p>&nbsp;&nbsp;Case : Determine the volume if there are only <input type="text" id="for73" style="width:50px;text-align:right;" value="0"> feet of fluid in</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This tank :</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;&nbsp; Length&nbsp;&nbsp; = <input type="text" id="for71" style="width:50px;text-align:right;" value="0"> ft</p><br/>
+          <p>&nbsp;&nbsp; Radius&nbsp;&nbsp; = <input type="text" id="for72" style="width:50px;text-align:right;" value="0"> ft</p>
+          <p>&nbsp;</p>
+          <button class="btn btn-success" id="hitung7">Calculate</button> 
+          <p>&nbsp;</p>
+          <b><div id="hasil7"></div></b>
+          <p>&nbsp;</p>
+          <p>To convert volume ft<sup>3</sup> to barrels, multiply by 0.1781</p>
+          <p>To convert volume ft<sup>3</sup> to gallons, multiply by 7.4805</p>
+          <p>Therefore, 2 feet of fluid in this tank would result in :</p>
+            <p>Volume (bbl) = <span id="hasil71"></span> ft<sup>3</sup> x 0.1781</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <span id="hasil72"></span></p>
+          <p>NOTE : This is only applicable until the tank is half full (r &ndash; h). After</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that, calculate total volume of the tank and subtract the empty</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; space. The empty space can be calculated by h = height of empty</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; space.</p>
+          <p>&nbsp;</p>
+        </div>
+    </body>
+    
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $("input[type='text']").click(function () {
+            $(this).select();
+        });
+    </script>  
+    
+		<script>
+
+      hitung1.onclick = function(){
+        var x = document.getElementById('for11').value *document.getElementById('for12').value*document.getElementById('for13').value;
+        document.getElementById('hasil1').innerHTML = x/5.61+' bbl';
+      }
+
+      hitung2.onclick = function(){
+        var x = document.getElementById('for11').value *document.getElementById('for12').value*document.getElementById('for14').value;
+        document.getElementById('hasil2').innerHTML = x/5.61+' bbl';
+      }
+
+      hitung3.onclick = function(){
+        var x = parseInt(document.getElementById('for22').value) +parseInt(document.getElementById('for23').value);
+        var y = document.getElementById('for24').value*x;
+        document.getElementById('hasil3').innerHTML = document.getElementById('for21').value*y/5.62+' bbl';
+      }
+
+      hitung4.onclick = function(){
+        var x = parseInt(document.getElementById('for42').value)/2 ;
+        var y = 3.14*(x*x)*document.getElementById('for41').value;
+        document.getElementById('hasil4').innerHTML = y/5.61+' bbl';
+      }
+
+      hitung5.onclick = function(){
+        var v2 = document.getElementById('for52').value;
+        var v4 = document.getElementById('for54').value;
+        var x = 0.1781*3.14*(v2*v2)*document.getElementById('for51').value ;
+        var y = 0.059*3.14*document.getElementById('for53').value*((v2*v2)+(v4*v4)+(v2*v4));
+        document.getElementById('hasil5').innerHTML = 'a.	Volume of cylindrical section : '+ x +' bbl<br/>b. Volume of tapered section : '+ y +' bbl<br/>c. Total volume : '+ (x+y) +' bbl<br/>';
+      }
+
+      hitung6.onclick = function(){
+        var x = 3.14*(document.getElementById('for62').value*document.getElementById('for62').value);
+        var y = document.getElementById('for61').value*7.48;
+        document.getElementById('hasil6').innerHTML = '<b>'+ (x*y)/48 +' bbl</b>';
+      }
+
+      hitung7.onclick = function(){
+        var hr7 = (parseFloat(document.getElementById('for73').value)+parseFloat(document.getElementById('for72').value))*2;
+        var kanan7 = Math.pow(document.getElementById('for73').value,2)*(parseFloat(document.getElementById('for72').value) - parseFloat(document.getElementById('for73').value))
+        var akar7 = Math.sqrt(hr7)*Math.floor(Math.sqrt(kanan7))
+        var tengah7 = 0.279248 * 60;
+        var dua7 = tengah7 - akar7;
+        var hasil7 = document.getElementById('for71').value*dua7;
+        document.getElementById('hasil7').innerHTML = '<b>'+ hasil7.toFixed(0) +'</b>';
+        document.getElementById('hasil71').innerHTML = '<b>'+ hasil7.toFixed(0) +'</b>';
+        document.getElementById('hasil72').innerHTML = '<b>'+ (hasil7*0.1781).toFixed(2) +' bbl</b>';
+      }
+
+    
+      </script>
+    
+	
+</html>

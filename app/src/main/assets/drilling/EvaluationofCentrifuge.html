@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/BuoyancyFactor.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tally App</title>
+</head>
+
+<body style="font-size: 20px;">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Evaluation of Centrifuge </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:100px">
+
+        <b>Evaluation of Centrifuge </b><br /> <br />
+        a. Underflow mud volume : <br />
+
+        <img src="img/eoc/a.png">
+        <br /><br />
+        b. Fraction of old mud in underflow : <br />
+
+        <img src="img/eoc/b.png">
+        <br /><br />
+        c. Mass rate of clay : <br />
+
+        <img src="img/eoc/c.png">
+        <br /><br />
+        d. Mass rate of additives : <br />
+
+        <img src="img/eoc/d.png">
+        <br /><br />
+        e. Water flow rate into mixing pit : <br />
+
+        <img src="img/eoc/e.png">
+        <br /><br />
+
+        f. Mass rate for API barite <br />
+        <img src="img/eoc/f.png">
+        <br /><br />
+
+        Where, <br />
+        MW = mud density into centrifuge (ppg)<br />
+        QM = mud volume into centrifuge (gal/min)<br />
+        PW = dilution water density (ppg)<br />
+        QW = dilution water volume (gal/min)<br />
+        PU = underflow mud density (ppg)<br />
+        PO = overflow mud density (ppg)<br />
+        CC = clay content in mud (lb/bbl)<br />
+        CD = additive content in mud (lb/bbl)<br />
+        QU = underflow mud volume (gal/min)<br />
+        FU = fraction of old mud in underflow<br />
+        QC = mass rate of clay (lb/min)<br />
+        QD = mass rate of additives (lb/min)<br />
+        QP = water flow rate into mixing pit (gal/min)<br />
+        QB = mass rate of API barite (lb/min)<br /><br /><br />
+
+        Case : <br /> <br />
+        Mud density into centrifuge (MW) = <input type="text" id="for1" style="width:50px;text-align:right;"
+            value="0">
+        ppg
+        <br /><br />
+        Mud volume into centrifuge (QM) = <input type="text" id="for2" style="width:50px;text-align:right;"
+            value="0">
+        gal/min
+        <br /><br />
+        Dilution water density (PW) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<input type="text"
+            id="for3" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Dilution water volume (QW) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for4"
+            style="width:50px;text-align:right;" value="0"> gal/min
+        <br /><br />
+        Underflow mud density (PU) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for5"
+            style="width:50px;text-align:right;" value="0"> ppg
+        <br /><br />
+        Overflow mud density (PO) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="text" id="for6"
+            style="width:50px;text-align:right;" value="0"> ppg
+        <br /><br />
+        Clay content of mud (CC) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input
+            type="text" id="for7" style="width:50px;text-align:right;" value="0"> lb/bbl
+        <br /><br />
+        Additive content of mud (CD) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="text" id="for8"
+            style="width:50px;text-align:right;" value="0"> lb/bbl
+        <br /><br /><br />
+
+        <p>
+            a. Underflow mud volume : <br />
+
+            <button class="btn btn-success" id="hitung1">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="QU"></div>
+        </h4>
+        <br /><br />
+
+        <p>
+            b. Fraction of old mud in underflow : <br />
+            <button class="btn btn-success" id="hitung2">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="FU"></div>
+        </h4>
+        <br /><br />
+
+        <p>
+            c. Mass rate of clay : <br />
+
+            <button class="btn btn-success" id="hitung3">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="QC"></div>
+        </h4>
+
+        <br /><br />
+
+        <p>
+            d. Mass rate of additives : <br />
+
+            <button class="btn btn-success" id="hitung4">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="QD"></div>
+        </h4>
+
+        <br /><br />
+
+        <p>
+            e. Water flow rate into mixing pit : <br />
+
+            <button class="btn btn-success" id="hitung5">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="QP"></div>
+        </h4>
+
+        <br /><br />
+
+        <p>
+            f. Mass rate for API barite <br />
+
+            <button class="btn btn-success" id="hitung6">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="hasil6"></div>
+        </h4>
+
+
+    </div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+</script>  
+
+<script>
+    var QMMWPOhitung1 = ((document.getElementById('for2').value) * (document.getElementById('for1').value - document.getElementById('for6').value));
+    var QWPOPWhitung1 = ((document.getElementById('for4').value) * (document.getElementById('for6').value - document.getElementById('for3').value));
+    var PUPOhitung1 = document.getElementById('for5').value - document.getElementById('for6').value;
+    var hitungsatuhampir = QMMWPOhitung1 - QWPOPWhitung1;
+    var hasilakhirhitung1 = hitungsatuhampir / PUPOhitung1;
+
+    var TIGALIMAPU = 35 - document.getElementById('for5').value;
+    var TIGALIMAMW = 35 - document.getElementById('for1').value;
+    var QWQM = document.getElementById('for4').value / document.getElementById('for2').value;
+    var TIGALIMAPW = 35 - document.getElementById('for3').value;
+    var QWQMTIGALIMAPW = QWQM * TIGALIMAPW;
+    var TIGALIMAMWQWQMTIGALIMAPW = TIGALIMAMW + QWQMTIGALIMAPW;
+    var hasilakhirhitung2 = TIGALIMAPU / TIGALIMAMWQWQMTIGALIMAPW;
+
+    var QMQUFU = document.getElementById('for2').value - (hasilakhirhitung1 * hasilakhirhitung2);
+    var CCQMQUFU = document.getElementById('for7').value * QMQUFU.toFixed(1);
+    var hasilakhirhitung3 = CCQMQUFU.toFixed(1) / 42;
+
+    var CCQMQUFU8 = document.getElementById('for8').value * QMQUFU.toFixed(1);
+    var hasilakhirhitung4 = CCQMQUFU8.toFixed(1) / 42;
+
+    var QMTIGALIMAMW = document.getElementById('for2').value * (35 - document.getElementById('for1').value);
+    var QUTIGALIMAPU = hasilakhirhitung1.toFixed(1) * (35 - document.getElementById('for5').value);
+    var bil1kurangqc = 0.6129 * hasilakhirhitung3.toFixed(2);
+    var bil1kurangqd = 0.6129 * hasilakhirhitung4.toFixed(0);
+    var TIGALIMAPWHITUNG5 = 35 - document.getElementById('for3').value;
+    var bilatas = QMTIGALIMAMW - QUTIGALIMAPU.toFixed(2) - bil1kurangqc.toFixed(3) - bil1kurangqd.toFixed(3);
+    var hasilakhirhitung5 = bilatas.toFixed(3) / TIGALIMAPWHITUNG5;
+    
+
+    hitung1.onclick = function () {
+        var QMMWPOhitung1 = ((document.getElementById('for2').value) * (document.getElementById('for1').value - document.getElementById('for6').value));
+        var QWPOPWhitung1 = ((document.getElementById('for4').value) * (document.getElementById('for6').value - document.getElementById('for3').value));
+        var PUPOhitung1 = document.getElementById('for5').value - document.getElementById('for6').value;
+        var hitungsatuhampir = QMMWPOhitung1 - QWPOPWhitung1;
+        hasilakhirhitung1 = hitungsatuhampir / PUPOhitung1;
+        document.getElementById('QU').innerHTML = hasilakhirhitung1.toFixed(1) + ' gal/min';
+    }
+
+    hitung2.onclick = function () {
+        var TIGALIMAPU = 35 - document.getElementById('for5').value;
+        var TIGALIMAMW = 35 - document.getElementById('for1').value;
+        var QWQM = document.getElementById('for4').value / document.getElementById('for2').value;
+        var TIGALIMAPW = 35 - document.getElementById('for3').value;
+        var QWQMTIGALIMAPW = QWQM * TIGALIMAPW;
+        var TIGALIMAMWQWQMTIGALIMAPW = TIGALIMAMW + QWQMTIGALIMAPW;
+        hasilakhirhitung2 = TIGALIMAPU / TIGALIMAMWQWQMTIGALIMAPW;
+        document.getElementById('FU').innerHTML = hasilakhirhitung2.toFixed(3) + ' %';
+    }
+
+    hitung3.onclick = function () {
+        var QMQUFU = document.getElementById('for2').value - (hasilakhirhitung1 * hasilakhirhitung2);
+        var CCQMQUFU = document.getElementById('for7').value * QMQUFU.toFixed(1);
+        hasilakhirhitung3 = CCQMQUFU.toFixed(1) / 42;
+        document.getElementById('QC').innerHTML = parseFloat(hasilakhirhitung3).toFixed(2) + ' lb/min';
+    }
+
+    hitung4.onclick = function () {
+        var QMQUFU = document.getElementById('for2').value - (hasilakhirhitung1 * hasilakhirhitung2);
+        var CCQMQUFU8 = document.getElementById('for8').value * QMQUFU.toFixed(1);
+        hasilakhirhitung4 = CCQMQUFU8.toFixed(1) / 42;
+        document.getElementById('QD').innerHTML = hasilakhirhitung4.toFixed(2) + ' lb/min';
+    }
+
+    hitung5.onclick = function () {
+        var QMTIGALIMAMW = document.getElementById('for2').value * (35 - document.getElementById('for1').value);
+        var QUTIGALIMAPU = hasilakhirhitung1.toFixed(1) * (35 - document.getElementById('for5').value);
+        var bil1kurangqc = 0.6129 * hasilakhirhitung3.toFixed(2);
+        var bil1kurangqd = 0.6129 * hasilakhirhitung4.toFixed(0);
+        var TIGALIMAPWHITUNG5 = 35 - document.getElementById('for3').value;
+        var bilatas = QMTIGALIMAMW - QUTIGALIMAPU.toFixed(2) - bil1kurangqc.toFixed(3) - bil1kurangqd.toFixed(3);
+        hasilakhirhitung5 = bilatas.toFixed(3) / TIGALIMAPWHITUNG5;
+        document.getElementById('QP').innerHTML = hasilakhirhitung5.toFixed(2) + ' gal/min';
+    }
+
+    hitung6.onclick = function () {
+        var QCDUASATU = hasilakhirhitung3.toFixed(2) / 21.7;
+        var QDDUASATU = hasilakhirhitung4.toFixed(2) / 21.7;
+        var hasilakhirhitung6 = document.getElementById('for2').value - hasilakhirhitung1.toFixed(1) - hasilakhirhitung5.toFixed(2) - QCDUASATU - QDDUASATU;
+        document.getElementById('hasil6').innerHTML = hasilakhirhitung6.toFixed(4) *35 +' lb/min';
+    }
+
+</script>
+
+
+</html>

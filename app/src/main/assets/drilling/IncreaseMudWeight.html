@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tally App</title>
+</head>
+
+<body style="font-size: 19px;">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Increase Mud Density </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:100px">
+
+        <b>Mud weight (ppg) with barite </b><br /> <br />
+
+        (average specific gravity of barite — 4.2)
+        <br /> <br />
+
+        <img src="img/imd/a.png" >
+        <br /><br />
+
+        Case : <br /> <br />
+        W1 = <input type="text" id="for1" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        W2 = <input type="text" id="for2" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+
+
+        <button class="btn btn-success" id="hitung1">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil1"></div>
+        </h4>
+        <br /><br />
+
+        <p>
+            Volume increase (bbl) due to mud weight increase with barite <br />
+
+            <img src="img/imd/b.png" >
+            <br /><br />
+
+            Case : <br /> <br />
+            W1 = <input type="text" id="forb1" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+            W2 = <input type="text" id="forb2" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+
+            <button class="btn btn-success" id="hitung2">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="hasil2"></div>
+        </h4>
+        <br /><br />
+
+        <p>
+            Starting volume (bbl) of original mud weight required to give a predetermined final volume of desired mud
+            weight with barite <br />
+
+            <img src="img/imd/c.png" >
+            <br /><br />
+
+            Case : <br /> <br />
+            W1 = <input type="text" id="forc1" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+            W2 = <input type="text" id="forc2" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+            Vf &nbsp;&nbsp;= <input type="text" id="forc3" style="width:50px;text-align:right;" value="0">
+            bbl
+            <br /><br />
+
+            <button class="btn btn-success" id="hitung3">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="hasil3"></div>
+        </h4>
+
+        <br /><br />
+
+        <p>
+            Mud weight increase with calcium carbonate (SG — 2.7) <br /><br />
+            NOTE : The maximum practical mud weight attainable with calcium carbonate
+            is 14.0 ppg<br /><br />
+
+
+            <img src="img/imd/d.png" >
+            <br /><br />
+
+            Case : <br /> <br />
+            W1 = <input type="text" id="ford1" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+            W2 = <input type="text" id="ford2" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+
+            <button class="btn btn-success" id="hitung4">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="hasil4"></div>
+        </h4>
+
+        <br /><br />
+
+        <p>
+            Volume increase (bbl) due to mud weight increase with calcium carbonate <br />
+
+            <img src="img/imd/e.png" >
+            <br /><br />
+
+            Case : <br /> <br />
+            W1 = <input type="text" id="fore1" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+            W2 = <input type="text" id="fore2" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+
+            <button class="btn btn-success" id="hitung5">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="hasil5"></div>
+        </h4>
+        <br /><br />
+
+        <p>
+            Starting volume (bbl) of original mud weight required to give a predetermined final volume of desired mud
+            weight with calcium carbonate <br />
+
+            <img src="img/imd/f.png" >
+            <br /><br />
+
+            Case : <br /> <br />
+            W1 = <input type="text" id="forf1" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+            W2 = <input type="text" id="forf2" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+            Vf &nbsp;&nbsp;= <input type="text" id="forf3" style="width:50px;text-align:right;" value="0">
+            bbl
+            <br /><br />
+
+            <button class="btn btn-success" id="hitung6">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="hasil6"></div>
+        </h4>
+
+        <br /><br />
+
+        <p>
+            Mud weight increase with hematite (SG —4.8) <br /><br />
+
+
+            <img src="img/imd/g.png" >
+            <br /><br />
+
+            Case : <br /> <br />
+            W1 = <input type="text" id="forg1" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+            W2 = <input type="text" id="forg2" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+
+            <button class="btn btn-success" id="hitung7">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="hasil7"></div>
+        </h4>
+
+        <br /><br />
+
+        <p>
+            Volume increase (bbl) due to mud weight increase with hematite <br />
+
+            <img src="img/imd/h.png" >
+            <br /><br />
+
+            Case : <br /> <br />
+            W1 = <input type="text" id="forh1" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+            W2 = <input type="text" id="forh2" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+
+            <button class="btn btn-success" id="hitung8">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="hasil8"></div>
+        </h4>
+        <br /><br />
+
+        <p>
+            Starting volume (bbl) of original mud weight required to give a predetermined final volume of desired mud
+            weight with hematite <br />
+
+            <img src="img/imd/i.png" >
+            <br /><br />
+
+            Case : <br /> <br />
+            W1 = <input type="text" id="fori1" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+            W2 = <input type="text" id="fori2" style="width:50px;text-align:right;" value="0">
+            ppg
+            <br /><br />
+            Vf &nbsp;&nbsp;= <input type="text" id="fori3" style="width:50px;text-align:right;" value="0">
+            bbl
+            <br /><br />
+
+            <button class="btn btn-success" id="hitung9">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="hasil9"></div>
+        </h4>
+
+        <br /><br />
+
+    </div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+</script>  
+
+<script>
+
+    hitung1.onclick = function () {
+        document.getElementById('hasil1').innerHTML = ((1470)) * ((document.getElementById('for2').value - document.getElementById('for1').value)) / ((35 - document.getElementById('for2').value)) + ' sk/100 bbl';
+    }
+
+    hitung2.onclick = function () {
+        var hasilhitung2imd = ((100)) * ((document.getElementById('forb2').value - document.getElementById('forb1').value)) / ((35 - document.getElementById('forb2').value));
+        document.getElementById('hasil2').innerHTML = hasilhitung2imd.toFixed(2) + ' bbl per 100 bbl';
+    }
+
+    hitung3.onclick = function () {
+        var hasilhitung3imd = ((document.getElementById('forc3').value)) * ((35 - document.getElementById('forc2').value)) / ((35 - document.getElementById('forc1').value));
+        document.getElementById('hasil3').innerHTML = hasilhitung3imd.toFixed(1) + ' bbl';
+    }
+
+    hitung4.onclick = function () {
+        var hasilhitung4imd = ((945)) * ((document.getElementById('ford2').value - document.getElementById('ford1').value)) / ((22.5 - document.getElementById('ford2').value));
+        document.getElementById('hasil4').innerHTML = hasilhitung4imd.toFixed(1);
+    }
+
+    hitung5.onclick = function () {
+        var hasilhitung5imd = ((100)) * ((document.getElementById('fore2').value - document.getElementById('fore1').value)) / ((22.5 - document.getElementById('fore2').value));
+        document.getElementById('hasil5').innerHTML = hasilhitung5imd.toFixed(2) + ' bbl per 100 bbl';
+    }
+
+    hitung6.onclick = function () {
+        var hasilhitung6imd = ((document.getElementById('forf3').value)) * ((22.5 - document.getElementById('forf2').value)) / ((22.5 - document.getElementById('forf1').value));
+        document.getElementById('hasil6').innerHTML = hasilhitung6imd.toFixed(1) + ' bbl';
+    }
+
+    hitung7.onclick = function () {
+        var hasilhitung7imd = ((1680)) * ((document.getElementById('forg2').value - document.getElementById('forg1').value)) / ((40 - document.getElementById('forg2').value));
+        document.getElementById('hasil7').innerHTML = hasilhitung7imd.toFixed(1) + ' sk/100 bbl';
+    }
+
+    hitung8.onclick = function () {
+        var hasilhitung8imd = ((100)) * ((document.getElementById('forh2').value - document.getElementById('forh1').value)) / ((40 - document.getElementById('forh2').value));
+        document.getElementById('hasil8').innerHTML = hasilhitung8imd.toFixed(1) + ' bbl per 100 bbl';
+    }
+
+    hitung9.onclick = function () {
+        var hasilhitung9imd = ((document.getElementById('fori3').value)) * ((40 - document.getElementById('fori2').value)) / ((40 - document.getElementById('fori1').value));
+        document.getElementById('hasil9').innerHTML = hasilhitung9imd.toFixed(1) + ' bbl';
+    }
+
+</script>
+
+
+</html>

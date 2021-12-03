@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tally App</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Differential Hydrostatic Pressure </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:150px">
+
+        <b>Differential Hydrostatic Pressure Between Cement in the Annulus and Mud inside the Casing </b><br /> <br />
+
+
+        1. Determine the hydrostatic pressure exerted by the cement and any mud
+        remaining in the annulus.
+        <br />
+        2. Determine the hydrostatic pressure exerted by the mud and cement
+        remaining in the casing.
+        <br />
+        3. Determine the differential pressure.<br /><br />
+        <br>
+        Sample Case : 9-5/8 inch casing — 43.5 lb/ft in 12-1/4 inch hole :
+        <br>
+        <br>
+        Case : <br /> <br />
+        Well depth
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for1" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Cementing program :<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEAD slurry <input onkeypress="return hanyaAngka(event)" type="text" id="for6" style="width:50px;text-align:right;"
+            value="0"> ft
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="for2" style="width:50px;text-align:right;" value="0">
+        lb/gal
+        <br /><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TAIL slurry &nbsp; <input onkeypress="return hanyaAngka(event)" type="text" id="for7" style="width:50px;text-align:right;"
+            value="0"> ft
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="for3" style="width:50px;text-align:right;" value="0">
+        lb/gal
+        <br /><br />
+        Mud weight
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input onkeypress="return hanyaAngka(event)" type="text" id="for4" style="width:50px;text-align:right;" value="0">
+        lb/gal
+        <br /><br />
+        Float collar (No. of feet above shoe) = <input onkeypress="return hanyaAngka(event)" type="text" id="for5" style="width:50px;text-align:right;"
+            value="0">
+        ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung1">Calculate</button>
+        <br/><br/>
+
+        Determine the total hydrostatic pressure of cement and mud in the annulus
+        <br /><br />
+        a. Hydrostatic pressure of mud in annulus :
+        <br />
+        <h4>
+            <div id="hasil1"></div>
+        </h4>
+        <br /><br />
+
+        b. Hydrostatic pressure of LEAD cement :
+        <br />
+        <h4>
+            <div id="hasil2"></div>
+        </h4>
+        <br /><br />
+
+        c. Hydrostatic pressure of TAIL cement :
+        <br />
+        <h4>
+            <div id="hasil3"></div>
+        </h4>
+        <br /><br />
+
+        d. Total hydrostatic pressure in annulus :
+        <br />
+        <h4>
+            <div id="hasil4"></div>
+        </h4>
+        <br /><br />
+
+        Determine the total pressure inside the casing
+        <br /><br />
+        a. Pressure exerted by the mud :
+        <br />
+        <h4>
+            <div id="hasil5"></div>
+        </h4>
+        <br /><br />
+        b. Pressure exerted by the cement :
+        <br />
+        <h4>
+            <div id="hasil6"></div>
+        </h4>
+        <br /><br />
+        c. Total pressure inside the casing :
+        <br />
+        <h4>
+            <div id="hasil7"></div>
+        </h4>
+        <br /><br />
+        Differential pressure
+        <br />
+        <h4>
+            <div id="hasil8"></div>
+        </h4>
+        <br /><br />
+        <br /><br /><br /><br />
+
+    </div>
+</body>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $("input[type='text']").click(function () {
+            $(this).select();
+        });
+        function hanyaAngka(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+		  }
+    </script>  
+<script>
+    hitung1.onclick = function () {
+        var ftsatutambahftdua = ((document.getElementById('for6').value * 1)) + ((document.getElementById('for7').value * 1));
+        var kuranginvsrft = ((document.getElementById('for1').value * 1)) - ((ftsatutambahftdua * 1));
+        var hasilakhirhitung1dhp = document.getElementById('for4').value * 0.052 * kuranginvsrft;
+
+        var hasilakhirhitung2dhp = document.getElementById('for2').value * 0.052 * document.getElementById('for6').value;
+
+        var hasilakhirhitung3dhp = document.getElementById('for3').value * 0.052 * document.getElementById('for7').value;
+
+        var hasilakhirhitung4dhp = ((hasilakhirhitung1dhp * 1)) + ((hasilakhirhitung2dhp * 1)) + ((hasilakhirhitung3dhp * 1));
+
+        var satukuranglima = ((document.getElementById('for1').value * 1)) - ((document.getElementById('for5').value * 1));
+        var hasilakhirhitung5dhp = document.getElementById('for4').value * 0.052 * satukuranglima;
+
+        var hasilakhirhitung6dhp = document.getElementById('for3').value * 0.052 * document.getElementById('for5').value;
+
+        var hasilakhirhitung7dhp = ((hasilakhirhitung5dhp * 1)) + ((hasilakhirhitung6dhp * 1));
+
+        var hasilakhirhitung18dhp = ((hasilakhirhitung4dhp * 1)) - ((hasilakhirhitung7dhp * 1));
+
+
+        document.getElementById('hasil1').innerHTML = hasilakhirhitung1dhp + (' psi');
+        document.getElementById('hasil2').innerHTML = hasilakhirhitung2dhp.toFixed(1) + ' psi';
+        document.getElementById('hasil3').innerHTML = hasilakhirhitung3dhp.toFixed(0) + ' psi';
+        document.getElementById('hasil4').innerHTML = hasilakhirhitung4dhp.toFixed(0);
+        document.getElementById('hasil5').innerHTML = hasilakhirhitung5dhp.toFixed(0) + ' psi';
+        document.getElementById('hasil6').innerHTML = hasilakhirhitung6dhp.toFixed(0) + ' psi';
+        document.getElementById('hasil7').innerHTML = hasilakhirhitung7dhp.toFixed(0) + ' psi';
+        document.getElementById('hasil8').innerHTML = hasilakhirhitung18dhp.toFixed(0) + ' psi';
+    }
+
+
+
+
+</script>
+
+
+</html>

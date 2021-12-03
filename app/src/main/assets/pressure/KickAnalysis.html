@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tally App</title>
+</head>
+
+<body style="font-size: 19px;">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Kick Analysis </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:100px">
+
+        <b>Formation Pressure (FP) With The Well Shut-in On a Kick </b><br /> <br />
+        <img src="img/ka/a.png" style="width:560px;">
+        <br /><br />
+        Case : Determine the formation pressure using the following data : <br /> <br />
+
+        Shut-in drill pipe pressure &nbsp;&nbsp;= <input type="text" id="for1" style="width:50px;text-align:right;"
+            value="0">
+        psi
+        <br /><br />
+        Mud weight in drill pipe
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for2" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        True vertical depth
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+
+
+        <button class="btn btn-success" id="hitung1">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil1"></div>
+        </h4>
+        <br /><br />
+
+        <b>Bottom Hole Pressure (BHP) With The Well Shut-in On a Kick </b><br /> <br />
+        <img src="img/ka/b.png">
+        <br /><br />
+        Case : Determine the bottom hole pressure (BHP) with the well shut-
+        in on a kick :
+        <br /> <br />
+
+        Shut-in drill pipe pressure &nbsp;&nbsp;= <input type="text" id="for1b" style="width:50px;text-align:right;"
+            value="0">
+        psi
+        <br /><br />
+        Mud weight in drill pipe
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for2b" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        True vertical depth
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3b" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung2">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil2"></div>
+        </h4>
+        <br /><br />
+
+        <b>Shut-in Drill Pipe Pressure (SIDPP) </b><br /> <br />
+        <img src="img/ka/c.png">
+        <br /><br />
+        Case : Determine the shut-in drill pipe pressure using the following
+        <br /> <br />
+
+        Data :
+        <br /> <br />
+        Shut-in drill pipe pressure &nbsp;&nbsp;= <input type="text" id="for1c" style="width:50px;text-align:right;"
+            value="0">
+        psi
+        <br /><br />
+        Mud weight in drill pipe
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for2c" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        True vertical depth
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3c" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung3">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil3"></div>
+        </h4>
+        <br /><br />
+
+        <b>Shut-in Casing Pressure (SICP) </b><br /> <br />
+        <img src="img/ka/d.png">
+        <br /><br />
+        Case : Determine the shut-in casing pressure using the following
+        <br /> <br />
+
+        data :
+        <br /> <br />
+        Formation pressure &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for1d"
+            style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Mud weight in annulus
+        &nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for2d" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Feet of mud in annulus
+        &nbsp; =
+        <input type="text" id="for3d" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Influx gradient
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for4d" style="width:50px;text-align:right;" value="0">
+        psi / ft
+        <br /><br />
+        Feet of influx in annulus =
+        <input type="text" id="for5d" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung4">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil4"></div>
+        </h4>
+        <br /><br />
+
+        <b>Height, Ft, of Influx </b><br /> <br />
+        <img src="img/ka/e.png">
+        <br /><br />
+        Case 1 : Determine the height (ft) of the influx using the following
+        <br /> <br />
+
+        data :
+
+        <br /> <br />
+        Pit gain
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for1e" style="width:50px;text-align:right;" value="0">
+        bbl
+        <br /><br />
+        Annular capacity - DC/OH
+        &nbsp;&nbsp;=
+        <input type="text" id="for2e" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung5">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil5"></div>
+        </h4>
+        <br /><br />
+
+        Case 2 : Determine the height (ft) of the influx using the following
+        data:
+
+        <br /> <br />
+        Pit gain &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for1f" style="width:50px;text-align:right;" value="0">
+        bbl
+        <br /><br />
+        Hole size
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for2f" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        Drill collar OD
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3f" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+        Drill collar length
+        &nbsp; =
+        <input type="text" id="for4f" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Drill pipe OD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for5f" style="width:50px;text-align:right;" value="0">
+        inch
+        <br /><br />
+
+        Determine annular capacity (bbl/ft) for DC/OH :
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung6">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil6"></div>
+        </h4>
+        <br /><br />
+
+        Determine the number of barrels opposite the drill collars :
+        <br /><br />
+        Barrels = length of collars x annular capacity
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung7">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil7"></div>
+        </h4>
+        <br /><br />
+
+        Determine annular capacity (bbl/ft) opposite drill pipe :
+
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung8">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil8"></div>
+        </h4>
+        <br /><br />
+
+        Determine barrels of influx opposite drill pipe :
+        <br /><br />
+        Barrels = pit gain (bbl) — barrels opposite drill collars
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung9">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil9"></div>
+        </h4>
+        <br /><br />
+
+        Determine height of influx opposite drill pipe :
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung10">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil10"></div>
+        </h4>
+        <br /><br />
+
+        Determine the total height of the influx :
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung11">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil11"></div>
+        </h4>
+        <br /><br />
+
+        <b>Estimated Type of Influx</b><br /><br />
+        <br /> <br />
+        <img src="img/ka/12.png">
+        <br /><br />
+
+        Case :
+        <br /> <br />
+        Shut-in casing pressure
+        &nbsp;&nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for1g" style="width:50px;text-align:right;" value="0">
+        pis
+        <br /><br />
+        Shut-in drill pipe pressure &nbsp;=
+        <input type="text" id="for2g" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Height of influx
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3g" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Mud weight
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; =
+        <input type="text" id="for4g" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung12">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil12"></div>
+        </h4>
+        <br /><br />
+
+        <b>Gas Migration in a Shut-in Well</b>
+        <br /><br />
+        <img src="img/ka/13.png" style="width:250px;height:50px">
+        <br /><br />
+        Case :
+        <br /> <br />
+        mud Weight of
+        &nbsp;&nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for1h" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        <button class="btn btn-success" id="hitung13">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil13"></div>
+        </h4>
+        <br /><br />
+
+        Determining the actual rate of gas migration after a welt has been shut-in on a kick :
+        <br /><br />
+        <img src="img/ka/14.png">
+        <br /><br />
+        Case : Determine the rate of gas migration with the following data :
+        <br /> <br />
+        Stabilized shut-in casing pressure &nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for1i" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        SICP after one hour
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for2i" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        mud Weight
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for3i" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Pressure gradient for 12.0 ppg mud =
+        <input type="text" id="for4i" style="width:50px;text-align:right;" value="0">
+        psi/ft
+        <br /><br />
+
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung14">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil14"></div>
+        </h4>
+        <br /><br />
+
+        <b>Hydrostatic Pressure Decrease at TD Caused by Gas Cut Mud</b>
+        <br /><br />
+        <img src="img/ka/15a.png">
+        <br /><br />
+        Case : Determine the hydrostatic pressure decrease caused by gas cut
+        Mud using the following data :
+
+        <br /> <br />
+        Weight of uncut mud &nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for1j" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Weight of gas cut mud =
+        <input type="text" id="for2j" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        <button class="btn btn-success" id="hitung15">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil15"></div>
+        </h4>
+        <br /><br />
+        <img src="img/ka/15b.png" atyle="width:100px;height:90px;">
+        <br /><br />
+        Case :
+        <br /> <br />
+        MG =
+        <input type="text" id="for1k" style="width:50px;text-align:right;" value="0">
+        psi/ft
+        <br /><br />
+        C &nbsp; =
+        <input type="text" id="for2k" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        V &nbsp; =
+        <input type="text" id="for3k" style="width:50px;text-align:right;" value="0">
+        bbl
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung16">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil16"></div>
+        </h4>
+        <br /><br />
+        <b>Maximum Surface Pressure From a Gas Kick in a Water Base Mud</b>
+        <br /><br />
+        <img src="img/ka/17.png" style="width:200px;height:70px;">
+        <br /><br />
+        Where ;<br />
+        MSPgk = maximum surface pressure resulting from a gas kick in a water base
+        mud<br />
+        P &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = formation pressure (psi)<br />
+        V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = pit gain (bbl)<br />
+        KWM &nbsp;&nbsp; = kill weight mud (ppg)<br />
+        C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = annular capacity (bbl/ft)<br />
+
+        <br />
+        Case :
+        <br /> <br />
+        P &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for1l" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for2l" style="width:50px;text-align:right;" value="0">
+        bbl
+        <br /><br />
+        KWM &nbsp;&nbsp; = <input type="text" id="for3l" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for4l" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung17">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil17"></div>
+        </h4>
+        <br /><br />
+
+        <b>Maximum Pit Gain From Gas Kick in Water Base Mud</b><br /><br />
+        <img src="img/ka/18.png" style="width:200;height:70px">
+        <br /><br />
+        Where ;<br />
+
+        MPGgk = maximum pit gain resulting from a gas kick in a water base mud<br />
+        P &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = formation pressure (psi)<br />
+        V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = original pit gain (bbl)<br />
+        C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = annular capacity (bbl/ft)<br />
+        KWM &nbsp;&nbsp;&nbsp; = kill weight mud (ppg)<br />
+
+        <br />
+        Case :
+        <br /> <br />
+        P &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for1m" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for2m" style="width:50px;text-align:right;" value="0">
+        bbl
+        <br /><br />
+        KWM &nbsp;&nbsp; = <input type="text" id="for3m" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for4m" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung18">Calculate</button>
+
+        <br />
+        <h4>
+            <div id="hasil18"></div>
+        </h4>
+        <br /><br />
+
+        <b>Maximum Pressures When Circulating Out a Kick (Moore Equations)</b>
+        <br /><br />
+        Case :
+        <br /> <br />
+        Well depth &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for1ok" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Surface casing &nbsp;&nbsp; =
+        <input type="text" id="for2ok" style="width:50px;text-align:right;" value="0">
+        in
+        <br /><br />
+        Casing ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3ok" style="width:50px;text-align:right;" value="0">
+        in
+        <br /><br />
+        capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for4ok" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        Hole size &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for5ok" style="width:50px;text-align:right;" value="0">
+        in
+        <br /><br />
+        Drill pipe &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for6ok" style="width:50px;text-align:right;" value="0">
+        in
+        <br /><br />
+        Drill collar OD &nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for7ok" style="width:50px;text-align:right;" value="0">
+        in
+        <br /><br />
+        length &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for8ok" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for9ok" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Fracture gradient =
+        <input type="text" id="for10ok" style="width:50px;text-align:right;" value="0">
+        psi/ft
+        <br /><br />
+
+        Mud volumes :
+        8-1/2 in. hole &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for11ok" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        8-1/2 in. hole x 4.1/2 in. drill pipe &nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for12ok" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        8-1/2 in. hole x 6-1/4 in. drill collars =
+        <input type="text" id="for13ok" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        8.921 in. casing x 4-1/2 in. drill pipe =
+        <input type="text" id="for14ok" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        Drill pipe capacity &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for15ok" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        Drill collar capacity &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for16ok" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        supercompressibility factor (Z) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for17ok" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+
+        The well kicks and the following information is recorded : <br /><br />
+
+        SIDP &nbsp;&nbsp; =
+        <input type="text" id="for18ok" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        SICP &nbsp;&nbsp; =
+        <input type="text" id="for19ok" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Pit gain =
+        <input type="text" id="for20ok" style="width:50px;text-align:right;" value="0">
+        bbl
+        <br /><br />
+
+        Determine the following :<br /><br />
+
+        Maximum pressure at shoe with drillers method<br />
+        Maximum pressure at surface with drillers method<br />
+        Maximum pressure at shoe with wait and weight method<br />
+        Maximum pressure at surface with wait and weight method<br /><br />
+
+        <button class="btn btn-success" id="hitung19">Calculate</button><br /><br />
+
+        Determine maximum pressure at shoe with drillers method :<br /><br />
+
+        1. Determine formation pressure :<br /><br />
+
+        <img src="img/ka/oke1.png"><br /><br />
+        <h4>
+            <div id="hasil19a"></div>
+        </h4>
+        <br /><br />
+
+        2. Determine height of influx at TD :<br /><br />
+
+        <img src="img/ka/oke2.png"><br /><br />
+        <h4>
+            <div id="hasil19b"></div>
+        </h4>
+        <br /><br />
+
+        3. Determine pressure exerted by influx at TD :<br /><br />
+
+        <img src="img/ka/oke3.png"><br /><br />
+        <h4>
+            <div id="hasil19c"></div>
+        </h4>
+        <br /><br />
+
+        4. Determine gradient of influx at TD :<br /><br />
+
+        <img src="img/ka/oke4.png" style="width:150px;height:30px;"><br /><br />
+        <h4>
+            <div id="hasil19d"></div>
+        </h4>
+        <br /><br />
+
+        5. Determine height and pressure of influx around drill pipe :<br /><br />
+        h: <br /><br />
+        <h4>
+            <div id="hasil19e"></div>
+        </h4>
+        <br /><br />
+        Pi: <br /><br />
+        <h4>
+            <div id="hasil19f"></div>
+        </h4>
+        <br /><br />
+
+        6. Determine T °R at TD and at shoe :<br /><br />
+        T °R @ 10.000 ft =<br /><br />
+        <h4>
+            <div id="hasil19g"></div>
+        </h4>
+        <br /><br />
+        T °R @ 2500 ft =<br /><br />
+        <h4>
+            <div id="hasil19h"></div>
+        </h4>
+        <br /><br />
+
+        7. Determine A :<br /><br />
+        <h4>
+            <div id="hasil19i"></div>
+        </h4>
+        <br /><br />
+
+        8. Determine maximum pressure at shoe with drillers method :<br /><br />
+        <h4>
+            <div id="hasil19j"></div>
+        </h4>
+        <br /><br />
+
+        Determine maximum pressure at surface with drillers method :<br /><br />
+
+        1. Determine A :<br /><br />
+        <h4>
+            <div id="hasil19k"></div>
+        </h4>
+        <br /><br />
+
+        2. Determine maximum pressure at surface with drillers method :<br /><br />
+        <h4>
+            <div id="hasil19l"></div>
+        </h4>
+        <br /><br />
+
+        Determine maximum pressure at shoe with wait and weight method :<br /><br />
+        1. Determine kill weight mud :<br /><br />
+        <h4>
+            <div id="hasil19m"></div>
+        </h4>
+        <br /><br />
+
+        2. Determine gradient (pm), psi/ft for KWM :<br /><br />
+        <h4>
+            <div id="hasil19n"></div>
+        </h4>
+        <br /><br />
+
+        3. Determine internal volume of drill string :<br /><br />
+        <h4>
+            <div id="hasil19o"></div>
+        </h4>
+        <br /><br />
+
+        4. Determine FEET drill string volume occupies in annulus :<br /><br />
+        <h4>
+            <div id="hasil19p"></div>
+        </h4>
+        <br /><br />
+
+        5. Determine A :<br /><br />
+        <h4>
+            <div id="hasil19q"></div>
+        </h4>
+        <br /><br />
+
+        6. Determine maximum pressure at shoe with wait and weight method :<br /><br />
+        <h4>
+            <div id="hasil19r"></div>
+        </h4>
+        <br /><br />
+
+        Determine maximum pressure at surface with wait and weight method :<br /><br />
+        1. Determine A :<br /><br />
+        <h4>
+            <div id="hasil19s"></div>
+        </h4>
+        <br /><br />
+
+        2. Determine maximum pressure at surface with wait and weight method :<br /><br />
+        <h4>
+            <div id="hasil19t"></div>
+        </h4>
+        <br /><br />
+
+        Nomenclature :<br /><br />
+
+        A = pressure at top of gas bubble (psi)<br />
+        Ci = gradient of influx (psi/ft)<br />
+        D = total depth (ft)<br />
+        Di = feet in annulus occupied by drill string volume<br />
+        hi = height of influx (ft)<br />
+        MW = mud weight (ppg)<br />
+        Pb = formation pressure (psi)<br />
+        Pdi = pressure at depth of interest (psi)<br />
+        Ps = pressure at surface (psi)<br />
+        Pi = pressure exerted by influx (psi)<br />
+        pKWM = pressure gradient of kill weight mud (ppg)<br />
+        pm = pressure gradient of mud weight in use (ppg)<br />
+        T0F = temperature degrees Fahrenheit at depth-of interest<br />
+        T0R = temperature degrees Rankine at depth of interest<br />
+        SIDP = shut-in drill pipe pressure (psi)<br />
+        SICP = shut-in casing pressure (psi)<br />
+        X = depth of interest (ft)<br />
+        Zb = gas supercompressibility factor TD<br />
+        Zdi = gas supercompressibility factor at depth of interest<br /><br />
+
+        <b>GAS FLOW INTO THE WELLBORE</b><br /><br />
+
+        Flow rate into the wellbore increases as wellbore depth through a gas sand increases :<br /><br />
+        <img src="img/ka/oke12.png"><br /><br />
+
+        Where ;<br />
+        Q = flow rate (bbl/min)<br />
+        md = permeability (millidarcys)<br />
+        Dp = pressure differential (psi)<br />
+        L = length of section open to wellbore (ft)<br />
+        u = viscosity of intruding gas (centipoise)<br />
+        Re = radius of drainage (ft)<br />
+        Rw = radius of wellbore (ft)<br />
+
+        Case :
+        <br /> <br />
+        md =
+        <input type="text" id="for20a" style="width:50px;text-align:right;" value="0">
+        md
+        <br /><br />
+        Dp =
+        <input type="text" id="for20b" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        L &nbsp;&nbsp; =
+        <input type="text" id="for20c" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        u &nbsp;&nbsp; =
+        <input type="text" id="for20d" style="width:50px;text-align:right;" value="0">
+        cp
+        <br /><br />
+        ln &nbsp;&nbsp; =
+        <input type="text" id="for20e" style="width:50px;text-align:right;" value="0">
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung20">Calculate</button><br /><br />
+        <h4>
+            <div id="hasil20"></div>
+        </h4>
+        <br /><br />
+
+
+        <br /><br /><br /><br />
+
+    </div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+</script>  
+
+<script>
+    var hasilakhirhitungan6 = 0;
+    var hasilhitung7akhir = 0;
+    var hasilakhirhitungan8 = 0;
+    var hasilhitung9akhir = 0;
+    var hasilhitung10akhir = 0;
+    var hasilhitung11akhir = 0;
+    var pangkatlapanlima = 0;
+    var pangkatenamlima = 0;
+    var kurangpangkatlapanenam = 0;
+    var pangkatlapanlimag = 0;
+    var pangkatenamlimag = 0;
+    var kurangpangkatlapanenamg = 0;
+    hitung1.onclick = function () {
+        var kalippg = document.getElementById('for2').value * 0.052 * document.getElementById('for3').value;
+        var tambahsatudankalippg = ((document.getElementById('for1').value * 1)) + ((kalippg * 1));
+        document.getElementById('hasil1').innerHTML = tambahsatudankalippg + ' psi';
+    }
+
+    hitung2.onclick = function () {
+        var kalippgb = document.getElementById('for2b').value * 0.052 * document.getElementById('for3b').value;
+        var tambahsatudankalippgb = ((document.getElementById('for1b').value * 1)) + ((kalippgb * 1));
+        document.getElementById('hasil2').innerHTML = tambahsatudankalippgb + ' psi';
+    }
+
+    hitung3.onclick = function () {
+        var kalippgc = document.getElementById('for2c').value * 0.052 * document.getElementById('for3c').value;
+        var tambahsatudankalippgc = ((document.getElementById('for1c').value * 1)) - ((kalippgc * 1));
+        document.getElementById('hasil3').innerHTML = tambahsatudankalippgc.toFixed(0) + ' psi';
+    }
+
+    hitung4.onclick = function () {
+        var kalitengahnya = document.getElementById('for2d').value * 0.052 * document.getElementById('for3d').value;
+        var kalikanan = document.getElementById('for4d').value * document.getElementById('for5d').value;
+        var hasilajdhshd = (kalitengahnya * 1) + (kalikanan * 1);
+        var hasilakhi4hitungan = (document.getElementById('for1d').value * 1) - (hasilajdhshd * 1);
+        document.getElementById('hasil4').innerHTML = hasilakhi4hitungan.toFixed(0) + ' psi';
+    }
+
+    hitung5.onclick = function () {
+        var hasilhitung5akhir = document.getElementById('for1e').value / document.getElementById('for2e').value;
+        document.getElementById('hasil5').innerHTML = hasilhitung5akhir.toFixed(0) + ' ft';
+    }
+
+    pangkatlapanlima = Math.pow(document.getElementById('for2f').value, 2);
+    pangkatenamlima = Math.pow(document.getElementById('for3f').value, 2);
+    kurangpangkatlapanenam = pangkatlapanlima - pangkatenamlima;
+    hasilakhirhitungan6 = kurangpangkatlapanenam / 1029.4;
+    hitung6.onclick = function () {
+        pangkatlapanlima = Math.pow(document.getElementById('for2f').value, 2);
+        pangkatenamlima = Math.pow(document.getElementById('for3f').value, 2);
+        kurangpangkatlapanenam = pangkatlapanlima - pangkatenamlima;
+        hasilakhirhitungan6 = kurangpangkatlapanenam / 1029.4;
+        document.getElementById('hasil6').innerHTML = hasilakhirhitungan6.toFixed(5) + ' bbl/ft';
+    }
+
+    hasilhitung7akhir = document.getElementById('for4f').value * hasilakhirhitungan6.toFixed(5);
+
+    hitung7.onclick = function () {
+        hasilhitung7akhir = document.getElementById('for4f').value * hasilakhirhitungan6.toFixed(5);
+        document.getElementById('hasil7').innerHTML = hasilhitung7akhir.toFixed(1) + ' bbl';
+    }
+
+    pangkatlapanlimag = Math.pow(document.getElementById('for2f').value, 2);
+    pangkatenamlimag = Math.pow(document.getElementById('for5f').value, 2);
+    kurangpangkatlapanenamg = pangkatlapanlimag - pangkatenamlimag;
+    hasilakhirhitungan8 = kurangpangkatlapanenamg / 1029.4;
+    hitung8.onclick = function () {
+        pangkatlapanlimag = Math.pow(document.getElementById('for2f').value, 2);
+        pangkatenamlimag = Math.pow(document.getElementById('for5f').value, 2);
+        kurangpangkatlapanenamg = pangkatlapanlimag - pangkatenamlimag;
+        hasilakhirhitungan8 = kurangpangkatlapanenamg / 1029.4;
+        document.getElementById('hasil8').innerHTML = hasilakhirhitungan8.toFixed(4) + ' bbl/ft';
+    }
+
+    hasilhitung9akhir = document.getElementById('for1f').value - hasilhitung7akhir.toFixed(1);
+    hitung9.onclick = function () {
+        hasilhitung9akhir = document.getElementById('for1f').value - hasilhitung7akhir.toFixed(1);
+        document.getElementById('hasil9').innerHTML = hasilhitung9akhir.toFixed(1) + ' bbl';
+    }
+
+    hasilhitung10akhir = hasilhitung9akhir.toFixed(1) / hasilakhirhitungan8.toFixed(4);
+    hitung10.onclick = function () {
+        hasilhitung10akhir = hasilhitung9akhir.toFixed(1) / hasilakhirhitungan8.toFixed(4);
+        document.getElementById('hasil10').innerHTML = hasilhitung10akhir.toFixed(0) + ' ft';
+    }
+
+    hitung11.onclick = function () {
+        hasilhitung11akhir = ((hasilhitung10akhir.toFixed(0) * 1)) + ((document.getElementById('for4f').value * 1));
+        document.getElementById('hasil11').innerHTML = hasilhitung11akhir + ' ft';
+    }
+
+    hitung12.onclick = function () {
+        var hitungan1 = ((document.getElementById('for1g').value * 1)) - ((document.getElementById('for2g').value * 1));
+        var hitungan2 = document.getElementById('for3g').value * 0.052;
+        var bagihitungan12 = hitungan1 / hitungan2;
+        var hasilakhir12hitungan = document.getElementById('for4g').value - bagihitungan12;
+        document.getElementById('hasil12').innerHTML = hasilakhir12hitungan.toFixed(2) + ' ppg';
+    }
+
+    hitung13.onclick = function () {
+        var hasilkalipangkat = -0.37 * document.getElementById('for1h').value;
+        var hasilhitungankeduanya = Math.pow(2.71828182846, hasilkalipangkat);
+        var kalikandualas = hasilhitungankeduanya * 12;
+        var kalimenit = kalikandualas * 60;
+        var kalidetik = kalimenit * 60;
+        document.getElementById('hasil13').innerHTML = kalidetik.toFixed(0) + ' ft/hr';
+    }
+
+    hitung14.onclick = function () {
+        var atasaatas = document.getElementById('for2i').value - document.getElementById('for1i').value;
+        var hasilhitung14akhir = atasaatas / document.getElementById('for4i').value;
+        document.getElementById('hasil14').innerHTML = hasilhitung14akhir.toFixed(1) + ' ft/hr';
+    }
+
+    hitung15.onclick = function () {
+        var kurangatas = document.getElementById('for1j').value - document.getElementById('for2j').value;
+        var hasilhitungkurangatasbagi = kurangatas / document.getElementById('for2j').value;
+        var hasilakhir15hitung = hasilhitungkurangatasbagi * 100;
+        document.getElementById('hasil15').innerHTML = hasilakhir15hitung + ' psi';
+    }
+
+    hitung16.onclick = function () {
+        var kurangatasaa = document.getElementById('for1k').value / document.getElementById('for2k').value;
+        var hasilhitungkurangatasbagiaa = kurangatasaa * document.getElementById('for3k').value;
+        document.getElementById('hasil16').innerHTML = hasilhitungkurangatasbagiaa.toFixed(1) + ' psi';
+    }
+
+    hitung17.onclick = function () {
+        var kaliatasaaa = document.getElementById('for1l').value * document.getElementById('for2l').value * document.getElementById('for3l').value;
+        var bagibagii = kaliatasaaa / document.getElementById('for4l').value;
+        var pengakaran = Math.sqrt(bagibagii.toFixed(0));
+        var hasilakhir17hitung = pengakaran.toFixed(2) * 0.2;
+        document.getElementById('hasil17').innerHTML = hasilakhir17hitung.toFixed(0) + ' psi';
+    }
+
+    hitung18.onclick = function () {
+        var kaliatasaaabbb = document.getElementById('for1m').value * document.getElementById('for2m').value * document.getElementById('for3m').value;
+        var bagibagiibbb = kaliatasaaabbb / document.getElementById('for4m').value;
+        var pengakaranbbbb = Math.sqrt(bagibagiibbb.toFixed(0));
+        var hasilakhir18hitung = pengakaranbbbb.toFixed(3) * 4;
+        document.getElementById('hasil18').innerHTML = hasilakhir18hitung.toFixed(1) + ' bbl';
+    }
+
+    hitung19.onclick = function () {
+        var kasdhjhjhsds = document.getElementById('for1ok').value * 0.052 * document.getElementById('for9ok').value;
+        var jasdghsghdss = (kasdhjhjhsds * 1) + (document.getElementById('for18ok').value * 1);
+
+        var dsjjksdhjsds = document.getElementById('for20ok').value / document.getElementById('for13ok').value;
+
+        var djsdbjsdbbsd = (document.getElementById('for1ok').value * 1) - (dsjjksdhjsds.toFixed(0) * 1);
+        var dsjkljkjsdhs = djsdbjsdbbsd * 0.4992;
+        var sisdjksjdsds = (document.getElementById('for19ok').value * 1) + (dsjkljkjsdhs.toFixed(0) * 1);
+        var dksdjksjdskj = (jasdghsghdss.toFixed(0) * 1) - (sisdjksjdsds.toFixed(0) * 1);
+
+        var udsdkjksjkds = dksdjksjdskj.toFixed(0) / dsjjksdhjsds.toFixed(0);
+
+        var sjkdskdjshsd = document.getElementById('for20ok').value / document.getElementById('for12ok').value;
+        var usdsjdjshjsd = udsdkjksjkds.toFixed(4) * sjkdskdjshsd.toFixed(0);
+
+        var djsdhsjhdjshds = 0.012 * document.getElementById('for1ok').value;
+        var sjsjdhjshdjsds = (70 * 1) + (djsdhsjhdjshds.toFixed(0) * 1) + (460 * 1);
+
+        var nSghsgdjhjsdss = 0.012 * 2500;
+        var pasdjksdjskjds = (70 * 1) + (nSghsgdjhjsdss.toFixed(0) * 1) + (460 * 1);
+
+        var sdjdjshdjhsjdh = (10000 * 1) - (2500 * 1);
+        var jsdhsdhjhsdhsd = sdjdjshdjhsjdh * 0.4992;
+        var dsdksdjsdhjhjs = (jsdhsdhjhsdhsd.toFixed(0) * 1) + (46 * 1);
+        var dskdjksdhjhjsd = (jasdghsghdss.toFixed(0) * 1) - (dsdksdjsdhjhjs * 1);
+
+        var kshsjdhjhjshjd = dskdjksdhjhjsd.toFixed(0) / 2;
+        var jsdhhsdhghghds = (kshsjdhjhjshjd.toFixed(0) * 1) + (1199 * 1);
+
+        var jsdhsdsvhsdsss = 0.4992 * document.getElementById('for1ok').value;
+        var usdhhsgdhghsds = (jsdhsdsvhsdsss.toFixed(0) * 1) + (46 * 1);
+        var jsdsjsdjhwdggw = (jasdghsghdss.toFixed(0) * 1) - (usdhhsgdhghsds * 1);
+
+        var hdshdghsgdshgs = jsdsjsdjhwdggw.toFixed(0) / 2;
+        var osdhjhjsdhjhsd = (hdshdghsgdshgs.toFixed(0) * 1) + (931 * 1);
+
+        var sdhjhsdjhjshjp = document.getElementById('for18ok').value / 0.052 / document.getElementById('for1ok').value;
+        var hsdjskdjksdhjj = (sdhjhsdjhjshjp.toFixed(1) * 1) + (document.getElementById('for9ok').value * 1);
+
+        var jsdhshdghghgss = hsdjskdjksdhjj.toFixed(1) * 0.052;
+
+        var uusdghghsgdhss = document.getElementById('for15ok').value * 9375;
+        var hsdhugshdghghg = document.getElementById('for16ok').value * dsjjksdhjsds.toFixed(0);
+        var jsdhhghsdghsds = (uusdghghsgdhss * 1) + (hsdhugshdghghg * 1);
+
+        var ysdghsgdhgssds = jsdhhghsdghsds.toFixed(3) / document.getElementById('for12ok').value;
+
+        var ysudghggghsdhj = (document.getElementById('for1ok').value * 1) - (2500 * 1);
+        var shdjshjhdsjhjs = jsdhshdghghgss.toFixed(4) * ysudghggghsdhj;
+        var yytffdfdfdfdff = (shdjshjhdsjhjs.toFixed(0) * 1) - (46 * 1);
+
+        var ghghfggfftffgg = (jsdhshdghghgss.toFixed(4) * 1) - (0.4992 * 1);
+        var hhffdfdfdxdfdf = ghghfggfftffgg * ysdghsgdhgssds.toFixed(1);
+
+        var usdbhsdhhvbsbd = (jasdghsghdss.toFixed(0) * 1) - (yytffdfdfdfdff.toFixed(0) * 1);
+        var hsdhjsdhjhjsds = (usdbhsdhhvbsbd * 1) + (hhffdfdfdxdfdf * 1);
+        var hsbhsdghghsdss = (hsdhjsdhjhjsds * 1) - (92 * 1);
+
+        var jsdhhjhsdhghsg = hsbhsdghghsdss.toFixed(1) / 2;
+        var hsdhsghghsdghs = (jsdhhjhsdhghsg * 1) + (1182.28 * 1);
+
+        var osdhjhjsdhjsjs = jsdhshdghghgss.toFixed(4) * document.getElementById('for1ok').value;
+        var bsdghsgdhghgsd = (osdhjhjsdhjsjs.toFixed(0) * 1) - (46 * 1);
+        var bsdghgsdghghsd = (jasdghsghdss.toFixed(0) * 1) - (bsdghsgdhghgsd * 1);
+
+        var hsdhsdhhsgdhsd = ysdghsgdhgssds.toFixed(1) * ghghfggfftffgg;
+        var hsdhsgdhghsdss = (hsdhsdhhsgdhsd * 1) - (bsdghgsdghghsd.toFixed(0) * 1);
+
+        var hsdhsdhsghdsjs = hsdhsgdhghsdss.toFixed(1) / 2;
+        var thsdhjhsdjhjhs = (hsdhsdhsghdsjs * 1) + (975.049 * 1)
+
+        document.getElementById('hasil19a').innerHTML = jasdghsghdss.toFixed(0)+ ' psi';
+        document.getElementById('hasil19b').innerHTML = dsjjksdhjsds.toFixed(0) + ' ft';
+        document.getElementById('hasil19c').innerHTML = dksdjksjdskj.toFixed(0) + ' psi';
+        document.getElementById('hasil19d').innerHTML = udsdkjksjkds.toFixed(4) + ' psi/ft';
+        document.getElementById('hasil19e').innerHTML = sjkdskdjshsd.toFixed(0) + ' ft';
+        document.getElementById('hasil19f').innerHTML = usdsjdjshjsd.toFixed(0) + ' psi';
+        document.getElementById('hasil19g').innerHTML = sjsjdhjshdjsds.toFixed(0);
+        document.getElementById('hasil19h').innerHTML = pasdjksdjskjds.toFixed(0);
+        document.getElementById('hasil19i').innerHTML = dskdjksdhjhjsd.toFixed(0) + ' psi';
+        document.getElementById('hasil19j').innerHTML = jsdhhsdhghghds.toFixed(0) + ' psi';
+        document.getElementById('hasil19k').innerHTML = jsdsjsdjhwdggw.toFixed(0) + ' psi';
+        document.getElementById('hasil19l').innerHTML = osdhjhjsdhjhsd.toFixed(0) + ' psi';
+        document.getElementById('hasil19m').innerHTML = hsdjskdjksdhjj.toFixed(1) + ' ppg';
+        document.getElementById('hasil19n').innerHTML = jsdhshdghghgss.toFixed(4) + ' psi/ft';
+        document.getElementById('hasil19o').innerHTML = jsdhhghsdghsds.toFixed(3) + ' bbl';
+        document.getElementById('hasil19p').innerHTML = ysdghsgdhgssds.toFixed(1);
+        document.getElementById('hasil19q').innerHTML = hsbhsdghghsdss.toFixed(1);
+        document.getElementById('hasil19r').innerHTML = hsdhsghghsdghs.toFixed(0) + ' psi';
+        document.getElementById('hasil19s').innerHTML = hsdhsgdhghsdss.toFixed(1);
+        document.getElementById('hasil19t').innerHTML = thsdhjhsdjhjhs.toFixed(0) + ' psi';
+    }
+
+    hitung20.onclick = function () {
+        var hasdhjshduh = 0.007 * document.getElementById('for20a').value * document.getElementById('for20b').value * document.getElementById('for20c').value;
+        var hsdbsbdhbhb = document.getElementById('for20d').value * document.getElementById('for20e').value * 1400;
+        var tsdghhsgdhsgd = hasdhjshduh / hsdbsbdhbhb;
+
+        document.getElementById('hasil20').innerHTML = tsdghhsgdhsgd.toFixed(0) + ' bbl/min';
+    }
+
+</script>
+
+
+</html>

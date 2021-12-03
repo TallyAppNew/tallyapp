@@ -1,0 +1,4 @@
+include ':monitoring'
+include ':app'
+rootProject.name = "Tally App"
+include ':core'

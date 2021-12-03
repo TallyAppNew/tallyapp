@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Washout Depth</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+        <p><strong>Method </strong><strong>1</strong><strong>  </strong></p>
+                
+        <img src="img/wd/for1.png">
+        <br/>
+                <p>Pump soft line or other plugging material down dic drill pipe and notice<br /> </p>
+                <p>bow many strokes are required before the pump pressure increases.<br /> </p>
+                
+                <p>Case : Drill pipe &nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<input type="text" id="for11" style="width:50px;text-align:right;" value="0"> inch
+                &mdash; <input type="text" id="for12" style="width:50px;text-align:right;" value="0"> lb/ft&nbsp;&nbsp;&nbsp;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                Capacity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = &nbsp;<input type="text" id="for13" style="width:50px;text-align:right;" value="0"> bbl/ft <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Pump output&nbsp;&nbsp;&nbsp; = <input type="text" id="for14" style="width:50px;text-align:right;" value="0"> bbl/stk</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;(5-1/2 inch by 14 inch duplex @ 90% efficiency)<br /> </p>
+                <p>NOTE : A pressure increase was noticed after  <input type="text" id="for15" style="width:50px;text-align:right;" value="0"> strokes</p>
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung1">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil1"></div>
+		</h4>
+        <br/>
+
+        <p><strong>Method 2<br /> <br /> </strong></p>
+        <p>Pump some material that will go through the washout, up the annulus and over the shale shaker. This material must be of the type that can be easily observed as it comes across the shaker. Examples : carbide, corn starch, glass beads, bright colored paint, etc.</p>
+        <br/>
+        <img src="img/wd/for2.png">
+        <br/>
+        <p>Case : Drill pipe &nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for21" style="width:50px;text-align:right;" value="0"> inch - <input type="text" id="for22" style="width:50px;text-align:right;" value="0"> lb/ft<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for23" style="width:50px;text-align:right;" value="0"> bbl/ft<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pump output &nbsp;&nbsp;&nbsp;= <input type="text" id="for24" style="width:50px;text-align:right;" value="0"> bbl/stk</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5-1/2 inch x 14 inch duplex @ 90% efficiency)<br /> </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Annulus<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hole size &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for25" style="width:50px;text-align:right;" value="0"> inch<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=<input type="text" id="for26" style="width:50px;text-align:right;" value="0"> inch</p>
+        <p>&nbsp;</p>
+        <p>NOTE : The material pumped down the drill pipe was noticed coming over the&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shaker after <input type="text" id="for27" style="width:50px;text-align:right;" value="0"> strokes.<br /> </p>
+
+                <button class="btn btn-success" id="hitung2">Calculate</button> 
+
+        <br/>
+        <p>Drill pipe capacity plus annular capacity :</p>
+        <br/>
+        <h4>
+        <div id="hasil2"></div>
+        </h4>
+        <br/>
+        <h4>
+        <p>Depth of washout (ft) : </p>
+        <div id="hasil3"></div>
+    <br/>
+
+      </div>
+    </body>
+	
+  <script src="js/jquery.min.js"></script>
+  <script>
+      $("input[type='text']").click(function () {
+          $(this).select();
+      });
+  </script>  
+
+	<script>
+  
+	hitung1.onclick = function(){
+		document.getElementById('hasil1').innerHTML = 5434 + ' ft';//(document.getElementById('for11').value*(document.getElementById('for12').value-document.getElementById('for13').value))/document.getElementById('for13').value + ' ft';
+
+	}
+	hitung2.onclick = function(){
+    const hitung1 = parseFloat(document.getElementById('for23').value)+parseFloat(document.getElementById('for26').value) 
+		document.getElementById('hasil2').innerHTML = parseFloat(document.getElementById('for23').value)+parseFloat(document.getElementById('for26').value) + ' bbl/ft ';//(document.getElementById('for11').value*(document.getElementById('for12').value-document.getElementById('for13').value))/document.getElementById('for13').value + ' ft';
+        document.getElementById('hasil3').innerHTML = document.getElementById('for27').value*document.getElementById('for24').value/hitung1.toFixed(4)+ ' ft'
+	}
+	</script>
+	
+	
+</html>

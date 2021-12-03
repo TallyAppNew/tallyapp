@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/BuoyancyFactor.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Control Drilling </h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+        
+
+        <p >
+        Maximum drilling rate (MDR) (ft/hr) when drilling large diameter holes 
+(14-3/4 inch and larger) <br/>
+        <br/>
+		
+		<br/>
+		<img src="img/cd/formula1.png">
+        <br/><br/>
+        Case : Determine the MDR (ft/hr) necessary to keep the mud weight  
+        Coming out at <input onkeypress="return hanyaAngka(event)" type="text" id="for11" style="width:50px;text-align:right;" value="0"> ppg at the flow line 
+                <br/>
+                <br/>
+	   Data : Mud weight in    = <input onkeypress="return hanyaAngka(event)" type="text" id="for12" style="width:50px;text-align:right;" value="0"> ppg 
+	   <br/><br/>
+       Circulation rate &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for13" style="width:50px;text-align:right;" value="0"> gpm 
+       <br/><br/>
+	   Hole size      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  = <input  onkeypress="return hanyaAngka(event)" type="text" id="for14" style="width:50px;text-align:right;" value="0"> inch       
+	   <br/><br/>
+	   <button class="btn btn-success" id="hitung1">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil1"></div>
+		</h4>
+
+        </div>
+    </body>
+
+    
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $("input[type='text']").click(function () {
+            $(this).select();
+        });
+        function hanyaAngka(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+		}
+    </script>  
+    
+	<script>
+
+	hitung1.onclick = function(){
+		document.getElementById('hasil1').innerHTML = parseFloat((67*(document.getElementById('for11').value-document.getElementById('for12').value)*document.getElementById('for13').value)/(document.getElementById('for14').value*document.getElementById('for14').value)).toFixed(2) + ' ft/hr' ;
+	}
+		
+	</script>
+	
+
+</html>

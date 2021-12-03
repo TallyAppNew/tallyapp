@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tally App</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Workover Operations </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:100px">
+
+        NOTE :
+        The following procedures and calculations are more commonly used in
+        workover operations,<br /> but at times they are used in drilling
+        operations.
+        <br /><br />
+        <b>Bullheading</b><br /><br />
+        Bullheading is a term used to describe killing the well by forcing formation fluids <br />
+        back into the formation by pumping kill weight fluid down the tubing and in some cases down the
+        casing.<br /><br />
+        The bullheading method killing a well is primarily used in the following situations : <br /><br />
+
+        a. Tubing in the well with a packer set. No communication exists between
+        tubing and annulus.<br /><br />
+        b. Tubing in the well, influx in the annulus, and for some reason, cannot
+        circulate through the tubing.<br /><br />
+        c. No tubing in the well. Influx in the casing. Bullheading is simplest,
+        fastest, and safest method to use to kill the well.<br /><br />
+        NOTE : Tubing could be well off bottom also.<br /><br />
+        d. In drilling operations, bullheading has been used successfully in areas
+        where hydrogen sulfide is a possibility.<br /><br />
+        Example calculations involved in bullheading operations :<br /><br />
+
+        Using the information given below, <br />
+        the necessary calculations will be performed to kill the well by bullheading.<br />
+        The example calculations will pertain to “a” above :<br /><br />
+
+        Case : <br /> <br />
+        Depth of perforations
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for1" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Fracture gradient
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for2" style="width:50px;text-align:right;" value="0">
+        psi/ft
+        <br /><br />
+        Formation pressure gradient &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3" style="width:50px;text-align:right;" value="0">
+        psi/ft
+        <br /><br />
+        Tubing hydrostatic pressure (THP) =
+        <input type="text" id="for4" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Shut-in tubing pressure
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for5" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Tubing
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for6" style="width:50px;text-align:right;" value="0">
+        in
+        <br /><br />
+        Tubing capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for7" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        <br /><br />
+        Tubing internal yield pressure &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for8" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Kill fluid density &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for9" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+
+        NOTE : <br /><br />
+        Determine the best pump rate to use.<br /> The pump rate must exceed the
+        rate of gas bubble migration up the tubing. <br />The rate of gas bubble
+        migration (ft/hr)in a shut-in well can be determined by the
+        following formula :<br /><br />
+        <img src="img/wo/1.png"><br /><br />
+
+        <button class="btn btn-success" id="hitung1">Calculate</button>
+        <br /><br />
+
+        a. MATP (initial) with influx in the tubing <br /><br />
+        <h4>
+            <div id="hasil1a"></div>
+        </h4>
+        <br /><br />
+
+        b. MATP (final) with kill fluid in tubing <br /><br />
+        <h4>
+            <div id="hasil1b"></div>
+        </h4>
+        <br /><br />
+
+        <b>Determine tubing capacity :</b><br /><br />
+        <h4>
+            <div id="hasil1c"></div>
+        </h4>
+        <br /><br />
+
+        <b>Lubricate and Bleed</b><br /><br />
+        The lubricate and bleed method involves alternately pumping a kill fluid into the tubing or into the casing
+        <br />
+        if there is no tubing in the well, allowing the kill fluid to fall, <br />
+        then bleeding off a volume of gas until kill fluid reaches the choke. <br />
+        As each volume of kill fluid is pumped into the tubing, <br />
+        the SITP should decrease by a calculated value until the well is eventually killed.<br /><br />
+
+        This method is often used for two reasons ;<br />
+        1. Shut-in pressures approach the rated working pressure of the wellhead or<br />
+        tubing and dynamic pumping pressure may exceed the limits, as in the
+        case of bullheading.
+        2. Either to completely kill the well or lower the SITP to a value where<br />
+        other kill methods can be safely employed without exceeding rated
+        limits.<br /><br />
+
+        This method can also be applied when the wellbore or perforations are plugged, rendering bullheading useless.
+        <br />
+        In this case, the well can be killed without necessitating the use of tubing or snubbing small diameter
+        tubing.<br /><br />
+
+        Users should be aware that the lubricate and bleed method is often a very time consuming process, <br />
+        whereas another method may kill the well more quickly.<br /><br />
+
+
+        The following is an example of a typical lubricate and bleed kill procedure.<br /><br />
+
+        Case : <br /> <br />
+        TVD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for1b" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        Depth of perforations &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for2b" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        SITP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for3b" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Tubing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        =
+        <input type="text" id="for4b" style="width:50px;text-align:right;" value="0">
+        in
+        <br /><br />
+        Tubing capacity
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for5b" style="width:50px;text-align:right;" value="0">
+        bbl/ft
+        &nbsp;&nbsp;
+        <input type="text" id="for6b" style="width:50px;text-align:right;" value="0">
+        ft/bbl
+        <br /><br />
+        Tubing internal yield &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for7b" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Wellhead working pressure =
+        <input type="text" id="for8b" style="width:50px;text-align:right;" value="0">
+        psi
+        <br /><br />
+        Kill fluid density
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for9b" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung2">Calculate</button>
+        <br /><br />
+
+        psi/bbl = <br /><br />
+        <h4>
+            <div id="hasil2a"></div>
+        </h4>
+        <br /><br />
+
+        Calculate tubing capacity (bbl) to the perforations : <br /><br />
+        <h4>
+            <div id="hasil2b"></div>
+        </h4>
+        <br /><br />
+
+        Procedure :<br /><br />
+
+        1. Rig up all surface equipment including pumps and gas flare lines.<br />
+        2. Record SITP and SICP.<br />
+        3. Open the choke to allow gas to escape from the well and momentarily
+        reduce the SITP.<br />
+        4. Close the choke and pump in 9.0 ppg brine until the tubing pressure
+        reaches 2830 psi.<br />
+        5. Wait for a period of time to allow the brine to fall in the tubing.<br /> This
+        period will range from 1/4 to 1 hour depending on gas density, pressure,
+        and tubing size.<br />
+        6. Open the choke and bleed gas until 9.0 brine begins to escape.<br />
+        7. Close the choke and pump in 9.0 ppg brine water.<br />
+        8. Continue the process until a low level, safe working pressure is
+        attained.<br /><br />
+
+        A certain amount of time is required for the kill fluid to fall down the tubing after the pumping stops. <br />
+        The actual waiting time is not to allow fluid to fall, but rather, for gas to migrate up through the kill
+        fluid.<br />
+        Gas migrates at rates of 1000 to 2000 ft/hr.<br />
+        Therefore considerable time is required for fluid to fall or migrate to 6500 ft.<br />
+        Therefore, after pumping, it is important to wait several minutes before bleeding gas<br />
+        to prevent bleeding off kill fluid through the choke.<br /><br />
+
+
+        <br /><br /><br /><br />
+
+    </div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+</script>  
+
+<script>
+    hitung1.onclick = function () {
+        var basdhihis = document.getElementById('for1').value * document.getElementById('for2').value;
+        var xzkjosdjo = (basdhihis * 1) - (document.getElementById('for4').value * 1);
+
+        var xksjissis = document.getElementById('for9').value * 0.052 * document.getElementById('for1').value;
+        var bdsdhjshd = (basdhihis * 1) - (xksjissis * 1);
+
+        var adjskdjds = document.getElementById('for1').value * document.getElementById('for7').value;
+
+        document.getElementById('hasil1a').innerHTML = xzkjosdjo.toFixed(0) + ' psi';
+        document.getElementById('hasil1b').innerHTML = bdsdhjshd.toFixed(0) + ' psi';
+        document.getElementById('hasil1c').innerHTML = adjskdjds.toFixed(1) + ' bbl';
+
+    }
+
+    hitung2.onclick = function () {
+        var cisjdisjds = document.getElementById('for6b').value * 0.052 * document.getElementById('for9b').value;
+
+        var bashdushss = document.getElementById('for5b').value * document.getElementById('for2b').value;
+
+        document.getElementById('hasil2a').innerHTML = cisjdisjds.toFixed(2);
+        document.getElementById('hasil2b').innerHTML = bashdushss.toFixed(1) + ' bbl';
+
+    }
+
+</script>
+
+
+</html>

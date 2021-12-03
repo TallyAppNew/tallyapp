@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/BuoyancyFactor.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Pump Output</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+        <p><strong>Triplex Pump<br /> <br /> </strong></p>
+        <p><strong>Fo</strong><strong>rm</strong><strong>ula 1<br /> <br /> </strong></p>
+        <p>PO (bbl/stk) = 0.000243 x (Linear Diameter (inch))<sup>2</sup> x Stroke Length (inch)<br /> </p>
+        <p>&nbsp;</p>
+        <p>Case : Determine the pump output (bbl/stk) at 100 % efficiency for a &nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input onkeypress="return hanyaAngka(event)" type="text" id="for11" style="width:50px;text-align:right;" value="0"> inch by <input onkeypress="return hanyaAngka(event)" type="text" id="for12" style="width:50px;text-align:right;" value="0"> inch, triplex pump :<br /> </p>
+
+        <br/>
+        <button class="btn btn-success" id="hitung1">Calculate</button> 
+
+        <br/>
+        <h4>
+        <div id="hasil11"></div>
+        </h4>
+        <br>
+        Adjust the pump output for 95% efficiency<br>
+        Decimal equivalent 95 ÷ 100 = 0.95
+        <br/>
+        <h4>
+        <div id="hasil12"></div>
+        </h4>
+        <br>
+        <br/>
+        
+        <p><strong>Fo</strong><strong>rm</strong><strong>ula 2<br /> <br /> </strong></p>
+        <p>PO (gpm) = [(3 (D2 x 0.7854) S] 0.00411 x SPM </p><br/>
+        <p>Where ;</p><br/>
+        <p>D   = linear diameter (inch)</p><br/>
+        <p>S   = stroke 1ength (inch)</p><br/>
+        <p>SPM = strokes per minute</p><br/>
+
+        <p>&nbsp;</p>
+        <p>Case : Determine the pump output (gpm) for a <input onkeypress="return hanyaAngka(event)" type="text" id="for21" style="width:50px;text-align:right;" value="0">-inch by <input onkeypress="return hanyaAngka(event)" type="text" id="for22" style="width:50px;text-align:right;" value="0">-inch,  &nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Triplex pump at <input onkeypress="return hanyaAngka(event)" type="text" id="for23" style="width:50px;text-align:right;" value="0"> strokes per minute : <br /> </p>
+
+        <br/>
+        <button class="btn btn-success" id="hitung2">Calculate</button> 
+
+        <br/>
+        <h4>
+        <div id="hasil2"></div>
+        </h4>
+        <br/>
+        <br/>
+
+        <p><strong>Duplex Pump<br /> <br /> </strong></p>
+        <p><strong>Fo</strong><strong>rm</strong><strong>ula 1<br /> <br /> </strong></p>
+        <p>0.000324 x [(linear diameter (inch)]2 x (stroke length (inch)) = _______ bbl/stk</p>
+        <p>0.000162 x (rod diameter (inch)) x (stroke length(inch))     = ________ bbl/stk</p>
+        <p>pump output @ 100% eff =  ________ bbl/</p>
+        <br/>
+        <br>
+        Case : Determine the output (bbl/stk) of a <input onkeypress="return hanyaAngka(event)" type="text" id="for31" style="width:50px;text-align:right;" value="0"> inch by <input onkeypress="return hanyaAngka(event)" type="text" id="for32" style="width:50px;text-align:right;" value="0">-inch, 
+        Duplex pump at 100% efficiency. Rod diameter = <input onkeypress="return hanyaAngka(event)" type="text" id="for33" style="width:50px;text-align:right;" value="0"> inch :
+        <br>
+        <br>
+        <button class="btn btn-success" id="hitung3">Calculate</button> 
+        <br>
+        <br>
+        <span id="hasil31"></span>
+        <br/>
+        <br>
+        <span id="hasil32"></span>
+        <br>
+        <br>
+        <span id="hasil33"></span>
+        <br>
+        <br>
+        Adjust pump output for 85% efficiency :
+        <br>
+        Decimal equivalent = 85 ÷ 100 = 0.85
+        <h4>
+        <div id="hasil34"></div>
+        </h4>
+        <br/>
+        <br/>
+
+        <p><strong>Fo</strong><strong>rm</strong><strong>ula 2<br /> <br /> </strong></p>
+        <p>PO (bbl/stk) = 0.000162 x S [2(D)2 — d2]</p>
+        <p>Where ;</p>
+        <p>S = stroke length (inch)</p>
+        <p>D = linear diameter (inch)</p>
+        <p>d = rod diameter (inch)</p>
+        <p>Case : Determine the output (bbl/stk) of a <input onkeypress="return hanyaAngka(event)" type="text" id="for41" style="width:50px;text-align:right;" value="0">-inch by <input onkeypress="return hanyaAngka(event)" type="text" id="for42" style="width:50px;text-align:right;" value="0">-inch,</p>
+        <p>Duplex pump @ 100% efficiency. Rod diameter = <input onkeypress="return hanyaAngka(event)" type="text" id="for43" style="width:50px;text-align:right;" value="0"> inch :</p>
+        <br/>
+        <button class="btn btn-success" id="hitung4">Calculate</button> 
+
+        <br/>
+        <h4>
+        <div id="hasil41"></div>
+        </h4>
+        <br>
+        Adjust pump output for 85% efficiency:
+        <br/>
+        <h4>
+          <div id="hasil42"></div>
+          </h4>
+        <br/>
+  
+    
+        </div>
+    </body>
+	
+  <script src="js/jquery.min.js"></script>
+  <script>
+      $("input[type='text']").click(function () {
+          $(this).select();
+      });
+      function hanyaAngka(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+		  }
+  </script>  
+
+	<script>
+
+	hitung1.onclick = function(){
+    var hasil1 = parseFloat(0.000243 * (document.getElementById('for11').value*document.getElementById('for11').value)*document.getElementById('for12').value).toFixed(6);
+		document.getElementById('hasil11').innerHTML = parseFloat(0.000243 * (document.getElementById('for11').value*document.getElementById('for11').value)*document.getElementById('for12').value).toFixed(6) + ' bbl/stk';
+    document.getElementById('hasil12').innerHTML = parseFloat(hasil1 *0.95).toFixed(5) + ' bbl/stk';
+	}
+  hitung2.onclick = function(){
+		document.getElementById('hasil2').innerHTML = parseFloat(3*((document.getElementById('for21').value*document.getElementById('for21').value)*0.7854)*document.getElementById('for22').value*0.00411*document.getElementById('for23').value).toFixed(1) + ' gpm';
+	}
+  hitung3.onclick = function(){
+    var hasil31 = 0.000324 * (document.getElementById('for31').value*document.getElementById('for31').value)*document.getElementById('for32').value;
+		var hasil32 = 0.000162 * (document.getElementById('for33').value*document.getElementById('for33').value)*document.getElementById('for32').value;
+		var hasil33 = hasil31-hasil32;
+    document.getElementById('hasil31').innerHTML = '0.000324 x '+ document.getElementById('for31').value + '<sup>2</sup> x ' + document.getElementById('for32').value + ' = ' + hasil31   + ' bbl/stk'   ;
+    document.getElementById('hasil32').innerHTML = '0.000162 x '+ document.getElementById('for33').value + '<sup>2</sup> x ' + document.getElementById('for32').value + ' = ' + hasil32   + ' bbl/stk'   ;
+    document.getElementById('hasil33').innerHTML = 'pump output @ 100% eff. = ' + hasil33 + ' bbl/stk';
+    document.getElementById('hasil34').innerHTML = parseFloat(hasil33*0.85).toFixed(5) + ' bbl/stk'; 
+  }
+  hitung4.onclick = function(){
+    var hasil2 = 0.000162 *document.getElementById('for42').value*(2*(document.getElementById('for41').value*document.getElementById('for41').value)-(document.getElementById('for43').value*document.getElementById('for43').value));
+		document.getElementById('hasil41').innerHTML = 0.000162 *document.getElementById('for42').value*(2*(document.getElementById('for41').value*document.getElementById('for41').value)-(document.getElementById('for43').value*document.getElementById('for43').value)) + ' bbl/stk';
+    document.getElementById('hasil42').innerHTML = hasil2*0.85 + ' bbl/stk';
+	}
+	</script>
+	
+</html>

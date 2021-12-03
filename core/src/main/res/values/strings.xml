@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="admob_app_id">ca-app-pub-6681885392686558~1450658094</string>
+    <string name="test_ads">ca-app-pub-3940256099942544/1033173712</string>
+
+    <string name="initial_ads">ca-app-pub-6681885392686558/9646257598</string>
+    <string name="menu_ads">ca-app-pub-6681885392686558/8127208085</string>
+    <string name="return_ads">ca-app-pub-6681885392686558/3219330489</string>
+</resources>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/BuoyancyFactor.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tally App</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Evaluation of Hydrocyclone </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:100px">
+
+        <b>Determine the mass of solids (for an unweighted mud) and the volume of water discarded by one cone of a
+            hydrocyclone (desander or desilter) </b><br /> <br />
+            Volume fraction of solids (SF):
+            <br> 
+            <img src="img/eoh/a.png">
+            <br /><br />
+            Mass rate of solids (MS):<br>
+            <img src="img/eoh/b.png">
+            <br /><br />
+            Volume rate of water (WR)<br>
+            <img src="img/eoh/c.png">
+            <br /><br />
+
+        Where, <br />
+        SF = fraction percentage of solids<br />
+        MW = average density of discarded mud (ppg)<br />
+        MS = mass rate of solids removed by one cone of a hydrocyclone (lb/hr)<br />
+        V = volume of slurry sample collected (quarts)<br />
+        T = time to collect slurry sample (seconds)<br />
+        WR = volume of water ejected by one cone of a hydrocyclone (gal/hr)<br />
+        <br /> <br />
+
+        Case : <br /> <br />
+        Average weight of slurry sample collected &nbsp;&nbsp;= <input type="text" id="for1"
+            style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        Sample collected in
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+        <input type="text" id="for2" style="width:50px;text-align:right;" value="0">
+        seconds
+        <br /><br />
+        Volume of slurry sample collected
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3" style="width:50px;text-align:right;" value="0">
+        quarts
+        <br /><br />
+
+        <p>
+            <b>Volume fraction of solids (SF): <br /></b><br />
+
+
+            <button class="btn btn-success" id="hitung1">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="SF"></div>
+        </h4>
+        <br /><br />
+
+        <p>
+            Mass rate of solids (MS): <br />
+
+            
+            <button class="btn btn-success" id="hitung2">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="MS"></div>
+        </h4>
+        <br /><br />
+
+        <p>
+            Volume rate of water (WR) <br />
+
+            
+            <button class="btn btn-success" id="hitung3">Calculate</button>
+
+            <br />
+        <h4>
+            <div id="WR"></div>
+        </h4>
+
+        <br /><br /><br /><br />
+
+    </div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+</script>  
+
+<script>
+    var hasilakhirhitung1eoh = parseFloat((document.getElementById('for1').value - 8.33)) / 13.37;
+
+    hitung1.onclick = function () {
+        hasilakhirhitung1eoh = parseFloat((document.getElementById('for1').value - 8.33)) / 13.37;
+        document.getElementById('SF').innerHTML = hasilakhirhitung1eoh.toFixed(4);
+    }
+
+    hitung2.onclick = function () {
+        var VBAGIT = parseFloat(document.getElementById('for3').value) / parseFloat(document.getElementById('for2').value);
+        var KALISF = 19530 * hasilakhirhitung1eoh.toFixed(4);
+        var hasilakhirhitung2eoh = parseFloat(KALISF) * parseFloat(VBAGIT);
+        document.getElementById('MS').innerHTML = hasilakhirhitung2eoh.toFixed(2) + ' lb/hr';
+    }
+
+    hitung3.onclick = function () {
+        var SATUSF = 1 - hasilakhirhitung1eoh.toFixed(4);
+        var VBAGIT2 = parseFloat(document.getElementById('for3').value) / parseFloat(document.getElementById('for2').value);
+        var hasilakhirhitung3eoh = 900 * SATUSF.toFixed(4) * VBAGIT2.toFixed(4);
+        document.getElementById('WR').innerHTML = hasilakhirhitung3eoh.toFixed(1) + ' gal/hr';
+    }
+
+
+</script>
+
+
+</html>

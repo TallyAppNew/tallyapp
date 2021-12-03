@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/BuoyancyFactor.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Hydrostatic Pressure (HP)</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:150px">
+    	<p><span data-contrast="auto">Hydrostatic pressure using&nbsp;ppg&nbsp;and feet as the units of measure</span>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		<p><strong><em><span data-contrast="auto">HP = mud weight</span></em></strong><strong><em><span data-contrast="auto">&nbsp;(</span></em></strong><strong><em><span data-contrast="auto">ppg</span></em></strong><strong><em><span data-contrast="auto">)</span></em></strong><strong><em><span data-contrast="auto">&nbsp;x 0.052 x true vertical depth (TVD)</span></em></strong><strong><em><span data-contrast="auto">(</span></em></strong><strong><em><span data-contrast="auto">ft</span></em></strong><strong><em><span data-contrast="auto">)</span></em></strong>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		<p><span data-contrast="auto">Case&nbsp;</span><span data-contrast="auto">:&nbsp;</span><span data-contrast="auto">&nbsp;</span><span data-contrast="auto">mud weight&nbsp;</span><span data-contrast="auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span data-contrast="auto">=  <input onkeypress="return hanyaAngka(event)" type="text" id="for11" style="width:50px;text-align:right;" value="0">&nbsp;ppg</span>&nbsp;<br /><span data-contrast="auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span data-contrast="auto">true vertical depth&nbsp; &nbsp; =  <input onkeypress="return hanyaAngka(event)" type="text" id="for12" style="width:50px;text-align:right;" value="0"> ft</span></p>
+
+                <br/>
+                <button class="btn btn-success" id="hitung1">Calculate</button> 
+        </p>
+
+		<h4>
+		<div id="hasil1"></div>
+		</h4>
+		
+		<br/>
+		<strong><span data-contrast="auto">Hydrostatic pressure</span></strong><strong><span data-contrast="auto">&nbsp;(</span></strong><strong><span data-contrast="auto">psi</span></strong><strong><span data-contrast="auto">)</span></strong><strong><span data-contrast="auto">&nbsp;using pressure gradient</span></strong><strong><span data-contrast="auto">&nbsp;(</span></strong><strong><span data-contrast="auto">psi/ft</span></strong><strong><span data-contrast="auto">)</span></strong>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span>
+		<p><strong><em><span data-contrast="auto">HP = psi/ft&nbsp;</span></em></strong><strong><em><span data-contrast="auto">x</span></em></strong><strong><em><span data-contrast="auto">&nbsp;true vertical depth</span></em></strong><strong><em><span data-contrast="auto">&nbsp;(</span></em></strong><strong><em><span data-contrast="auto">ft</span></em></strong><strong><em><span data-contrast="auto">)</span></em></strong>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		<p><span data-contrast="auto">Case&nbsp;</span><span data-contrast="auto">:&nbsp;</span><span data-contrast="auto">&nbsp;&nbsp;Pressure&nbsp;gradient&nbsp;&nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for21" style="width:50px;text-align:right;" value="0"> psi/ft</span><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		<p><span data-contrast="auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span data-contrast="auto">&nbsp; &nbsp; &nbsp;True&nbsp;vertical&nbsp;depth&nbsp;= <input onkeypress="return hanyaAngka(event)" type="text" id="for22" style="width:50px;text-align:right;" value="0"> &nbsp;ft</span><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		  <br/>
+                <button class="btn btn-success" id="hitung2">Calculate</button> 
+        </p>
+
+		<h4>
+		<div id="hasil2"></div>
+		</h4>
+
+
+    <br/>
+		<strong><span data-contrast="auto">Hydrostatic pressure</span></strong><strong><span data-contrast="auto">&nbsp;(</span></strong><strong><span data-contrast="auto">psi</span></strong><strong><span data-contrast="auto">)</span></strong><strong><span data-contrast="auto">&nbsp;using mud weight </span></strong><strong><span data-contrast="auto">&nbsp;(</span></strong><strong><span data-contrast="auto">lb/ft<sup>3</sup></span></strong><strong><span data-contrast="auto">)</span></strong>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></strong>
+		<p><strong><em><span data-contrast="auto">HP = mud weight (lb/ft<sup>3</sup>) x 0.006944 x TVD (ft)</span></p></strong>
+		<p><span data-contrast="auto">Case&nbsp;</span><span data-contrast="auto">:&nbsp;</span><span data-contrast="auto">&nbsp;&nbsp;mud weight&nbsp;&nbsp;&nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for31" style="width:50px;text-align:right;" value="0"> lb/ft<sup>3</sup></span><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		<p><span data-contrast="auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span data-contrast="auto">&nbsp; &nbsp; &nbsp;True vertical depth &nbsp;= <input onkeypress="return hanyaAngka(event)" type="text" id="for32" style="width:50px;text-align:right;" value="0"> &nbsp;ft</span><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		  <br/>
+      <button class="btn btn-success" id="hitung3">Calculate</button> 
+      </p>
+
+		<h4>
+		<div id="hasil3"></div>
+		</h4>
+
+    <br/>
+		<strong><span data-contrast="auto">Hydrostatic pressure</span></strong><strong><span data-contrast="auto">&nbsp;(</span></strong><strong><span data-contrast="auto">psi</span></strong><strong><span data-contrast="auto">)</span></strong><strong><span data-contrast="auto">&nbsp;using meters as unit of depth</span></strong>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></strong>
+		<p><strong><em><span data-contrast="auto">HP = mud weight (ppg) x 0.052 x tvd (ft) x 3.281</span></p></strong>
+		<p><span data-contrast="auto">Case&nbsp;</span><span data-contrast="auto">:&nbsp;</span><span data-contrast="auto">&nbsp;&nbsp;mud weight&nbsp;&nbsp;&nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for41" style="width:50px;text-align:right;" value="0"> ppg</span><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		<p><span data-contrast="auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span data-contrast="auto">&nbsp; &nbsp; &nbsp;True vertical depth &nbsp;= <input onkeypress="return hanyaAngka(event)" type="text" id="for42" style="width:50px;text-align:right;" value="0"> &nbsp;ft</span><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		  <br/>
+      <button class="btn btn-success" id="hitung4">Calculate</button> 
+      </p>
+
+		<h4>
+		<div id="hasil4"></div>
+		</h4>
+
+    <br/>
+    <strong>Converting Pressure into Mud Weight</strong>
+    <br>
+    <br>
+    <strong>Convert pressure (psi) into Mud Weight (ppg) using feet as the unit of measure</strong>
+    <br>
+    <br>
+    <strong>Mud Weight (ppg) = pressure (psi) : 0.052 : TVD (ft)</strong>
+    <br>
+    <br>
+    <p><span data-contrast="auto">Case&nbsp;</span><span data-contrast="auto">:&nbsp;</span><span data-contrast="auto">&nbsp;&nbsp;pressure&nbsp;&nbsp;&nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for51" style="width:50px;text-align:right;" value="0"> psi</span><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		<p><span data-contrast="auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span data-contrast="auto">&nbsp; &nbsp; &nbsp;True vertical depth &nbsp;= <input onkeypress="return hanyaAngka(event)" type="text" id="for52" style="width:50px;text-align:right;" value="0"> &nbsp;ft</span><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		  <br/>
+      <button class="btn btn-success" id="hitung5">Calculate</button> 
+      </p>
+
+		<h4>
+		<div id="hasil5"></div>
+		</h4>
+
+    <br>
+    <strong>Convert pressure (psi) into Mud Weight (ppg) using meters as the unit of measure</strong>
+    <br>
+    <strong>Mud Weight (ppg) = pressure (psi) : 0.052 : TVD (ft) : 3.281</strong>
+    <br>
+    <br>
+    <p><span data-contrast="auto">Case&nbsp;</span><span data-contrast="auto">:&nbsp;</span><span data-contrast="auto">&nbsp;&nbsp;pressure&nbsp;&nbsp;&nbsp; = <input onkeypress="return hanyaAngka(event)" type="text" id="for61" style="width:50px;text-align:right;" value="0"> psi</span><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		<p><span data-contrast="auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span data-contrast="auto">&nbsp; &nbsp; &nbsp;True vertical depth &nbsp;= <input onkeypress="return hanyaAngka(event)" type="text" id="for62" style="width:50px;text-align:right;" value="0"> &nbsp;meters</span><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		  <br/>
+      <button class="btn btn-success" id="hitung6">Calculate</button> 
+      </p>
+
+		<h4>
+		<div id="hasil6"></div>
+		</h4>
+
+    </div>
+    </body>
+	
+    
+  <script src="js/jquery.min.js"></script>
+  <script>
+      $("input[type='text']").click(function () {
+          $(this).select();
+      });
+      function hanyaAngka(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+		  }
+  </script>  
+
+	<script>
+
+	hitung1.onclick = function(){
+		document.getElementById('hasil1').innerHTML = document.getElementById('for11').value*0.052*document.getElementById('for12').value + ' psi' ;
+	}
+		
+
+	hitung2.onclick = function(){
+		document.getElementById('hasil2').innerHTML = document.getElementById('for21').value*document.getElementById('for22').value + ' psi' ;
+	}
+  
+  hitung3.onclick = function(){
+		document.getElementById('hasil3').innerHTML = parseFloat(document.getElementById('for31').value*0.006944*document.getElementById('for32').value).toFixed(0) + ' psi' ;
+	}
+
+  hitung4.onclick = function(){
+		document.getElementById('hasil4').innerHTML = parseFloat(document.getElementById('for41').value*0.052*document.getElementById('for42').value*3.281).toFixed(0) + ' psi' ;
+	}
+
+  hitung5.onclick = function(){
+		document.getElementById('hasil5').innerHTML = (document.getElementById('for51').value/0.052/document.getElementById('for52').value) + ' ppg' ;
+	}
+
+  hitung6.onclick = function(){
+		document.getElementById('hasil6').innerHTML = parseFloat((document.getElementById('for61').value/0.052/document.getElementById('for62').value)/3.281).toFixed(1) + ' ppg' ;
+	}
+  </script>
+	
+	
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Tally App</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1> Pressure Analysis </h1>
+            </div>
+        </div>
+    </nav>
+
+    <div style="left: 20px;position: absolute;top:100px">
+
+        <b>Gas Expansion Equations</b>><br /><br />
+        Basic gas laws :<br /><br />
+        <img src="img/pa/1.png"><br /><br />
+
+        Where ;<br /><br />
+        P1 = formation pressure (psi)<br />
+        P2 = hydrostatic pressure at the surface or any depth in the wellbore (psi)<br />
+        V1 = original pit gain (bbl)<br />
+        V2 = gas volume at surface or at any depth of interest (bbl)<br />
+        T1 = temperature of formation fluid, degrees Rankine (0R = °F + 460)<br />
+        T2 = temperature at surface or at any depth of interest, degrees Rankine
+
+        <br /> <br />
+
+        Basic gas law plus compressibility factor
+        <br /> <br />
+        <img src="img/pa/2.png"><br /><br />
+
+        Where<br /><br />
+        Z1 = compressibility factor under pressure in formation,dimensionless<br />
+        Z2 = compressibility factor at the surface or at any depth of
+        interest, dimensionless<br /><br />
+
+        Shortened gas expansion equation :
+        <br /> <br />
+        <img src="img/pa/3.png"><br /><br />
+
+        Where ;<br /><br />
+        P1 = formation pressure (psi)<br />
+        P2 = hydrostatic pressure plus atmospheric pressure (14.7 psi), psi<br />
+        V1 = original pit gain (bbl)<br />
+        V2 = gas volume at surface or at any depth of interest (bbl)
+        <br /><br />
+
+        <b>Hydrostatic Pressure Exerted by Each Barrel of Mud in the Casing</b><br /><br />
+        With pipe in the wellbore :<br /><br />
+        <img src="img/pa/4.png"><br /><br />
+
+        Case : <br /> <br />
+        Dh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for3" style="width:50px;text-align:right;" value="0">
+        in. ID
+        <br /><br />
+        Dp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for4" style="width:50px;text-align:right;" value="0">
+        in. OD
+        <br /><br />
+        Mud weight =
+        <input type="text" id="for5" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung1">Calculate</button>
+        <br /><br />
+
+        psi/bbl = <br /><br />
+        <h4>
+            <div id="hasil1"></div>
+        </h4>
+        <br /><br />
+
+        With no pipe in the wellbore :<br /><br />
+        <img src="img/pa/5.png"><br /><br />
+
+        Case : <br /> <br />
+        Dh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+        <input type="text" id="for1b" style="width:50px;text-align:right;" value="0">
+        in. ID
+        <br /><br />
+        Mud weight =
+        <input type="text" id="for2b" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung2">Calculate</button>
+        <br /><br />
+
+        psi/bbl = <br /><br />
+        <h4>
+            <div id="hasil2"></div>
+        </h4>
+        <br /><br />
+
+        <b>Surface Pressure During Drill Stem Tests</b><br /><br />
+
+        Case : <br /> <br />
+        Oil bearing sand =
+        <input type="text" id="for1c" style="width:50px;text-align:right;" value="0">
+        ft
+        <br /><br />
+        formation pressure equivalent =
+        <input type="text" id="for2c" style="width:50px;text-align:right;" value="0">
+        ppg
+        <br /><br />
+        specific gravity of the oil =
+        <input type="text" id="for3c" style="width:50px;text-align:right;" value="0">
+        <br /><br />
+
+        <button class="btn btn-success" id="hitung3">Calculate</button>
+        <br /><br />
+
+        Determine formation pressure (psi):<br /><br />
+        <img src="img/pa/6.png"><br /><br />
+        <h4>
+            <div id="hasil3a"></div>
+        </h4>
+        <br /><br />
+
+        Determine oil hydrostatic pressure :<br /><br />
+        <img src="img/pa/7.png"><br /><br />
+        <h4>
+            <div id="hasil3b"></div>
+        </h4>
+        <br /><br />
+
+        Determine surface pressure :<br /><br />
+        <img src="img/pa/8.png"><br /><br />
+        <h4>
+            <div id="hasil3c"></div>
+        </h4>
+        <br /><br />
+
+        <br /><br /><br /><br />
+
+    </div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script>
+    $("input[type='text']").click(function () {
+        $(this).select();
+    });
+</script>  
+
+<script>
+    hitung1.onclick = function () {
+        var basdhsdjs = Math.pow(document.getElementById('for3').value, 2);
+        var dkfhsfuhw = Math.pow(document.getElementById('for4').value, 2);
+        var dsdjhsjdw = (basdhsdjs * 1) - (dkfhsfuhw * 1);
+        var dsdskkkss = 1029.4 / dsdjhsjdw;
+        var dsjddssss = dsdskkkss * 0.052 * document.getElementById('for5').value;
+
+        document.getElementById('hasil1').innerHTML = dsjddssss.toFixed(2);
+
+    }
+
+    hitung2.onclick = function () {
+        var gsdhsdsdu = Math.pow(document.getElementById('for1b').value, 2);
+        var dsadksdjw = 1029.4 / gsdhsdsdu;
+        var dsdkjsdhu = dsadksdjw * 0.052 * document.getElementById('for2b').value;
+
+        document.getElementById('hasil2').innerHTML = dsdkjsdhu.toFixed(2);
+
+    }
+
+    hitung3.onclick = function () {
+        var bdfjsdfhdfd = document.getElementById('for2c').value * 0.052 * document.getElementById('for1c').value;
+
+        var dsadkjskdss = document.getElementById('for3c').value * 8.33;
+        var djfhdjhjdfv = dsadkjskdss * 0.052 * document.getElementById('for1c').value;
+
+        var dsjdhssiidd = (bdfjsdfhdfd.toFixed(0) * 1) - (djfhdjhjdfv.toFixed(0) * 1);
+
+        document.getElementById('hasil3a').innerHTML = bdfjsdfhdfd.toFixed(0) + ' psi';
+        document.getElementById('hasil3b').innerHTML = djfhdjhjdfv.toFixed(0);
+        document.getElementById('hasil3c').innerHTML = dsjdhssiidd.toFixed(0) + ' psi';
+
+    }
+
+</script>
+
+
+</html>

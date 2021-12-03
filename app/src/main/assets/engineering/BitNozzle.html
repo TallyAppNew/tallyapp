@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Bit Nozzle </h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+            <p>These series of formulas will determine the correct jet sizes when optimizing for jet impact or hydraulic horsepower and optimum flow rate for two or three nozzles. <br /> </p>
+            <ol>
+            <li>Nozzle area (sq in)<br /> </li>
+            <img src="img/bn/a.png">
+            </ol>
+            <ol start="2">
+            <li>Bit nozzle pressure loss, psi (Pb):<br /> </li>
+            <img src="img/bn/b.png">
+            </ol>
+            <ol start="3">
+            <li>Total pressure losses except bit nozzle pressure loss, psi (Pc):<br /> </li>
+            </ol>
+            <p><em></em><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pc</em><em><sub>1 </sub></em><em>&amp; Pc<sub>2</sub> = </em><em>circulating pressure (psi) &ndash; bit nozzle pressure loss (psi)</em><em><br /> <br /> </em></p>
+            <ol start="4">
+            <li>Determine slope of line M :<br /> </li>
+            <img src="img/bn/c.png">
+            </ol>
+            <ol start="5">
+            <li>Optimum pressure losses (Popt)<br /> </li>
+                a. For impact force :<br/>
+                <img src="img/bn/d.png">
+            </ol>
+            <ol>
+              b. For hydraulic horsepower<br/>
+              <img src="img/bn/e.png">
+            </ol>
+            <ol start="6">
+            <li>For optimum flow rate (Qopt):<br /> </li>
+            a. For impact force :<br />
+            <img src="img/bn/f.png">
+            </ol>
+            <ol>
+            </li>b. For hydraulic horsepower :<br /> 
+            <img src="img/bn/g.png">
+            </ol>
+            <ol start="7">
+            <li>To determine pressure at the bit (Pb):<br /> </li>
+            </ol>
+            <p><em></em><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pb = Pmax &mdash; Popt<br /> <br /> </em></p>
+            <ol start="8">
+            <li>To determine nozzle area (sq in.):<br /> </li>
+            <img src="img/bn/h.png">
+            <li>To determine nozzles, 32nd in. for three nozzles :</li>
+            <img src="img/bn/i.png">
+            </ol>
+            <ol start="10">
+            <li>To determine nozzles, 32nd in. for two nozzles :<br /> </li>
+            <img src="img/bn/j.png">
+            </ol>
+            <p>Case : Optimize bit hydraulics on a well with the following :<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Select the proper jet sizes for impact force and hydraulic</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;horsepower for two jets and three jets :<br /> </p>
+            <p>DATA : Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for11" style="width:50px;text-align:right;" value="0"> ppg<br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;Jet sizes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 
+            <input type="text" id="for12" style="width:50px;text-align:right;" value="0"> -
+            <input type="text" id="for122" style="width:50px;text-align:right;" value="0"> -
+            <input type="text" id="for123" style="width:50px;text-align:right;" value="0"> -
+            <input type="text" id="for124" style="width:50px;text-align:right;" value="0"> - 
+            <input type="text" id="for125" style="width:50px;text-align:right;" value="0"> - 
+            <input type="text" id="for126" style="width:50px;text-align:right;" value="0">
+            <input type="hidden" id="for127" style="width:50px;text-align:right;" value="0"><br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;Maximum surface pressure &nbsp;&nbsp;&nbsp;= <input type="text" id="for13" style="width:50px;text-align:right;" value="0"> psi<br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;Pump pressure 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for14" style="width:50px;text-align:right;" value="0"> psi<br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;Pump rate 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for15" style="width:50px;text-align:right;" value="0"> gpm<br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;Pump pressure 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for16" style="width:50px;text-align:right;" value="0"> psi<br /><br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;Pump rate 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for17" style="width:50px;text-align:right;" value="0"> gpm<br /><br /> </p>
+            <ol>
+              <br/>
+              <br/>
+              <button class="btn btn-success" id="hitung1">Calculate</button> 
+            <br/>
+            <br/>
+            <li>Nozzle area. sq i :<br /> </li>
+              <b><div id="hasil1"></div></b>
+           </ol>
+            <ol start="2">
+              <li>Bit nozzle pressure loss, psi (Pb) :<br /> </li>
+                Pb = <b><span id="hasil2"></span></b>
+                <br/>
+                Pb2 = <b><span id="hasil3"></span></b>
+            </ol>
+            <ol start="3">
+              <li>Total pressure losses except bit nozzle pressure loss (Pc), psi :</li>
+              <p>&nbsp;&nbsp; Pc<sub>1</sub>= <b> <span id="hasil4"></span></b>
+              <p>&nbsp;&nbsp; Pc<sub>2</sub>= <b> <span id="hasil5"></span></b></p>
+            </ol>
+            <ol start="4">
+                <li>Determine slope of line (M):<br /> </li>
+                <b><div id="hasil6"></div></b>
+            </ol>
+            <ol start="5">
+              <li>Determine optimum pressure losses, psi (Popt) :<br /> </li>
+                a. For impact force :
+                  <b><div id="hasil7"></div></b>
+                b. For hydraulic horsepower
+                  <b><div id="hasil8"></div></b>  
+            </ol>
+
+            <ol start="6">
+              <li>Determine optimum flow rate (Qopt) :<br /> </li>
+                  a. For impact force :
+                    <b><div id="hasil9"></div></b>
+                b. For hydraulic horsepower
+                  <b><div id="hasil10"></div></b>
+            </ol>
+            <ol start="7">
+            <li>Determine pressure losses at the bit (Pb) :<br /> </li>
+              a. For impact force<br />
+                <b><div id="hasil11"></div></b>
+              b. For hydraulic horsepower<br /> </li>
+              <b><div id="hasil12"></div></b>
+            </ol>
+            <ol start="8">
+            <li>Determine nozzle area, sq in. :<br /> </li>
+                a. For impact force :<br />
+                <b><div id="hasil13"></div></b>
+                b. For hydraulic horsepower<br />
+                <b><div id="hasil14"></div></b>
+            </ol>
+            <ol start="9">
+              <li>Determine nozzle size, 32nd in. :</li>
+              </ol>
+              <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;a. For impact force :</p>
+              <ol><ol><b><div id="hasil151"></div></b></ol></ol>
+              <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;b. For hydraulic horse power :</p>
+              <ol><ol><b><div id="hasil15"></div></b></ol></ol>
+              <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Note : Ussually the nozzle size will have a decimal fraction. The</p>
+              <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;fraction times 3 will determine how many nozzles should be</p>
+              <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;larger than that calculated.&nbsp;</p>
+              <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a.&nbsp; For impact force :<br/>
+                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.76 x 3 = 2.28 rounded to 2&nbsp;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So : 1 jets = 10/32nd<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp; 2 jets = 11/32nd&nbsp;</p>&nbsp;
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; b.&nbsp; For hydraulic horse power :<br/>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.03 x 3 = 0.09 rounded to 0&nbsp;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So : 3 jets = 9/32nd<br>
+            <ol start="10">
+              <li>Determine nozzles 32nd in for two nozles :</li>
+                a. For impact force :&nbsp; <br />
+                <b><div id="hasil16"></div></b>
+                b. For hydraulic horse power :&nbsp;<br />
+                <b><div id="hasil17"></div></b>
+            </ol>
+        </div>
+    </body>
+	
+  <script src="js/jquery.min.js"></script>
+  <script>
+      $("input[type='text']").click(function () {
+          $(this).select();
+      });
+  </script>  
+
+	<script>
+
+	hitung1.onclick = function(){
+      var satu  = document.getElementById('for12').value*document.getElementById('for12').value;
+      var dua  = document.getElementById('for122').value*document.getElementById('for122').value;
+      var tiga  = document.getElementById('for123').value*document.getElementById('for123').value;
+      var empat  = document.getElementById('for124').value*document.getElementById('for124').value;
+      var lima  = document.getElementById('for125').value*document.getElementById('for125').value;
+      var enam  = document.getElementById('for126').value*document.getElementById('for126').value;
+      var tujuh  = document.getElementById('for127').value*document.getElementById('for127').value;
+      
+      var hitungan1 = (satu+dua+tiga+empat+lima+enam+tujuh)/1303.8
+      hitungan1 = hitungan1.toFixed(6)
+	  document.getElementById('hasil1').innerHTML = hitungan1;
+	
+      var hitungan2 =((document.getElementById('for15').value*document.getElementById('for15').value)*document.getElementById('for11').value)/(10858*(hitungan1*hitungan1));
+      hitungan2 = hitungan2.toFixed(0)
+      document.getElementById('hasil2').innerHTML = hitungan2 + ' psi' ;
+  
+      var hitungan3=((document.getElementById('for17').value*document.getElementById('for17').value)*document.getElementById('for11').value)/(10858*(hitungan1*hitungan1));
+      hitungan3 = hitungan3.toFixed(0)
+      document.getElementById('hasil3').innerHTML = hitungan3 + ' psi' ;
+
+
+      var hitungan4 = document.getElementById('for13').value-hitungan2;
+      document.getElementById('hasil4').innerHTML = hitungan4 + ' psi';
+
+      var hitungan5 = document.getElementById('for16').value-hitungan3;
+      document.getElementById('hasil5').innerHTML = hitungan5 + ' psi';
+
+      var hitungan6 = Math.log(hitungan4/hitungan5)/Math.log(document.getElementById('for15').value/document.getElementById('for17').value) ;
+      hitungan6 = hitungan6.toFixed(2)
+      document.getElementById('hasil6').innerHTML = hitungan6;
+
+      var hitungan7 = (2/(parseFloat(hitungan6)+2)) *document.getElementById('for13').value ;
+      hitungan7 = hitungan7.toFixed(0)
+      document.getElementById('hasil7').innerHTML = hitungan7 + ' psi';
+
+      var hitungan8 = (1/(parseFloat(hitungan6)+1)) *document.getElementById('for13').value ;
+      hitungan8 = hitungan8.toFixed(0)
+      document.getElementById('hasil8').innerHTML = hitungan8 + ' psi';
+
+      var pangkat9 = 1+parseFloat(hitungan5);
+      var pankatpertama = Math.pow(1511/3000,2.97);
+      var hitungan9 = 0.70714*document.getElementById('for15').value;
+      document.getElementById('hasil9').innerHTML = hitungan9.toFixed(0) + ' gpm';
+      
+      var hitungan10 = 0.576190*document.getElementById('for15').value;
+      document.getElementById('hasil10').innerHTML = hitungan10.toFixed(0) + ' gpm';
+
+      var hitungan11 =document.getElementById('for13').value- hitungan7;
+      document.getElementById('hasil11').innerHTML = hitungan11 + ' psi';
+
+      var hitungan12 =document.getElementById('for13').value- hitungan8;
+      document.getElementById('hasil12').innerHTML = hitungan12 + ' psi';
+
+      var atashitungan13 = Math.pow(hitungan9,2)*document.getElementById('for11').value;
+      var bawahhitungan13 =10858*parseFloat(hitungan11);
+      var hitungan13 = Math.sqrt(atashitungan13/bawahhitungan13) ;
+      document.getElementById('hasil13').innerHTML = hitungan13.toFixed(5) + ' sq in';
+
+      var atashitungan14 = Math.pow(hitungan10,2)*document.getElementById('for11').value;
+      var bawahhitungan14 =10858*parseFloat(hitungan12);
+      var hitungan14 = Math.sqrt(atashitungan14/bawahhitungan14) ;
+      document.getElementById('hasil14').innerHTML = hitungan14.toFixed(4) + ' sq in';
+
+
+      var hitungan151 = Math.sqrt(hitungan13/(3*0.7854))*32;
+      document.getElementById('hasil151').innerHTML = hitungan151.toFixed(2);
+
+      var hitungan15 = Math.sqrt(hitungan14/(3*0.7854))*32;
+      document.getElementById('hasil15').innerHTML = hitungan15.toFixed(2);
+
+      var atashitungan16 = hitungan13;
+      var bawahhitungan16 =2*0.7854;
+      var hitungan16 = Math.sqrt(atashitungan16/bawahhitungan16) *32 ;
+      document.getElementById('hasil16').innerHTML = hitungan16.toFixed(2) + ' sq in';
+
+      var atashitungan17 = hitungan14;
+      var bawahhitungan17 =2*0.7854;
+      var hitungan17 = Math.sqrt(atashitungan17/bawahhitungan17) *32 ;
+      document.getElementById('hasil17').innerHTML = hitungan17.toFixed(2) + ' sq in';
+    }
+
+	</script>
+	
+	
+</html>
