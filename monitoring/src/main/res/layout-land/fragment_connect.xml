@@ -8,11 +8,12 @@
 
     <EditText
         android:id="@+id/ipAddress"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Host IP Address"
         app:layout_constraintBottom_toTopOf="@+id/portNumber"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed">
@@ -22,12 +23,13 @@
 
     <EditText
         android:id="@+id/portNumber"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Port Number"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/connectButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/ipAddress"
         app:layout_constraintTop_toBottomOf="@+id/ipAddress" />
 
@@ -37,7 +39,6 @@
         android:layout_height="wrap_content"
         android:text="Connect"
         android:theme="@style/buttonGreen"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="@+id/portNumber"
         app:layout_constraintTop_toBottomOf="@+id/portNumber" />
 
@@ -45,12 +46,9 @@
         android:id="@+id/tvNote"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:clickable="true"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:clickable="true"
         android:text="@string/note_to_connect2"
-        app:layout_constraintEnd_toStartOf="@+id/rv_history"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/connectButton" />
 
@@ -58,20 +56,32 @@
         android:id="@+id/tv_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="History"
         android:textAppearance="?android:textAppearanceMedium"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/rv_history"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/tvNote"
+        app:layout_constraintTop_toBottomOf="@+id/tvNote" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_history"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="8dp"
         android:layout_weight="1"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_history" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-6681885392686558/4307052343"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="15dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

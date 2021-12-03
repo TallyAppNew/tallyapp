@@ -16,6 +16,10 @@
             android:label="@string/app_name">
         </activity>
         <activity android:name=".MusicControlActivity"/>
+
+
+
+
     </application>
 
 </manifest>

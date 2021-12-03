@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/androdev/0Belajar/tallyapp2/app/src/main/res/layout/activity_about.xml" value="0.2" />
+        <entry key="..\:/androdev/0Belajar/tallyapp2/app/src/main/res/layout/activity_bha.xml" value="0.19140625" />
+        <entry key="..\:/androdev/0Belajar/tallyapp2/app/src/main/res/layout/activity_conversion.xml" value="0.20416666666666666" />
+        <entry key="..\:/androdev/0Belajar/tallyapp2/app/src/main/res/layout/activity_daily_note.xml" value="0.19727891156462585" />
+        <entry key="..\:/androdev/0Belajar/tallyapp2/app/src/main/res/layout/activity_web_view.xml" value="0.19140625" />
+        <entry key="..\:/androdev/0Belajar/tallyapp2/monitoring/src/main/res/layout-land/fragment_connect.xml" value="0.22" />
+        <entry key="..\:/androdev/0Belajar/tallyapp2/monitoring/src/main/res/layout/activity_main.xml" value="0.19140625" />
+        <entry key="..\:/androdev/0Belajar/tallyapp2/monitoring/src/main/res/layout/app_bar_main.xml" value="0.19140625" />
+        <entry key="..\:/androdev/0Belajar/tallyapp2/monitoring/src/main/res/layout/content_main.xml" value="0.19140625" />
+        <entry key="..\:/androdev/0Belajar/tallyapp2/monitoring/src/main/res/layout/fragment_connect.xml" value="0.17" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

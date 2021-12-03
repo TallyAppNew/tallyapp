@@ -28,6 +28,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.gson.Gson;
 
 import java.net.Socket;
@@ -46,6 +51,7 @@ import me.varunon9.remotecontrolpc.server.Server;
 
 public class ConnectFragment extends Fragment implements IfaceClickHistory {
     String TAG = "ConnectFragment";
+    private AdView mAdView;
 
     private Button connectButton;
     private TextView tvNote;
@@ -106,6 +112,18 @@ public class ConnectFragment extends Fragment implements IfaceClickHistory {
                 }
             }
         }
+
+        MobileAds.initialize(requireContext(), new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+
         if (!ipHistoryList.isEmpty()) {
             adapter = new RecyclerHistory(ipHistoryList, this);
             LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());

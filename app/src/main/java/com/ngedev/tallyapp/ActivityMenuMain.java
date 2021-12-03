@@ -116,15 +116,15 @@ public class ActivityMenuMain extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        if(isMenuOpened){
-            HelperAds.showAds(getApplicationContext(), ActivityMenuMain.this, R.string.return_ads);
-            isMenuOpened = false;
-        }
+//        if(isMenuOpened){
+//            HelperAds.showAds(getApplicationContext(), ActivityMenuMain.this, R.string.return_ads);
+//            isMenuOpened = false;
+//        }
     }
 
     void initAdsSDK(){
         MobileAds.initialize(this, initializationStatus ->
-               HelperAds.showAds(getApplicationContext(), ActivityMenuMain.this, R.string.initial_ads)
+               HelperAds.showAds(getApplicationContext(), ActivityMenuMain.this, R.string.menu_ads)
         );
 
         //ArrayList<String> testDeviceIds = new ArrayList<>();
