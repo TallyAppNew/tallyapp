@@ -10,19 +10,19 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_basic"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:cardBackgroundColor="#0fff"
         app:cardElevation="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_calculations"
         app:layout_constraintEnd_toStartOf="@+id/cv_calculations"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@+id/cv_calculations">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@drawable/background_menu"
             android:gravity="center_horizontal"
             android:orientation="vertical"
@@ -35,11 +35,13 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="Conversion"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorFontOrange"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -51,10 +53,11 @@
         android:layout_marginStart="16dp"
         app:cardBackgroundColor="#0fff"
         app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cv_drilling"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cv_basic"
-        app:layout_constraintTop_toTopOf="@+id/cv_basic">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,11 +74,14 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
+                android:padding="4dp"
                 android:text="Bottom Hole Assembly"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorFontOrange"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -83,10 +89,11 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_drilling"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         app:cardBackgroundColor="#0fff"
         app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_calculations"
         app:layout_constraintEnd_toStartOf="@+id/cv_engineer"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cv_calculations"
@@ -94,7 +101,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@drawable/background_menu"
             android:gravity="center_horizontal"
             android:orientation="vertical"
@@ -107,11 +114,13 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="Drilling Formula"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorFontOrange"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -119,10 +128,11 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_engineer"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         app:cardBackgroundColor="#0fff"
         app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_calculations"
         app:layout_constraintEnd_toStartOf="@+id/cv_pressure"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cv_drilling"
@@ -130,7 +140,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@drawable/background_menu"
             android:gravity="center_horizontal"
             android:orientation="vertical"
@@ -143,11 +153,13 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="Daily Note"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorFontOrange"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -155,10 +167,11 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_pressure"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         app:cardBackgroundColor="#0fff"
         app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_calculations"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cv_engineer"
@@ -166,7 +179,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@drawable/background_menu"
             android:gravity="center_horizontal"
             android:orientation="vertical"
@@ -179,11 +192,13 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="Monitoring"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorFontOrange"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

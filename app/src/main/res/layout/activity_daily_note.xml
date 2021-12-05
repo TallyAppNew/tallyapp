@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActivityDailyNote">
 
-  <com.prolificinteractive.materialcalendarview.MaterialCalendarView
-      android:id="@+id/mcv_calendar"
+  <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:mcv_selectionMode="single" />
+      android:layout_height="wrap_content">
 
-  <ScrollView
-      android:id="@+id/scrollView3"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      android:background="#E3E6E8"
-      app:layout_constraintBottom_toTopOf="@+id/adView3"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/mcv_calendar">
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/mcv_calendar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mcv_dateTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:mcv_headerTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:mcv_selectionMode="single"
+        app:mcv_weekDayTextAppearance="@style/TextAppearance.AppCompat.Medium">
+
+    </com.prolificinteractive.materialcalendarview.MaterialCalendarView>
 
     <TextView
         android:id="@+id/tv_preview"
@@ -32,30 +32,34 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:textAppearance="?android:textAppearanceMedium"
-        tools:text="asdohasoidhasdhosad\naosudgajsd\doasojdansd" />
-  </ScrollView>
+        app:layout_constraintBottom_toTopOf="@+id/adView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mcv_calendar" />
 
-  <com.google.android.material.floatingactionbutton.FloatingActionButton
-      android:id="@+id/fab_addEdit"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginEnd="24dp"
-      android:layout_marginBottom="16dp"
-      android:clickable="true"
-      app:layout_constraintBottom_toTopOf="@+id/adView3"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:srcCompat="@drawable/i_add" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_addEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/adView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/i_add" />
 
-  <com.google.android.gms.ads.AdView
-      android:id="@+id/adView3"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-      android:layout_centerHorizontal="true"
-      app:adSize="BANNER"
-      app:adUnitId="ca-app-pub-6681885392686558/4307052343"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent" />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-6681885392686558/4307052343"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
