@@ -9,24 +9,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
-import com.google.android.gms.ads.initialization.InitializationStatus
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener
 import com.ngedev.core.HelperAds
-import com.ngedev.tallyapp.adapter.FormulaMenuAdapter
-import com.ngedev.tallyapp.model.MenuFormulaModel
+import com.ngedev.tallyapp.adapter.SubMenuAdapter
+import com.ngedev.tallyapp.model.SubMenuModel
 import com.ngedev.tallyapp.webview.WebViewActivity
 import java.util.*
 
 
-class ActivityMenuFormula : AppCompatActivity() {
+class ActivitySubMenu : AppCompatActivity() {
     private var mAdView: AdView? = null
 
-    var listMenu = listOf<MenuFormulaModel>()
+    var listMenu = listOf<SubMenuModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_basic_formula)
+        setContentView(R.layout.activity_submenu)
 
-        HelperAds.showAds(applicationContext, this@ActivityMenuFormula, R.string.menu_ads)
+        HelperAds.showAds(applicationContext, this@ActivitySubMenu, R.string.menu_ads)
 
         MobileAds.initialize(
             this
@@ -46,34 +44,55 @@ class ActivityMenuFormula : AppCompatActivity() {
 
     private fun initRecyclerView(action: String) {
         findViewById<RecyclerView>(R.id.rvMenu).apply {
-            layoutManager = LinearLayoutManager(this@ActivityMenuFormula)
-            adapter = FormulaMenuAdapter(listMenu) {
+            layoutManager = LinearLayoutManager(this@ActivitySubMenu)
+            adapter = SubMenuAdapter(listMenu) {
                 openWebActivity(it.htmlTitle, action)
             }
         }
     }
 
     private fun initData(action: String) {
-        listMenu = if (action.equals("basic_formula")) {
-            generateListBasicMenu().also {
-                title = "Basic Formula"
+        listMenu = when(action) {
+            "basic_formula" -> {
+                generateListBasicMenu().also {
+                    title = "Basic Formula"
+                }
             }
-        } else if (action.equals("calculations")) {
-            generateCalucationList().also {
-                title = "Calculations"
+            "calculations" -> {
+                generateCalculationList().also {
+                    title = "Calculations"
 
+                }
             }
-        } else if (action.equals("drilling")) {
-            generateDrilingList().also {
-                title = "Drilling Fluids"
+            "drilling" -> {
+                generateDrillingList().also {
+                    title = "Drilling Fluids"
+                }
             }
-        } else if (action.equals("engineering")) {
-            generateEngineeringList().also {
-                title = "Engineering Calculations"
+            "engineering" -> {
+                generateEngineeringList().also {
+                    title = "Engineering Calculations"
+                }
             }
-        } else {
-            generatePressureList().also {
-                title = "Pressure Control"
+            "pressure" -> {
+                generatePressureList().also {
+                    title = "Pressure Control"
+                }
+            }
+//            "drilling_mud" -> {
+//                generateDrillingMudList().also {
+//                    title = "Drilling Mud"
+//                }
+//            }
+            "h2s" -> {
+                generateH2S().also {
+                    title = "H2S"
+                }
+            }
+            else -> {
+                generateDrillingRigComponents().also {
+                    title = "Drilling Rig Components"
+                }
             }
         }
     }
@@ -93,30 +112,30 @@ class ActivityMenuFormula : AppCompatActivity() {
     }
 
 
-    private fun generateListBasicMenu() = listOf<MenuFormulaModel>(
-        MenuFormulaModel("AnnularVelocity.html", "Anular Velocity"),
-        MenuFormulaModel("BuoyancyFactor.html", "Buoyancy Factor"),
-        MenuFormulaModel("CapacityFormula.html", "Capacity Formula"),
-        MenuFormulaModel("ControlDrilling.html", "Control Drilling"),
-        MenuFormulaModel("CostperFoot.html", "Cost per Foot"),
-        MenuFormulaModel("DPDCCalculations.html", "DPDC Calculations"),
-        MenuFormulaModel(
+    private fun generateListBasicMenu() = listOf(
+        SubMenuModel("AnnularVelocity.html", "Anular Velocity"),
+        SubMenuModel("BuoyancyFactor.html", "Buoyancy Factor"),
+        SubMenuModel("CapacityFormula.html", "Capacity Formula"),
+        SubMenuModel("ControlDrilling.html", "Control Drilling"),
+        SubMenuModel("CostperFoot.html", "Cost per Foot"),
+        SubMenuModel("DPDCCalculations.html", "DPDC Calculations"),
+        SubMenuModel(
             "EquivalentCirculatingDensity(ECD).html",
             "Equivalent Circulating Density (ECD)"
         ),
-        MenuFormulaModel("FormationTemperature.html", "Formation Temperature"),
-        MenuFormulaModel("HydraulicHorsepower.html", "Hydraulic Horsepower"),
-        MenuFormulaModel("HydrostaticPressure.html", "Hydrostatic Pressure"),
-        MenuFormulaModel("HydrostaticPressureDecrease.html", "Hydrostatic Pressure Decrease"),
-        MenuFormulaModel("LossofOverbalance.html", "Loss of Overbalance"),
-        MenuFormulaModel("PressureGradient.html", "Pressure Gradient"),
-        MenuFormulaModel("PumpOutput.html", "Pump Output"),
-        MenuFormulaModel("PumpPressure.html", "Pump Pressure"),
-        MenuFormulaModel("SpecificGravity.html", "Specific Gravity"),
-        MenuFormulaModel("TemperatureConversion.html", "Temperature Conversion")
+        SubMenuModel("FormationTemperature.html", "Formation Temperature"),
+        SubMenuModel("HydraulicHorsepower.html", "Hydraulic Horsepower"),
+        SubMenuModel("HydrostaticPressure.html", "Hydrostatic Pressure"),
+        SubMenuModel("HydrostaticPressureDecrease.html", "Hydrostatic Pressure Decrease"),
+        SubMenuModel("LossofOverbalance.html", "Loss of Overbalance"),
+        SubMenuModel("PressureGradient.html", "Pressure Gradient"),
+        SubMenuModel("PumpOutput.html", "Pump Output"),
+        SubMenuModel("PumpPressure.html", "Pump Pressure"),
+        SubMenuModel("SpecificGravity.html", "Specific Gravity"),
+        SubMenuModel("TemperatureConversion.html", "Temperature Conversion")
     )
 
-    private fun generateCalucationList() = listOf<MenuFormulaModel>(
+    private fun generateCalculationList() = listOf(
         generateFileReferencesWTitle("BreakCirculationPressure.html"),
         generateFileReferencesWTitle("BulkDensity.html"),
         generateFileReferencesWTitle("CementingCalculations.html"),
@@ -128,16 +147,16 @@ class ActivityMenuFormula : AppCompatActivity() {
         generateFileReferencesWTitle("SpottingPillsCalculations.html"),
         generateFileReferencesWTitle("StuckPipeCalculation.html"),
         generateFileReferencesWTitle("TonmileCalculations.html"),
-        MenuFormulaModel("Volumesandstrokes.html", "Volumes and Strokes"),
+        SubMenuModel("Volumesandstrokes.html", "Volumes and Strokes"),
         generateFileReferencesWTitle("WashoutDepth.html")
     )
 
-    private fun generateDrilingList() = listOf<MenuFormulaModel>(
+    private fun generateDrillingList() = listOf(
         generateFileReferencesWTitle("Dilution.html"),
-        MenuFormulaModel("DilutionofMudSystem.html", "Dilution of Mud System"),
+        SubMenuModel("DilutionofMudSystem.html", "Dilution of Mud System"),
         generateFileReferencesWTitle("Displacement.html"),
-        MenuFormulaModel("EvaluationofCentrifuge.html", "Evaluation of Centrifuge"),
-        MenuFormulaModel("EvaluationofHydrocyclone.html", "Evaluation of Hydrocyclone"),
+        SubMenuModel("EvaluationofCentrifuge.html", "Evaluation of Centrifuge"),
+        SubMenuModel("EvaluationofHydrocyclone.html", "Evaluation of Hydrocyclone"),
         generateFileReferencesWTitle("IncreaseMudWeight.html"),
         generateFileReferencesWTitle("MixingFluids.html"),
         generateFileReferencesWTitle("OilBasedMudCalculations.html"),
@@ -145,7 +164,7 @@ class ActivityMenuFormula : AppCompatActivity() {
         generateFileReferencesWTitle("SolidsFractions.html")
     )
 
-    private fun generateEngineeringList() = listOf<MenuFormulaModel>(
+    private fun generateEngineeringList() = listOf(
         generateFileReferencesWTitle("BitNozzle.html"),
         generateFileReferencesWTitle("CriticalAnnularVelocity.html"),
         generateFileReferencesWTitle("CuttingSlipVelocity.html"),
@@ -159,7 +178,7 @@ class ActivityMenuFormula : AppCompatActivity() {
         generateFileReferencesWTitle("TankCapacityCalculations.html")
     )
 
-    private fun generatePressureList() = listOf<MenuFormulaModel>(
+    private fun generatePressureList() = listOf(
         generateFileReferencesWTitle("KickAnalysis.html"),
         generateFileReferencesWTitle("KillSheetCalculations.html"),
         generateFileReferencesWTitle("PressureAnalysis.html"),
@@ -168,12 +187,35 @@ class ActivityMenuFormula : AppCompatActivity() {
         generateFileReferencesWTitle("WorkoverOperations.html")
     )
 
+    private fun generateDrillingRigComponents() = listOf(
+        SubMenuModel("power_and_prime_movers.html", "Power And Prime Movers"),
+        SubMenuModel("hoisting_component.html", "Hoisting Component"),
+        SubMenuModel("rotating_component.html", "Rotating Component"),
+        SubMenuModel("", "Circulating Component"),
+        SubMenuModel("", "Well Control Component"),
+        SubMenuModel("", "Tubular and Tubular Handling Equipment"),
+        SubMenuModel("", "Bit"),
+        SubMenuModel("", "Fishing Tools"),
+    )
 
-    private fun generateFileReferencesWTitle(s: String): MenuFormulaModel {
+    private fun generateH2S() = listOf(
+        SubMenuModel("what_is_h2s.html", "What is H2S"),
+        SubMenuModel("physical_properties_of_h2s.html", "Physical Properties Of H2S"),
+        SubMenuModel("occupational_exposure_limits_oel_toxicity_levels_and_scale.html", "Occupational Exposure Limits OEL Toxicity Levels And Scale"),
+        SubMenuModel("h2s_detection_system.html", "H2S Detection System"),
+        SubMenuModel("protection_system.html", "Protection System"),
+        SubMenuModel("emergency_response_procedure_and_strategy.html", "Emergency Response Procedure And Strategy"),
+        SubMenuModel("emergency_rescue_technique.html", "Emergency Rescue Technique")
+    )
+
+
+    private fun generateFileReferencesWTitle(s: String): SubMenuModel {
         val titleWithoutHtml = s.replace(".html", "")
         val title = splitCamelCase(titleWithoutHtml)
-        return MenuFormulaModel(s, title ?: "")
+        return SubMenuModel(s, title ?: "")
     }
+
+
 
 
     private fun splitCamelCase(s: String): String? {

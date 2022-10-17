@@ -22,7 +22,7 @@ import me.varunon9.remotecontrolpc.MainActivity;
 
 public class ActivityMenuMain extends AppCompatActivity {
 
-    CardView cv_conversion, cv_assembly, cv_formula, cv_note, cv_monitor;
+    CardView cv_conversion, cv_assembly, cv_formula, cv_note, cv_monitor, cv_drilling_mud, cv_h2s, cv_drilling_rig_component;
 
     boolean isMenuOpened = false;
 
@@ -42,6 +42,10 @@ public class ActivityMenuMain extends AppCompatActivity {
         cv_formula    = findViewById(R.id.cv_drilling);
         cv_note       = findViewById(R.id.cv_engineer);
         cv_monitor    = findViewById(R.id.cv_pressure);
+        cv_drilling_mud = findViewById(R.id.cv_drilling_mud);
+        cv_h2s        = findViewById(R.id.cv_h2s);
+        cv_drilling_rig_component = findViewById(R.id.cv_drilling_rig_component);
+
 
         cv_conversion.setOnClickListener(view -> {
             Intent i = new Intent(getApplicationContext(), ActivityConversion.class);
@@ -70,6 +74,21 @@ public class ActivityMenuMain extends AppCompatActivity {
         cv_monitor.setOnClickListener(view -> {
             Intent i = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(i);
+            isMenuOpened = true;
+        });
+
+        cv_drilling_mud.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), ActivityDrillingMud.class));
+            isMenuOpened = true;
+        });
+
+        cv_h2s.setOnClickListener(view -> {
+            gotoMenuGeneralActivity("h2s");
+            isMenuOpened = true;
+        });
+
+        cv_drilling_rig_component.setOnClickListener(view -> {
+            gotoMenuGeneralActivity("drilling_rig_components");
             isMenuOpened = true;
         });
     }
@@ -120,6 +139,12 @@ public class ActivityMenuMain extends AppCompatActivity {
 //            HelperAds.showAds(getApplicationContext(), ActivityMenuMain.this, R.string.return_ads);
 //            isMenuOpened = false;
 //        }
+    }
+
+    private void gotoMenuGeneralActivity(String action) {
+        Intent i = new Intent(getApplicationContext(), ActivitySubMenu.class);
+        i.setAction(action);
+        startActivity(i);
     }
 
     void initAdsSDK(){
