@@ -7,201 +7,330 @@
     android:background="@drawable/background"
     tools:context=".ActivityMenuMain">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_basic"
-        android:layout_width="120dp"
-        android:layout_height="0dp"
-        app:cardBackgroundColor="#0fff"
-        app:cardElevation="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cv_calculations"
-        app:layout_constraintEnd_toStartOf="@+id/cv_calculations"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cv_calculations">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/background_menu"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="8dp">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/conversion" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Conversion"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorFontOrange"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_calculations"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        app:cardBackgroundColor="#0fff"
-        app:cardElevation="0dp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/cv_drilling"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cv_basic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/background_menu"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/capacities_displacements" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_basic"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                app:cardBackgroundColor="#0fff"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cv_calculations"
+                app:layout_constraintEnd_toStartOf="@+id/cv_calculations"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cv_calculations"
+                app:layout_constraintVertical_chainStyle="packed">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="4dp"
-                android:text="Bottom Hole Assembly"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorFontOrange"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_menu"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_drilling"
-        android:layout_width="120dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        app:cardBackgroundColor="#0fff"
-        app:cardElevation="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cv_calculations"
-        app:layout_constraintEnd_toStartOf="@+id/cv_engineer"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cv_calculations"
-        app:layout_constraintTop_toTopOf="@+id/cv_calculations">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/conversion" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/background_menu"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Conversion"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorFontOrange"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/drilling_formula" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_calculations"
+                android:layout_width="120dp"
+                android:layout_height="165dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                app:cardBackgroundColor="#0fff"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/cv_drilling_mud"
+                app:layout_constraintEnd_toStartOf="@+id/cv_drilling"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cv_basic"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Drilling Formula"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorFontOrange"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_menu"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_engineer"
-        android:layout_width="120dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        app:cardBackgroundColor="#0fff"
-        app:cardElevation="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cv_calculations"
-        app:layout_constraintEnd_toStartOf="@+id/cv_pressure"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cv_drilling"
-        app:layout_constraintTop_toTopOf="@+id/cv_drilling">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/capacities_displacements" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/background_menu"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Bottom Hole Assembly"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorFontOrange"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/daily_note" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_drilling"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                app:cardBackgroundColor="#0fff"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cv_calculations"
+                app:layout_constraintEnd_toStartOf="@+id/cv_engineer"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cv_calculations"
+                app:layout_constraintTop_toTopOf="@+id/cv_basic">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Daily Note"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorFontOrange"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_menu"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_pressure"
-        android:layout_width="120dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        app:cardBackgroundColor="#0fff"
-        app:cardElevation="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cv_calculations"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cv_engineer"
-        app:layout_constraintTop_toTopOf="@+id/cv_engineer">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/drilling_formula" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/background_menu"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Drilling Formula"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorFontOrange"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/monitoring" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_engineer"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                app:cardBackgroundColor="#0fff"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cv_calculations"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cv_drilling"
+                app:layout_constraintTop_toTopOf="@+id/cv_drilling">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Monitoring"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorFontOrange"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_menu"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/daily_note" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Daily Note"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorFontOrange"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_pressure"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                app:cardBackgroundColor="#0fff"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cv_drilling_mud"
+                app:layout_constraintEnd_toStartOf="@+id/cv_drilling_mud"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cv_drilling_mud">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_menu"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/monitoring" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Monitoring"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorFontOrange"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_drilling_mud"
+                android:layout_width="120dp"
+                android:layout_height="165dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                app:cardBackgroundColor="#0fff"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cv_h2s"
+                app:layout_constraintStart_toEndOf="@+id/cv_pressure"
+                app:layout_constraintTop_toBottomOf="@+id/cv_calculations">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_menu"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/drilling_fluid_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Drilling Mud"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorFontOrange"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_h2s"
+                android:layout_width="120dp"
+                android:layout_height="165dp"
+                android:layout_marginStart="16dp"
+                app:cardBackgroundColor="#0fff"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cv_drilling_mud"
+                app:layout_constraintEnd_toStartOf="@+id/cv_drilling_rig_component"
+                app:layout_constraintStart_toEndOf="@+id/cv_drilling_mud"
+                app:layout_constraintTop_toTopOf="@+id/cv_drilling_mud">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_menu"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/htwos_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="H2S"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorFontOrange"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_drilling_rig_component"
+                android:layout_width="120dp"
+                android:layout_height="165dp"
+                android:layout_marginStart="16dp"
+                app:cardBackgroundColor="#0fff"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cv_h2s"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cv_h2s"
+                app:layout_constraintTop_toTopOf="@+id/cv_h2s">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_menu"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/rig_drilling_component_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Drilling Rig Component"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorFontOrange"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

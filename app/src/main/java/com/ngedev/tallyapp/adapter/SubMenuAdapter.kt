@@ -6,14 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
-import com.ngedev.tallyapp.model.MenuFormulaModel
+import com.ngedev.tallyapp.model.SubMenuModel
 
-class FormulaMenuAdapter(val datas: List<MenuFormulaModel>, val onClick: (MenuFormulaModel) -> Unit) : RecyclerView.Adapter<FormulaMenuAdapter.MyViewHolder>() {
+class SubMenuAdapter(private val datas: List<SubMenuModel>, val onClick: (SubMenuModel) -> Unit) : RecyclerView.Adapter<SubMenuAdapter.MyViewHolder>() {
 
   class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-    return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_row_menu_calculation, parent, false))
+    return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_row_submenu, parent, false))
   }
 
   override fun onBindViewHolder(holder: MyViewHolder, position: Int) {

@@ -5,4 +5,4 @@
  */
 package com.ngedev.tallyapp.model
 
-data class MenuFormulaModel(val htmlTitle: String, val title: String)
+data class SubMenuModel(val htmlTitle: String, val title: String)

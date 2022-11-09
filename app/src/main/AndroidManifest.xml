@@ -9,7 +9,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".ActivityDrillingMud"
+            android:exported="false" />
         <activity android:name=".ActivityMenuMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,17 +19,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".webview.WebViewActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity android:name=".ActivityAbout" />
         <activity android:name=".ActivityReference" />
         <activity android:name=".ActivityAddEditNote" />
         <activity android:name=".ActivityDailyNote" />
         <activity android:name=".ActivityAnnularVelocity" />
-        <activity android:name=".ActivityMenuFormula" />
+        <activity android:name=".ActivitySubMenu" />
         <activity android:name=".ActivityMenuDrillingFormula" />
         <activity android:name=".ActivityConversion" />
         <activity android:name=".ActivityBHA" />
@@ -35,10 +35,6 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/admob_app_id" />
-
     </application>
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

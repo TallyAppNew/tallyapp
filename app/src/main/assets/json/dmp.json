@@ -1,0 +1,822 @@
+[
+  [
+    "AK-70",
+    "Filtration Control Agent",
+    "Blend of air-blown asphalt and clay with an anticaking agent"
+  ],
+  [
+    "AKTAFLO-E",
+    "Emulsifier",
+    "Oxyethylated alkyl phenol"
+  ],
+  [
+    "AKTAFLO-S",
+    "Surfactant",
+    "Oxyethylated alkyl phenol"
+  ],
+  [
+    "ALDACIDE G",
+    "Microbiocide",
+    "Glutaraldehyde solution"
+  ],
+  [
+    "AQUAGEL",
+    "Viscosifier",
+    "Treated sodium montmorillonite"
+  ],
+  [
+    "AQUAGEL GOLD SEAL",
+    "Viscosifier",
+    "Sodium montmorillonite"
+  ],
+  [
+    "BARA-DEFOAM 1",
+    "Defoamer",
+    "Blend of high molecular weight alcohol and modified fatty acid derivatives"
+  ],
+  [
+    "BARA-DEFOAM HP",
+    "Defoamer",
+    "Polypropylene glycol"
+  ],
+  [
+    "BARA-DEFOAM W300",
+    "Defoamer",
+    "Blend of high molecular weight alcohol and modified fatty acid derivatives"
+  ],
+  [
+    "BARABLOK\/ BARABLOK 400",
+    "Filtration Control Agent",
+    "Powdered hydrocarbon resin (asphaltite)"
+  ],
+  [
+    "BARABRINE DEFOAM",
+    "Defoamer",
+    "Liquid blend of nonionic surfactants"
+  ],
+  [
+    "BARABRINE SI",
+    "Scale Inhibitor",
+    "Water soluble liquid"
+  ],
+  [
+    "BARABUF",
+    "pH Stabilizer",
+    "Alkaline material"
+  ],
+  [
+    "BARACARB",
+    "Bridging Agent",
+    "Sized calcium carbonate"
+  ],
+  [
+    "BARACAT",
+    "Filtration Control Agent",
+    "High-charge density cationic polymer"
+  ],
+  [
+    "BARACHEK",
+    "Shale Control Agent",
+    "Cellulosic polymer"
+  ],
+  [
+    "BARACOR 44",
+    "Hydrogen Sulfide Scavenger",
+    "Powdered zinc compound"
+  ],
+  [
+    "BARACOR 95",
+    "Alkalinity Control Agent",
+    "Liquid amine compound"
+  ],
+  [
+    "BARACOR 100",
+    "Corrosion Inhibitor",
+    "Highly active, film forming, water-dispersible corrosion inhibitor"
+  ],
+  [
+    "BARACOR 129",
+    "Hydrogen Sulfide\/Oxygen Scavenger",
+    "Blend of inorganic zinc and sulfite compounds"
+  ],
+  [
+    "BARACOR 450",
+    "Corrosion Inhibitor",
+    "Thiocyanate based inorganic compound"
+  ],
+  [
+    "BARACOR 700",
+    "Corrosion Inhibitor",
+    "Blend of phosphonates and alkyl phosphates"
+  ],
+  [
+    "BARACOR 1635",
+    "Corrosion Inhibitor",
+    "Powdered sodium nitrite"
+  ],
+  [
+    "BARACTIVE",
+    "Polar Activator",
+    "Glycerol"
+  ],
+  [
+    "BARAFILM",
+    "Corrosion Inhibitor",
+    "Aminated fatty acid"
+  ],
+  [
+    "BARAFLOC",
+    "Flocculant",
+    "Partially hydrolyzed polyacrylamide"
+  ],
+  [
+    "BARAFOAM",
+    "Foaming Agent",
+    "Sodium alpha olefin sulfonate"
+  ],
+  [
+    "BARAFOS",
+    "Thinner",
+    "Modified sodium polyphosphate"
+  ],
+  [
+    "BARAKLEAN",
+    "Degreaser",
+    "Blend of water-soluble surface active agents"
+  ],
+  [
+    "BARAKLEAN FL",
+    "Casing Wash",
+    "Blend of selected surfactants in an alcohol carrier fluid"
+  ],
+  [
+    "BARAKLEAN NS",
+    "Casing Wash",
+    "Surfactant mixture with a complexing agent"
+  ],
+  [
+    "BARANEX",
+    "Filtration Control Agent",
+    "Modified lignin powder"
+  ],
+  [
+    "BARAPAK",
+    "Suspension Agent",
+    "Oil-soluble polymer"
+  ],
+  [
+    "BARAPLUG",
+    "Bridging Agent",
+    "Sized and treated salts"
+  ],
+  [
+    "BARARESIN",
+    "Bridging Agent",
+    "Oil-soluble petroleum hydrocarbon resin"
+  ],
+  [
+    "BARARESIN-VIS",
+    "Viscosifier",
+    "Oil-soluble viscosifier in hydrocarbon copolymer"
+  ],
+  [
+    "BARASCAV D",
+    "Oxygen Scavenger",
+    "Powdered sodium sulfite"
+  ],
+  [
+    "BARASCAV L",
+    "Oxygen Scavenger",
+    "Concentrated liquid solution of ammonium bisulfite"
+  ],
+  [
+    "BARASCRUB",
+    "Casing Wash",
+    "Terpene derived surfactant"
+  ],
+  [
+    "BARAVIS",
+    "Viscosifier",
+    "Nonionic hydroxyethylcellulose (HEC) polymer"
+  ],
+  [
+    "BARAZAN D PLUS for drilling",
+    "Suspension Agent \/Viscosifier",
+    "Powdered dispersant-added biopolymer (xantham gum)"
+  ],
+  [
+    "BARAZAN D PLUS for completion",
+    "Suspension Agent \/Viscosifier",
+    "Powdered dispersant-added biopolymer (xantham gum)"
+  ],
+  [
+    "BARAZAN PLUS for drilling",
+    "Suspension Agent \/Viscosifier",
+    "Powdered biopolymer (xantham gum)"
+  ],
+  [
+    "BARAZAN PLUS for completion",
+    "Suspension Agent \/Viscosifier",
+    "Powdered biopolymer (xantham gum)"
+  ],
+  [
+    "BARO-LUBE",
+    "Lubricant",
+    "Blend of surfactants and lubricants"
+  ],
+  [
+    "BARO-LUBE GOLD SEAL",
+    "Lubricant",
+    "Blend of surfactants and lubricants"
+  ],
+  [
+    "BARO-SEAL",
+    "Lost Circulation Material",
+    "Combination of granules, flakes, and fibers"
+  ],
+  [
+    "BARO-SPOT",
+    "Spotting Fluid",
+    "Blend of anionic surfactants"
+  ],
+  [
+    "BARO-TROL",
+    "Shale Stabilizer",
+    "Sulfonated asphalt"
+  ],
+  [
+    "BARODENSE",
+    "Weighting Agent",
+    "Ground hematite"
+  ],
+  [
+    "BAROFIBRE",
+    "Seepage Loss Additive",
+    "Fibrous cellulosic material"
+  ],
+  [
+    "BAROID",
+    "Weighting Agent",
+    "Ground barium sulfate"
+  ],
+  [
+    "BAROID Oil Absorbent",
+    "Oil Absorbent",
+    "Granular calcined attapulgite clay"
+  ],
+  [
+    "BAROID RIG WASH",
+    "Degreaser",
+    "Blend of water-soluble surface active agents"
+  ],
+  [
+    "BROMI-VIS",
+    "Liquid Viscosifier",
+    "Liquid dispersion of activated HEC in a water soluble carrier"
+  ],
+  [
+    "BXR",
+    "Borehole Stabilizer",
+    "Blend of dispersible asphalt and a hydrocarbon resin (asphaltite)"
+  ],
+  [
+    "BXR-L",
+    "Borehole Stabilizer",
+    "Dispersible asphalt and hydrocarbon resin (asphaltite) dispersed in glycerol, polyglycerols, and polypropylene glycol"
+  ],
+  [
+    "CARBONOX",
+    "Filtration Control Agent",
+    "Powdered leonardite"
+  ],
+  [
+    "CAT-300",
+    "Filtration Control Agent",
+    "Modified starch"
+  ],
+  [
+    "CAT-GEL",
+    "Bridging Agent",
+    "Kaolinite clay"
+  ],
+  [
+    "CAT-HI",
+    "Filtration Control Agent",
+    "Modified cellulosic polymer"
+  ],
+  [
+    "CAT-LO",
+    "Filtration Control Agent",
+    "Modified cellulosic polymer"
+  ],
+  [
+    "CAT-VIS",
+    "Viscosifier",
+    "Powdered biopolymer (welan gum)"
+  ],
+  [
+    "CC-16",
+    "Filtration Control Agent",
+    "Causticized powdered leonardite"
+  ],
+  [
+    "CELLEX",
+    "Filtration Control Agent",
+    "Sodium carboxymethylcellulose (CMC) powder"
+  ],
+  [
+    "CELLEX HV",
+    "Filtration Control Agent",
+    "Sodium carboxymethylcellulose (CMC) powder"
+  ],
+  [
+    "CLAYSEAL",
+    "Shale Stabilizer",
+    "Low molecular weight amphoteric compound"
+  ],
+  [
+    "CLAYSEAL PLUS",
+    "Shale Stabilizer",
+    "Low molecular weight amphoteric compound"
+  ],
+  [
+    "CON DET",
+    "Wetting Agent",
+    "Blend of water-soluble anionic surfactants"
+  ],
+  [
+    "DEEP-TREAT",
+    "Wetting Agent\/Thinner",
+    "Sulfonate sodium salt"
+  ],
+  [
+    "DEXTRID",
+    "Filtration Control Agent",
+    "Modified and bacterially stabilized potato starch"
+  ],
+  [
+    "DEXTRID LT",
+    "Filtration Control Agent",
+    "Modified potato starch"
+  ],
+  [
+    "DEXTRID LTE",
+    "Filtration Control Agent",
+    "Modified potato starch"
+  ],
+  [
+    "DRILFOAM",
+    "Foaming Agent",
+    "Blend of sulfated ethoxylated alcohols"
+  ],
+  [
+    "DRIL-N-SLIDE",
+    "Lubricant\/ROP Enhancer",
+    "Blend of organics"
+  ],
+  [
+    "DRILTREAT",
+    "Oil Wetting Agent",
+    "Lecithin liquid dispersion"
+  ],
+  [
+    "DURATONE E",
+    "Filtration Control Agent",
+    "Organophilic lignite"
+  ],
+  [
+    "DURATONE HT",
+    "Filtration Control Agent",
+    "Organophilic leonardite"
+  ],
+  [
+    "DURENEX PLUS",
+    "Filtration Control Agent",
+    "Powered, sulfonated polymer"
+  ],
+  [
+    "ENVIRO-SPOT",
+    "Spotting Fluid",
+    "Concentrated blend of emulsifiers, lubricants, and viscosifiers"
+  ],
+  [
+    "ENVIRO-THIN",
+    "Thinner",
+    "Chrome-free iron lignosulfonate"
+  ],
+  [
+    "ENVIRO-TORQ",
+    "Lubricant",
+    "Blend of modified fatty acids and emulsifiers"
+  ],
+  [
+    "EP MUDLUBE",
+    "Extreme Pressure Lubricant",
+    "Modified tall fatty acid"
+  ],
+  [
+    "EZ-CORE",
+    "In-situ Emulsifier",
+    "Refined tall oil fatty acid"
+  ],
+  [
+    "EZ-MUD",
+    "Shale Stabilizer",
+    "Partially hydrolyzed polyacrylamide\/polyacrylate (PHPA) copolymer emulsion"
+  ],
+  [
+    "EZ-MUD DP",
+    "Shale Stabilizer",
+    "Partially hydrolyzed polyacrylamide\/polyacrylate (PHPA) copolymer dry powder"
+  ],
+  [
+    "EZ MUL NT",
+    "Emulsifier",
+    "Polyaminated fatty acid"
+  ],
+  [
+    "EZ MUL NTE",
+    "Emulsifier",
+    "Polyaminated tall oil in an ester carrier"
+  ],
+  [
+    "FILTER-CHEK",
+    "Filtration Control Agent",
+    "Modified starch"
+  ],
+  [
+    "FLO-CLEAN MD",
+    "Flocculant\/Wellbore Cleaner for Non-zinc Completion Brines",
+    "Proprietary ingredient"
+  ],
+  [
+    "FLO-CLEAN Z",
+    "Flocculant\/Wellbore Cleaner for Zinc Completion Brines",
+    "Proprietary ingredient"
+  ],
+  [
+    "GELTONE",
+    "Viscosifier",
+    "Organophilic clay"
+  ],
+  [
+    "GELTONE II",
+    "Viscosifier",
+    "Organophilic clay"
+  ],
+  [
+    "GELTONE IV",
+    "Viscosifier",
+    "Polymer-treated organophilic clay"
+  ],
+  [
+    "GELTONE V",
+    "Viscosifier",
+    "Organophilic clay"
+  ],
+  [
+    "GEM 2000",
+    "Shale Stabilizer",
+    "Blend of glycerol, polyglycerols, and polyglycols"
+  ],
+  [
+    "GEM CP",
+    "Shale Stabilizer",
+    "Polyalkylene glycol"
+  ],
+  [
+    "GEM CT",
+    "Shale stabilizer",
+    "Polyalkylene glycol"
+  ],
+  [
+    "GEM GP",
+    "Shale Stabilizer",
+    "Polyalkylene glycol"
+  ],
+  [
+    "HY-SEAL",
+    "Lost Circulation Material",
+    "Shredded cellulosic fiber"
+  ],
+  [
+    "IMPERMEX",
+    "Filtration Control Agent",
+    "Pregelatinized cornstarch"
+  ],
+  [
+    "INVERMUL NT",
+    "Emulsifier",
+    "Blend of oxidized tall oil and polyaminated fatty acid"
+  ],
+  [
+    "JELFLAKE",
+    "Lost Circulation Material",
+    "Shredded cellophane"
+  ],
+  [
+    "K-LIG",
+    "Thinner",
+    "Potassium leonardite"
+  ],
+  [
+    "LE MUL",
+    "Emulsion Stabilizer",
+    "Blend of oxidized tall oil and polyaminated fatty acid"
+  ],
+  [
+    "LE SUPERMUL",
+    "Emulsifier",
+    "Polyaminated fatty acid"
+  ],
+  [
+    "LE THIN",
+    "Invert Emulsion Thinner",
+    "Polyimide surfactant"
+  ],
+  [
+    "LE VIS",
+    "Viscosifier",
+    "Proprietary additive"
+  ],
+  [
+    "LIGNOX",
+    "Thinner",
+    "Copolymer of calcium lignosulfonate and acrylic acid"
+  ],
+  [
+    "LIQUI-DRIL",
+    "ROP Ehancer",
+    "Formulated blend of surface active agents"
+  ],
+  [
+    "LIQUI-VIS EP",
+    "Liquid Viscosifier",
+    "High purity HEC polymer dispersed in a water soluble carrier"
+  ],
+  [
+    "LIQUI-VIS NT",
+    "Liquid Viscosifier",
+    "High purity HEC polymer dispersed in an inorganic carrier"
+  ],
+  [
+    "LOLOSS",
+    "Viscosifier",
+    "Guar gum"
+  ],
+  [
+    "LUBRA-BEADS",
+    "Lubricant",
+    "Divinyl benzene styrene copolymer beads"
+  ],
+  [
+    "MICATEX",
+    "Lost Circulation Material",
+    "Ground mica"
+  ],
+  [
+    "N-DRIL",
+    "Filtration Control Agent",
+    "Modified starch"
+  ],
+  [
+    "N-DRIL HI",
+    "Filtration Control Agent",
+    "Modified cellulosic polymer"
+  ],
+  [
+    "N-DRIL HT PLUS",
+    "Filtration Control Agent",
+    "Specially processed, stabilized nonionic starch derivation"
+  ],
+  [
+    "N-DRIL LO",
+    "Filtration Control Agent",
+    "Modified cellulosic polymer"
+  ],
+  [
+    "N-PLEX",
+    "Lost Circulation Material",
+    "Liquid alkaline salt"
+  ],
+  [
+    "N-SEAL",
+    "Lost Circulation Material",
+    "Specially formulated extrusion spun mineral fiber"
+  ],
+  [
+    "N-SQUEEZE",
+    "Lost Circulation Material",
+    "Sized cellulose fibers"
+  ],
+  [
+    "N-VIS",
+    "Viscosifier",
+    "Polymer, premium quality xanthan product"
+  ],
+  [
+    "N-VIS HI",
+    "Viscosifier",
+    "Baroid Drilling fluids -Mixed metal silicate"
+  ],
+  [
+    "N-VIS L",
+    "Viscosifier",
+    "Highly refined, clarified xanthan biopolymer"
+  ],
+  [
+    "N-VIS O",
+    "Viscosifier",
+    "Organophilic clay, viscosity and suspension properties"
+  ],
+  [
+    "N-VIS P PLUS",
+    "Viscosifier",
+    "Blend of xanthan gum with specially processed, stabilized nonionic starch ether"
+  ],
+  [
+    "NO-SULF",
+    "Hydrogen Sulfide Scavenger",
+    "Blend of zinc compounds"
+  ],
+  [
+    "NO BLOK C",
+    "Non-Emulsifier for Calcium Completion Fluids",
+    "Surface active agents"
+  ],
+  [
+    "NO BLOK Z",
+    "Non-Emulsifier for Zinc Completion Fluids",
+    "Surface active agents"
+  ],
+  [
+    "OMC",
+    "Oil Mud Conditioner",
+    "Sodium petroleum sulfonate"
+  ],
+  [
+    "OMC 2",
+    "Oil Mud Conditioner",
+    "Oligomeric fatty acid"
+  ],
+  [
+    "OMC 42",
+    "Oil Mud Conditioner",
+    "Polyimide surfactant"
+  ],
+  [
+    "OXYGON",
+    "Corrosion Inhibitor\/Oxygen Scavenger",
+    "Granular material"
+  ],
+  [
+    "PAC-L",
+    "Filtration Control Agent",
+    "Polyanionic cellulose"
+  ],
+  [
+    "PAC-R",
+    "Filtration Control Agent",
+    "High molecular weight polyanionic cellulose"
+  ],
+  [
+    "PHASE II",
+    "Spotting Fluid",
+    "Blend of anionic surfactants,"
+  ],
+  [
+    "PLUG-GIT",
+    "Lost Circulation Material",
+    "Processed cedar fiber"
+  ],
+  [
+    "POLYAC",
+    "Filtration Control Agent",
+    "Sodium polyacrylate"
+  ],
+  [
+    "Q-BROXIN",
+    "Thinner",
+    "Ferrochrome lignosulfonate"
+  ],
+  [
+    "QUIK-FOAM",
+    "Foaming Agent",
+    "Proprietary blend of biodegradable alcohol ethoxy sulfates (AES)"
+  ],
+  [
+    "RM-63",
+    "Rheology Modifier",
+    "Blend of dimer and trimer fatty acids"
+  ],
+  [
+    "RV-310",
+    "Viscosifier",
+    "Mixed metal silicate"
+  ],
+  [
+    "SDI",
+    "Defoamer",
+    "Organosilicone emulsion"
+  ],
+  [
+    "STABILITE",
+    "Thinner",
+    "Phosphoric acid derivative"
+  ],
+  [
+    "STEELSEAL",
+    "Lost Circulation Additive",
+    "Resilient, angular, dual-composition carbon-based material"
+  ],
+  [
+    "STICK-LESS",
+    "Lubricant",
+    "Solid glass spherical beads"
+  ],
+  [
+    "SUSPENTONE",
+    "Suspension Agent",
+    "Organophilic clay"
+  ],
+  [
+    "THERMA-CHEK",
+    "Filtration Control Agent",
+    "Vinyl amide\/vinyl sulfonate copolymer"
+  ],
+  [
+    "THERMA-CHEK LV",
+    "Filtration Control Agent",
+    "Vinyl amide\/vinyl sulfonate terpolymer"
+  ],
+  [
+    "THERMA-THIN",
+    "Deflocculant",
+    "Anionic acrylic copolymer"
+  ],
+  [
+    "THERMA-VIS",
+    "Viscosifier",
+    "Synthetic magnesium silicate"
+  ],
+  [
+    "THERMO MUL",
+    "Surfactant",
+    "Blend of oxidized tall oil and polyaminated fatty acid"
+  ],
+  [
+    "THERMO PLUS",
+    "Surfactant",
+    "Polyaminated fatty acid"
+  ],
+  [
+    "THERMO TONE",
+    "Filtration Control Agent",
+    "Methyl styrene\/acrylate copolymer"
+  ],
+  [
+    "TORQ-TRIM 22",
+    "Lubricant",
+    "Blend of emulsifiers and alkaline surfactants"
+  ],
+  [
+    "TORQ-TRIM II",
+    "Lubricant",
+    "Baroid Drilling fluids – Alcohol amide"
+  ],
+  [
+    "TORQUE-LESS",
+    "Lubricant",
+    "Solid glass spherical beads"
+  ],
+  [
+    "TRIMULSO",
+    "Emulsifier",
+    "Blend of nonionic and anionic surfactants"
+  ],
+  [
+    "VIS-PLUS",
+    "Suspension Agent",
+    "Carboxylic acid"
+  ],
+  [
+    "WALL-NUT",
+    "Lost Circulation Material",
+    "Ground walnut shells"
+  ],
+  [
+    "X-TEND II",
+    "Bentonite Extender",
+    "Polyacrylate\/polyacrylamide copolymer"
+  ],
+  [
+    "X-VIS",
+    "Oil Mud Yield Activator",
+    "Dimerized fatty acids"
+  ],
+  [
+    "ZEOGEL",
+    "Viscosifier",
+    "Attapulgite clay"
+  ]
+]

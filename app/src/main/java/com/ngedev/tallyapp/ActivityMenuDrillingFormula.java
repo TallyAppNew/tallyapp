@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.ngedev.core.HelperAds;
 import java.util.Objects;
 
 import com.google.android.gms.ads.AdRequest;
@@ -67,7 +66,7 @@ public class ActivityMenuDrillingFormula extends AppCompatActivity {
     }
 
     private void gotoMenuFormulaActivity(String action) {
-        Intent i = new Intent(getApplicationContext(), ActivityMenuFormula.class);
+        Intent i = new Intent(getApplicationContext(), ActivitySubMenu.class);
         i.setAction(action);
         startActivity(i);
     }
