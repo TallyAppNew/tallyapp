@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity
             checkForPermission();
         }
 
-        HelperAds.showAds(getApplicationContext(), this, R.string.menu_ads);
+//        HelperAds.showAds(getApplicationContext(), this, R.string.menu_ads);
     }
 
     @TargetApi(Build.VERSION_CODES.M)

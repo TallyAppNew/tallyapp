@@ -35,15 +35,15 @@ class DrillingMudProductFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        HelperAds.showAds(context, activity, R.string.menu_ads)
-
-        context?.let {
-            MobileAds.initialize(
-                it
-            ) { }
-        }
-
-        rv_data = activity?.findViewById(R.id.rv_data_drilling_mud_product)!!
+//        HelperAds.showAds(context, activity, R.string.menu_ads)
+//
+//        context?.let {
+//            MobileAds.initialize(
+//                it
+//            ) { }
+//        }
+//
+//        rv_data = activity?.findViewById(R.id.rv_data_drilling_mud_product)!!
 
         mAdView = activity?.findViewById(R.id.adView)
         val adRequest = AdRequest.Builder().build()

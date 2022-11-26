@@ -69,9 +69,9 @@ public class ActivityDailyNote extends AppCompatActivity {
             }
         });
 
-        mAdView = findViewById(R.id.adView3);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+//        mAdView = findViewById(R.id.adView3);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
 
         mcv_calendar.setOnDateChangedListener((widget, date, selected) -> {
             mSelectedDate = date.getDate().toString();
@@ -89,7 +89,7 @@ public class ActivityDailyNote extends AppCompatActivity {
             startActivity(i);
         });
 
-        HelperAds.showAds(getApplicationContext(), this, R.string.menu_ads);
+//        HelperAds.showAds(getApplicationContext(), this, R.string.menu_ads);
     }
 
     @Override

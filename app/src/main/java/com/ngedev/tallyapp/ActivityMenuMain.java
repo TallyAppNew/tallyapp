@@ -4,8 +4,10 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,11 +33,10 @@ public class ActivityMenuMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_main);
 
-
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.drawable.logo_small);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        initAdsSDK();
+//        initAdsSDK();
 
         cv_conversion = findViewById(R.id.cv_basic);
         cv_assembly   = findViewById(R.id.cv_calculations);
@@ -147,10 +148,10 @@ public class ActivityMenuMain extends AppCompatActivity {
         startActivity(i);
     }
 
-    void initAdsSDK(){
-        MobileAds.initialize(this, initializationStatus ->
-               HelperAds.showAds(getApplicationContext(), ActivityMenuMain.this, R.string.menu_ads)
-        );
+//    void initAdsSDK(){
+//        MobileAds.initialize(this, initializationStatus ->
+//               HelperAds.showAds(getApplicationContext(), ActivityMenuMain.this, R.string.menu_ads)
+//        );
 
         //ArrayList<String> testDeviceIds = new ArrayList<>();
         //testDeviceIds.add("4126263DDEE370628E7428F7294C5842");
@@ -160,5 +161,5 @@ public class ActivityMenuMain extends AppCompatActivity {
          //       .setTestDeviceIds(testDeviceIds)
          //       .build();
         //MobileAds.setRequestConfiguration(requestConfiguration);
-    }
+//    }
 }

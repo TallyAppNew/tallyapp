@@ -40,10 +40,10 @@ public class ActivityConversion extends AppCompatActivity {
             }
         });
 
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
+//        mAdView = findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
+//
         rv_data = findViewById(R.id.rv_data);
 
         JSONArray arrayData = loadJson();
@@ -53,7 +53,7 @@ public class ActivityConversion extends AppCompatActivity {
         rv_data.setLayoutManager(layoutManager);
         rv_data.setAdapter(adapter);
 
-        HelperAds.showAds(getApplicationContext(), this, R.string.menu_ads);
+//        HelperAds.showAds(getApplicationContext(), this, R.string.menu_ads);
     }
 
     JSONArray loadJson(){

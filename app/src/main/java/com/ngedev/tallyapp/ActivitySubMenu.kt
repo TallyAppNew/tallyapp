@@ -24,15 +24,15 @@ class ActivitySubMenu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_submenu)
 
-        HelperAds.showAds(applicationContext, this@ActivitySubMenu, R.string.menu_ads)
+//        HelperAds.showAds(applicationContext, this@ActivitySubMenu, R.string.menu_ads)
 
-        MobileAds.initialize(
-            this
-        ) { }
-
-        mAdView = findViewById(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
-        mAdView?.loadAd(adRequest)
+//        MobileAds.initialize(
+//            this
+//        ) { }
+//
+//        mAdView = findViewById(R.id.adView)
+//        val adRequest = AdRequest.Builder().build()
+//        mAdView?.loadAd(adRequest)
 
         val action = intent.action ?: ""
         initData(action)
@@ -191,11 +191,11 @@ class ActivitySubMenu : AppCompatActivity() {
         SubMenuModel("power_and_prime_movers.html", "Power And Prime Movers"),
         SubMenuModel("hoisting_component.html", "Hoisting Component"),
         SubMenuModel("rotating_component.html", "Rotating Component"),
-        SubMenuModel("", "Circulating Component"),
-        SubMenuModel("", "Well Control Component"),
-        SubMenuModel("", "Tubular and Tubular Handling Equipment"),
-        SubMenuModel("", "Bit"),
-        SubMenuModel("", "Fishing Tools"),
+        SubMenuModel("circulating_component.html", "Circulating Component"),
+        SubMenuModel("well_control_component.html", "Well Control Component"),
+        SubMenuModel("tubular_and_tubular_handling_equipment.html", "Tubular and Tubular Handling Equipment"),
+        SubMenuModel("bit.html", "Bit"),
+        SubMenuModel("fishing_tools.html", "Fishing Tools"),
     )
 
     private fun generateH2S() = listOf(

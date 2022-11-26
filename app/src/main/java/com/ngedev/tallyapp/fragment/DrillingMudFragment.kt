@@ -34,17 +34,17 @@ class DrillingMudFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        HelperAds.showAds(context, activity, R.string.menu_ads)
-
-        context?.let {
-            MobileAds.initialize(
-                it
-            ) { }
-        }
-
-        mAdView = activity?.findViewById(R.id.av_drilling_mud)
-        val adRequest = AdRequest.Builder().build()
-        mAdView?.loadAd(adRequest)
+//        HelperAds.showAds(context, activity, R.string.menu_ads)
+//
+//        context?.let {
+//            MobileAds.initialize(
+//                it
+//            ) { }
+//        }
+//
+//        mAdView = activity?.findViewById(R.id.av_drilling_mud)
+//        val adRequest = AdRequest.Builder().build()
+//        mAdView?.loadAd(adRequest)
 
         listMenu = generateDrillingMudList()
         initRecyclerView()

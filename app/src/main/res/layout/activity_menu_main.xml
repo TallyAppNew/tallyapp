@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:minHeight="45dp"
-                android:text="Bottom Hole Assembly"
+                android:text="Capacity &amp; Displacement"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorFontOrange"
