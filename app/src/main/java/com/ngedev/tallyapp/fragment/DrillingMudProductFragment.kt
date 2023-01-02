@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.MobileAds
-import com.ngedev.core.HelperAds
+//import com.google.android.gms.ads.AdRequest
+//import com.google.android.gms.ads.AdView
+//import com.google.android.gms.ads.MobileAds
+//import com.ngedev.core.HelperAds
 import com.ngedev.tallyapp.R
 import com.ngedev.tallyapp.adapter.DrillingMudProductAdapter
 import org.json.JSONArray
@@ -20,7 +20,7 @@ import java.io.InputStream
 
 class DrillingMudProductFragment : Fragment() {
 
-    private var mAdView: AdView? = null
+//    private var mAdView: AdView? = null
 
     private lateinit var rv_data: RecyclerView
 
@@ -43,11 +43,11 @@ class DrillingMudProductFragment : Fragment() {
 //            ) { }
 //        }
 //
-//        rv_data = activity?.findViewById(R.id.rv_data_drilling_mud_product)!!
+        rv_data = activity?.findViewById(R.id.rv_data_drilling_mud_product)!!
 
-        mAdView = activity?.findViewById(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
-        mAdView?.loadAd(adRequest)
+//        mAdView = activity?.findViewById(R.id.adView)
+//        val adRequest = AdRequest.Builder().build()
+//        mAdView?.loadAd(adRequest)
 
         val arrayData = loadJson()
 

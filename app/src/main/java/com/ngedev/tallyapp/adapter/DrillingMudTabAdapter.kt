@@ -14,7 +14,7 @@ class DrillingMudTabAdapter(fm: FragmentManager, private val action: String) : F
     private val pages = listOf(
         DrillingMudFragment(),
         DrillingMudProductFragment(),
-        DrillingMudReportFragment()
+//        DrillingMudReportFragment()
     )
 
     override fun getCount(): Int {
@@ -31,8 +31,8 @@ class DrillingMudTabAdapter(fm: FragmentManager, private val action: String) : F
                 fragment = pages[0]
                 fragment.arguments = args
             }
-            1 -> fragment = pages[1]
-            else -> fragment = pages[2]
+//            1 -> fragment = pages[1]
+            else -> fragment = pages[1]
         }
 
         return fragment
@@ -41,8 +41,8 @@ class DrillingMudTabAdapter(fm: FragmentManager, private val action: String) : F
     override fun getPageTitle(position: Int): CharSequence? {
         return when(position) {
             0 -> "Drilling Mud"
-            1 -> "Drilling Mud Product"
-            else -> "Drilling Mud Report"
+            else -> "Drilling Mud Product"
+//            else -> "Drilling Mud Report"
         }
     }
 }

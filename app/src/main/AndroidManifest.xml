@@ -12,7 +12,7 @@
         <activity
             android:name=".ActivityDrillingMud"
             android:exported="false" />
-        <activity android:name=".ActivityMenuMain">
+        <activity android:name=".ActivityMenuMain" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

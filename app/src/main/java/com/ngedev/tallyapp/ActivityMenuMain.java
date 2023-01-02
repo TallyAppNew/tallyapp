@@ -13,9 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.RequestConfiguration;
-import com.ngedev.core.HelperAds;
+//import com.google.android.gms.ads.MobileAds;
+//import com.google.android.gms.ads.RequestConfiguration;
+//import com.ngedev.core.HelperAds;
 
 import java.util.ArrayList;
 import java.util.Objects;

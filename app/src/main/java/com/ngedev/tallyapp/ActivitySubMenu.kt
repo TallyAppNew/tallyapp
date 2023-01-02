@@ -6,10 +6,10 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.MobileAds
-import com.ngedev.core.HelperAds
+//import com.google.android.gms.ads.AdRequest
+//import com.google.android.gms.ads.AdView
+//import com.google.android.gms.ads.MobileAds
+
 import com.ngedev.tallyapp.adapter.SubMenuAdapter
 import com.ngedev.tallyapp.model.SubMenuModel
 import com.ngedev.tallyapp.webview.WebViewActivity
@@ -17,7 +17,7 @@ import java.util.*
 
 
 class ActivitySubMenu : AppCompatActivity() {
-    private var mAdView: AdView? = null
+//    private var mAdView: AdView? = null
 
     var listMenu = listOf<SubMenuModel>()
     override fun onCreate(savedInstanceState: Bundle?) {

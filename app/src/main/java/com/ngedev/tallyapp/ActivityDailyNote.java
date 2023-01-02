@@ -11,11 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+//import com.google.android.gms.ads.AdRequest;
+//import com.google.android.gms.ads.AdView;
+//import com.google.android.gms.ads.MobileAds;
+//import com.google.android.gms.ads.initialization.InitializationStatus;
+//import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.ngedev.core.HelperAds;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
@@ -42,7 +42,7 @@ public class ActivityDailyNote extends AppCompatActivity {
     private ArrayList<Date> markedDates = new ArrayList<>();
     FloatingActionButton fab_addEdit;
     TextView tv_preview;
-    private AdView mAdView;
+//    private AdView mAdView;
 
     String mSelectedDate;
 
@@ -63,11 +63,11 @@ public class ActivityDailyNote extends AppCompatActivity {
         tv_preview   = findViewById(R.id.tv_preview);
 
 
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
+//        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+//            @Override
+//            public void onInitializationComplete(InitializationStatus initializationStatus) {
+//            }
+//        });
 
 //        mAdView = findViewById(R.id.adView3);
 //        AdRequest adRequest = new AdRequest.Builder().build();
